@@ -5,7 +5,7 @@
 2. [Скачать](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe) и установить Node Virtual Environment (NVM)
 3. Скачать Node версии 16.4.2 - в командном окне(cmd.exe) выполнить команду `nvm install v16.14.2`
 4. Указать скаченную версию Node как текущую - в командном окне с правами Администратора выполнить команду `nvm use 16.14.2`
-5. Склонировать проект задания - в командном окне с правами пользователя выполнить команду `git clone https://github.com/jigius/bla-bla` в текущую папку
+5. Склонировать проект задания - в командном окне с правами пользователя выполнить команду `git clone git@github.com:jigius/tpl-main-page.git` в текущую папку
 6. Установить проект задания - команда `npm install`
 7. Сборка проекта задания - `npm run build`
 
