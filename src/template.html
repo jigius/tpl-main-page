@@ -1,170 +1,191 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<!--[if IE 8 ]><html dir="ltr" lang="ru" class="ie8"><![endif]-->
-<!--[if IE 9 ]><html dir="ltr" lang="ru" class="ie9"><![endif]-->
+<!--[if IE]> <![endif]-->
+<!--[if IE 8]><html dir="ltr" lang="ru" class="ie8"><![endif]-->
+<!--[if IE 9]><html dir="ltr" lang="ru" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html dir="ltr" lang="ru">
-<!--<![endif]-->
-<head>
+  <!--<![endif]-->
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Main page</title>
-</head>
-<body>
-<nav id="top"></nav>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3" style="height: 70px;"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Шины и диски от Федота</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-logo" href="index.html">
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="images/logo-desktop.svg"
+              />
+              <img class="" src="../src/images/logo-mobile.svg" alt="Logo" />
+            </picture>
+          </a>
+          <div class="navbar-tel-mobile">
+            <a class="navbar-number-mobile" href="+79833884506"
+              >+7‒983‒388‒45‒06</a
+            >
+          </div>
+          <div class="navbar-contact">
+            <p class="navbar-country">Барнаул,​</p>
+            <p class="navbar-adress">Рыбозаводской проезд, 42</p>
+          </div>
+          <div class="button button-desktop">
+            <a href="" class="button-call button-call-desktop"
+              >Обратный звонок</a
+            >
+          </div>
+          <div class="navbar-tel navbar-tel-desktop">
+            <a class="navbar-number" href="+79833884506">+7‒983‒388‒45‒06</a>
+            <a class="navbar-wa" href="+79833884506">
+              <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
+            </a>
+          </div>
         </div>
-    </div>
-</header>
-<div class="allmenu">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-4">
-                <div class="hidden-xs">
-                    <div id="wr-menu">
-                        <button class="btn-block text-left" type="button" data-target="#all-menu" data-toggle="collapse">
-                            <i class="fa fa-bars"></i>
-                            <span class="cate">Lots</span>
-                        </button>
-                    </div>
-                    <div id="all-menu" class="collapse">
-                        <nav class="navbar">
-                            <div class="navbar-header"><span id="category" class="visible-xs">Лоты</span>
-                                <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-                            </div>
-                            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                                <ul class="nav">
-                                    <li class="moremenu">
-                                        <a href="#">
-                                            <div class="menu-img pull-left"></div>Disks
-                                        </a>
-                                    </li>
-                                    <li class="moremenu">
-                                        <a href="#">
-                                            <div class="menu-img pull-left"></div>Tyres
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <div class="hidden-sm hidden-md hidden-lg">
-                    <nav id="menu" class="navbar">
-                        <div class="navbar-header">
-                            <button type="button" class="btn btn-navbar" onclick="openNav()" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-                        </div>
-                        <div id="mySidenav" class="sidenav">
-                            <div class="close-nav">
-                                <span class="categories">Menu</span>
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-close"></i></a>
-                            </div>
-                            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="#">Disks</a></li>
-                                    <li><a href="#">Tyres</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="col-md-9 col-sm-8">
-                <ul class="list-inline static-menu hidden-xs">
-                    <li><a href="#">Main</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                </ul>
-            </div>
+      </div>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a class="navbar-link" href="#"
+                >Диски<span class="sr-only"></span
+              ></a>
+            </li>
+            <li><a class="navbar-link" href="#">Шины</a></li>
+            <li><a class="navbar-link" href="#">Отзывы</a></li>
+            <li><a class="navbar-link" href="#">Как купить</a></li>
+            <li>
+              <a class="navbar-link" href="#">Оплата и доставка</a>
+            </li>
+            <li><a class="navbar-link" href="#">О нас</a></li>
+          </ul>
+          <div class="feedback">
+            <a class="feedback-link" href="">Написать в WhatsApp</a>
+            <a class="feedback-wa" href="+79833884506">
+              <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
+            </a>
+          </div>
+          <div class="button button-mobile">
+            <a href="" class="button-call button-call-mobile"
+              >Обратный звонок</a
+            >
+          </div>
         </div>
-    </div>
-</div>
-<div id="common-home" class="container">
-    <div class="row">
-        <div id="content" class="col-sm-12">
-
-            <!-- https://swiperjs.com/demos -->
-            <!-- Slider main container -->
-            <div class="swiper mySwiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="./images/slider/pic1.jpg" alt="pic1"></div>
-                    <div class="swiper-slide"><img src="./images/slider/pic2.jpg" alt="pic2"></div>
-                    <div class="swiper-slide"><img src="./images/slider/pic3.jpg" alt="pic3"></div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <!--<div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>-->
-                <!-- If we need scrollbar -->
-                <!--<div class="swiper-scrollbar"></div>-->
-            </div>
-            <!-- Slider main container -->
-
-            <div>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-            </div>
-
+      </div>
+    </nav>
+    <main class="main">
+      <section class="promo">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="images/promo-desktop.jpg"
+          />
+          <img
+            class="promo-img"
+            src="../src/images/promo-mobile.jpg"
+            alt="Promo"
+          />
+        </picture>
+        <div class="promo-block">
+          <h1 class="promo-title">Шины и диски от Федота</h1>
+          <p class="promo-adress">г. Барнаул, Рыбозаводской, 42</p>
         </div>
-    </div>
-</div>
-<footer>
-    <div class="foot-top">
+      </section>
+    </main>
+
+    <!--  <footer>
+      <div class="foot-top">
         <div class="container"></div>
-    </div>
-    <div class="container">
+      </div>
+      <div class="container">
         <div class="row">
-            <div class="middle-footer">
-                <div class="col-sm-3">
-                    <h5>FOO
-                        <button type="button" class="btn btn-primary toggle collapsed" data-toggle="collapse" data-target="#extra"></button>
-                    </h5>
-                    <div id="extra" class="collapse footer-collapse">
-                        <ul class="list-unstyled">
-                            <li><a href="#">foo1</a></li>
-                            <li><a href="#">foo2</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <h5>BAR
-                        <button type="button" class="btn btn-primary toggle collapsed" data-toggle="collapse" data-target="#info"></button>
-                    </h5>
-                    <div id="info" class="collapse footer-collapse">
-                        <ul class="list-unstyled">
-                            <li><a href="#">bar1</a></li>
-                            <li><a href="#">bar2</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <h5>BAZ
-                        <button type="button" class="btn btn-primary toggle collapsed" data-toggle="collapse" data-target="#account"></button>
-                    </h5>
-                    <div id="account" class="collapse footer-collapse">
-                        <ul class="list-unstyled lastb">
-                            <li><a href="#">baz1</a></li>
-                            <li><a href="#">baz2</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xs-fab"></div>
-                </div>
+          <div class="middle-footer">
+            <div class="col-sm-3">
+              <h5>
+                FOO
+                <button
+                  type="button"
+                  class="btn btn-primary toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#extra"
+                ></button>
+              </h5>
+              <div id="extra" class="collapse footer-collapse">
+                <ul class="list-unstyled">
+                  <li><a href="#">foo1</a></li>
+                  <li><a href="#">foo2</a></li>
+                </ul>
+              </div>
             </div>
+            <div class="col-sm-3">
+              <h5>
+                BAR
+                <button
+                  type="button"
+                  class="btn btn-primary toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#info"
+                ></button>
+              </h5>
+              <div id="info" class="collapse footer-collapse">
+                <ul class="list-unstyled">
+                  <li><a href="#">bar1</a></li>
+                  <li><a href="#">bar2</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <h5>
+                BAZ
+                <button
+                  type="button"
+                  class="btn btn-primary toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#account"
+                ></button>
+              </h5>
+              <div id="account" class="collapse footer-collapse">
+                <ul class="list-unstyled lastb">
+                  <li><a href="#">baz1</a></li>
+                  <li><a href="#">baz2</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="xs-fab"></div>
+            </div>
+          </div>
         </div>
         <div class="foot-bottom"></div>
-    </div>
-</footer>
-<a href="#" id="scroll" title="Scroll to Top" style="display: block;">
-    <i class="fa fa-angle-up"></i>
-</a>
-</body>
+      </div>
+    </footer>
+    <a href="#" id="scroll" title="Scroll to Top" style="display: block">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  </body>
+</html>
+ -->
+  </body>
 </html>

@@ -1,0 +1,43 @@
+.button {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.button-call {
+  display: block;
+  text-align: center;
+  padding: 7px 89px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #e01f35;
+  border: none;
+}
+
+.button-call:focus {
+  outline: 0px;
+}
+
+.button-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    display: none;
+  }
+
+  .button-desktop {
+    display: block;
+    margin: 0 30px 0 0;
+  }
+
+  .button-call-desktop {
+    padding: 7px 20px;
+
+    &:hover {
+      background-color: #cb192e;
+      color: #ffffff;
+    }
+  }
+}
