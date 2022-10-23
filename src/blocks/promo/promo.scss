@@ -11,7 +11,7 @@
 .promo-block {
   position: absolute;
   top: 152px;
-  padding: 0 15px;
+  padding: 0 30px 0 15px;
   margin: 0;
   align-items: center;
   color: #ffffff;
@@ -28,4 +28,25 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .promo-block {
+    top: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .promo {
+    flex-wrap: nowrap;
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
+  }
+}
+
+@media (min-width: 1520px) {
+  .promo {
+    padding-right: calc(50% - 760px);
+    padding-left: calc(50% - 760px);
+  }
 }

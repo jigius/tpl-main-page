@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=PT+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
     <title>Шины и диски от Федота</title>
   </head>
   <body>
@@ -68,18 +72,26 @@
       <div class="container">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li>
+            <li class="navbar-item">
               <a class="navbar-link" href="#"
                 >Диски<span class="sr-only"></span
               ></a>
             </li>
-            <li><a class="navbar-link" href="#">Шины</a></li>
-            <li><a class="navbar-link" href="#">Отзывы</a></li>
-            <li><a class="navbar-link" href="#">Как купить</a></li>
-            <li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">Шины</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">Отзывы</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">Как купить</a>
+            </li>
+            <li class="navbar-item">
               <a class="navbar-link" href="#">Оплата и доставка</a>
             </li>
-            <li><a class="navbar-link" href="#">О нас</a></li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">О нас</a>
+            </li>
           </ul>
           <div class="feedback">
             <a class="feedback-link" href="">Написать в WhatsApp</a>
@@ -113,79 +125,156 @@
           <p class="promo-adress">г. Барнаул, Рыбозаводской, 42</p>
         </div>
       </section>
+      <section class="card">
+        <h2 class="card-title">Новинки</h2>
+        <div class="row card-list">
+          <div class="col-sm-6 col-md-3 card-block">
+            <div class="thumbnail card-item">
+              <img
+                class="card-img"
+                src="../src/images/wheels.jpg"
+                alt="Wheels"
+              />
+              <div class="caption card-info">
+                <h3 class="card-name">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </h3>
+                <p class="card-price">16 800 руб./лот</p>
+                <p>
+                  <a href="#" class="btn btn-primary card-btn" role="button"
+                    >Купить</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 card-block">
+            <div class="thumbnail card-item">
+              <img
+                class="card-img"
+                src="../src/images/wheels.jpg"
+                alt="Wheels"
+              />
+              <div class="caption card-info">
+                <h3 class="card-name">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </h3>
+                <p class="card-price">16 800 руб./лот</p>
+                <p>
+                  <a href="#" class="btn btn-primary card-btn" role="button"
+                    >Купить</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 card-block card-block-mobile">
+            <div class="thumbnail card-item">
+              <img
+                class="card-img"
+                src="../src/images/wheels.jpg"
+                alt="Wheels"
+              />
+              <div class="caption card-info">
+                <h3 class="card-name">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </h3>
+                <p class="card-price">16 800 руб./лот</p>
+                <p>
+                  <a href="#" class="btn btn-primary card-btn" role="button"
+                    >Купить</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 card-block card-block-mobile">
+            <div class="thumbnail card-item">
+              <img
+                class="card-img"
+                src="../src/images/wheels.jpg"
+                alt="Wheels"
+              />
+              <div class="caption card-info">
+                <h3 class="card-name">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </h3>
+                <p class="card-price">16 800 руб./лот</p>
+                <p>
+                  <a href="#" class="btn btn-primary card-btn" role="button"
+                    >Купить</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!--  <footer>
+    <footer class="footer">
       <div class="foot-top">
         <div class="container"></div>
       </div>
       <div class="container">
-        <div class="row">
+        <div class="row footer-wrapper">
           <div class="middle-footer">
-            <div class="col-sm-3">
-              <h5>
-                FOO
-                <button
-                  type="button"
-                  class="btn btn-primary toggle collapsed"
-                  data-toggle="collapse"
-                  data-target="#extra"
-                ></button>
-              </h5>
-              <div id="extra" class="collapse footer-collapse">
-                <ul class="list-unstyled">
-                  <li><a href="#">foo1</a></li>
-                  <li><a href="#">foo2</a></li>
-                </ul>
-              </div>
+            <div class="col-sm-3 footer-item">
+              <p class="footer-info">Диски & Шины от Федота © 2022</p>
+              <p class="footer-info">ИП Иванов</p>
+              <p class="footer-info">ИНН: 2221066669473</p>
+              <p class="footer-info">Не является публичной офертой</p>
+              <a class="footer-link" href="">Политика конфиденциальности</a>
+              <a class="footer-link" href=""
+                >Согласие на обработку персональных данных</a
+              >
             </div>
-            <div class="col-sm-3">
-              <h5>
-                BAR
-                <button
-                  type="button"
-                  class="btn btn-primary toggle collapsed"
-                  data-toggle="collapse"
-                  data-target="#info"
-                ></button>
-              </h5>
-              <div id="info" class="collapse footer-collapse">
-                <ul class="list-unstyled">
-                  <li><a href="#">bar1</a></li>
-                  <li><a href="#">bar2</a></li>
-                </ul>
-              </div>
+            <div class="col-sm-3 footer-item">
+              <h5 class="footer-title">Покупателю</h5>
+              <a class="footer-link" href="">Оплата и доставка</a>
+              <a class="footer-link" href="">Гарантии</a>
+              <a class="footer-link" href="">Вопрос-ответ</a>
+              <a class="footer-link" href="">Новинки</a>
             </div>
-            <div class="col-sm-3">
-              <h5>
-                BAZ
-                <button
-                  type="button"
-                  class="btn btn-primary toggle collapsed"
-                  data-toggle="collapse"
-                  data-target="#account"
-                ></button>
-              </h5>
-              <div id="account" class="collapse footer-collapse">
-                <ul class="list-unstyled lastb">
-                  <li><a href="#">baz1</a></li>
-                  <li><a href="#">baz2</a></li>
-                </ul>
-              </div>
+            <div class="col-sm-3 footer-item">
+              <h5 class="footer-title">О магазине</h5>
+              <a class="footer-link" href="">Новости</a>
+              <a class="footer-link" href="">О нас</a>
             </div>
-            <div class="col-sm-3">
-              <div class="xs-fab"></div>
+            <div class="col-sm-3 footer-item">
+              <h5 class="footer-title">Наши контакты</h5>
+              <a class="footer-link" href="">+7‒983‒388‒45‒06</a>
+              <a class="footer-link" href="">zakaz@fedot22.ru</a>
+              <a class="footer-link" href=""
+                >Барнаул, ​Рыбозаводской проезд, 42</a
+              >
+            </div>
+            <div class="col-sm-3 footer-item">
+              <a class="footer-link footer-link-wa" href="+79833884506"
+                >Написать в WhatsApp</a
+              >
+              <a class="footer-link" href="+79833884506">
+                <img
+                  class="footer-img"
+                  src="../src/images/whatsapp.svg"
+                  alt="Whatsapp"
+                />
+              </a>
+            </div>
+            <div class="col-sm-3 footer-item">
+              <a class="footer-link footer-link-email" href="https://catda.ru/"
+                >Разработка сайта</a
+              >
+              <a class="footer-img" href="https://catda.ru/">
+                <img src="../src/images/catafot.svg" alt="Catafot" />
+              </a>
             </div>
           </div>
         </div>
-        <div class="foot-bottom"></div>
       </div>
     </footer>
-    <a href="#" id="scroll" title="Scroll to Top" style="display: block">
+    <!--  <a href="#" id="scroll" title="Scroll to Top" style="display: block">
       <i class="fa fa-angle-up"></i>
-    </a>
-  </body>
-</html>
- -->
+    </a> -->
   </body>
 </html>
