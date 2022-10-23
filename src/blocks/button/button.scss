@@ -14,6 +14,23 @@
   border: none;
 }
 
+.button-stock {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #e01f35;
+  padding: 7px 23px;
+}
+
+.button-wrapper {
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+
 .button-call:focus {
   outline: 0px;
 }

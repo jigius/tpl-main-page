@@ -32,6 +32,9 @@
   margin: 0;
   border: 1px solid #d3d3d3;
   border-radius: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-btn {
@@ -52,7 +55,8 @@
 
 .card-img {
   position: relative;
-  margin: 10px 25px 15px 25px;
+  margin: 0;
+  padding: 10px 25px 15px 25px;
 }
 
 .card-item::before {
@@ -93,6 +97,7 @@
   .card-list {
     display: flex;
     grid-gap: 0;
+    margin-bottom: 50px;
   }
 
   .card-block-mobile {
