@@ -47,9 +47,12 @@
   border: 2px solid #e01f35;
 }
 
-.card-btn:hover,
-.card-btn:active {
+.card-btn:hover {
   border: 2px solid #e01f35;
+  background-color: #cb192e;
+}
+
+.card-btn:focus {
   background-color: #cb192e;
 }
 

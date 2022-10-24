@@ -4,6 +4,13 @@
   cursor: pointer;
 }
 
+.button-call:hover,
+.selection-button:hover,
+.button-stock:hover {
+  text-decoration: none;
+  background-color: #cb192e;
+}
+
 .button-call {
   display: block;
   text-align: center;
