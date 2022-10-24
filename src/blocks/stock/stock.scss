@@ -8,8 +8,8 @@
 
 .stock-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
   padding: 0 15px;
   margin-bottom: 30px;
 }
@@ -25,5 +25,29 @@
 @media (min-width: 768px) {
   .stock-item-mobile {
     display: block;
+  }
+
+  .stock-list {
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stock {
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
+  }
+
+  .stock-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1520px) {
+  .stock {
+    padding-right: calc(50% - 760px);
+    padding-left: calc(50% - 760px);
   }
 }
