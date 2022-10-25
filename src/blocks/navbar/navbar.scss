@@ -33,6 +33,10 @@
   color: #ffffff;
 }
 
+.navbar-link:active {
+  color: #2d245b;
+}
+
 .navbar-link-desktop {
   display: none;
 }
@@ -76,6 +80,10 @@
 }
 
 .navbar-default .navbar-nav > li > a {
+  color: #2d245b;
+}
+
+.navbar-default .navbar-nav > li > a:active {
   color: #2d245b;
 }
 
@@ -165,6 +173,10 @@
     border-bottom: none;
     padding: 15px 0;
   }
+
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #ffffff;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -173,6 +185,10 @@
     padding-left: calc(50% - 600px);
     padding-top: 38px;
     padding-bottom: 38px;
+  }
+
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
   }
 
   .navbar-collapse {

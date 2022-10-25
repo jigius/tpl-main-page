@@ -21,9 +21,9 @@
 
 .selection-arrow {
   position: absolute;
-  width: 20px;
-  height: 11px;
-  right: 0;
+  width: 10px;
+  height: 7px;
+  right: 13px;
   top: 12px;
   background-image: url("../../images/arrow-dropdown.svg");
   background-repeat: no-repeat;
@@ -48,13 +48,20 @@
   margin-bottom: 10px;
 }
 
+.selection-name-centr {
+  width: 125px;
+} 
+
 .open > .dropdown-menu {
   display: block;
   top: 62px;
   margin: 0;
   padding: 0;
-  border: none;
   border-radius: 1px;
+}
+
+.open > .dropdown-menu-centr {
+  top: 83px;
 }
 
 .dropdown-menu {
@@ -93,6 +100,20 @@
   display: none;
 }
 
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+  background-color: #ffffff;
+}
+
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:active {
+  background-color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .selection-wrapper {
     display: grid;
@@ -104,6 +125,14 @@
   .selection-title {
     font-size: 36px;
     line-height: 47px;
+  }
+
+  .selection-name-centr {
+    width: auto;
+  } 
+
+  .open > .dropdown-menu-centr {
+    top: 62px;
   }
 
   .selection-btn {

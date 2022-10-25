@@ -60,6 +60,10 @@
   background-repeat: no-repeat;
 }
 
+.reviews-view:hover {
+  color: #171717;
+}
+
 @media (min-width: 768px) {
   .reviews-wrapper {
     display: flex;
@@ -87,6 +91,10 @@
 
   .reviews-view {
     top: 35px;
+  }
+
+  .reviews-view::before {
+    left: 140px;
   }
 
   .reviews-wrapper {

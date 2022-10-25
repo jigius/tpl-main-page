@@ -47,7 +47,12 @@
   border: 2px solid #e01f35;
 }
 
+.card-btn:active {
+  color: #ffffff;
+}
+
 .card-btn:hover {
+  color: #ffffff;
   border: 2px solid #e01f35;
   background-color: #cb192e;
 }
@@ -94,6 +99,10 @@
 
 .card-block-mobile {
   display: none;
+}
+
+.btn-primary:active {
+background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
