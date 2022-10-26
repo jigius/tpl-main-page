@@ -109,26 +109,28 @@
     </nav>
     <main class="main">
       <section class="promo">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="images/promo-desktop.jpg"
-          />
-          <img
-            class="promo-img"
-            src="../src/images/promo-mobile.jpg"
-            alt="Promo"
-          />
-        </picture>
-        <div class="promo-block">
-          <h1 class="promo-title">Шины и диски от Федота</h1>
-          <p class="promo-adress">г. Барнаул, Рыбозаводской, 42</p>
+        <div class="container">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="images/promo-desktop.jpg"
+            />
+            <img
+              class="promo-img img-responsive"
+              src="../src/images/promo-mobile.jpg"
+              alt="Promo"
+            />
+          </picture>
+          <div class="promo-block">
+            <h1 class="promo-title">Шины и диски от Федота</h1>
+            <p class="promo-adress">г. Барнаул, Рыбозаводской, 42</p>
+          </div>
         </div>
       </section>
       <section class="selection">
-        <div class="selection-block">
-          <h2 class="selection-title">Подбор дисков</h2>
-          <div class="container">
+        <div class="row">
+          <div class="col-lg-6 selection-block">
+            <h2 class="selection-title">Подбор дисков</h2>
             <div class="selection-wrapper">
               <div class="dropdown selection-dropdown">
                 <p class="selection-name">Диаметр</p>
@@ -149,7 +151,6 @@
                   <li><a href="#">...</a></li>
                 </ul>
               </div>
-
               <div class="dropdown selection-dropdown">
                 <p class="selection-name">Сверловка</p>
                 <button
@@ -208,7 +209,9 @@
                 </ul>
               </div>
               <div class="dropdown selection-dropdown">
-                <p class="selection-name selection-name-centr">Центральное отверстие</p>
+                <p class="selection-name selection-name-centr">
+                  Центральное отверстие
+                </p>
                 <button
                   class="btn btn-default dropdown-toggle selection-btn"
                   type="button"
@@ -220,7 +223,10 @@
                   Все
                   <span class="caret selection-arrow"></span>
                 </button>
-                <ul class="dropdown-menu dropdown-menu-centr" aria-labelledby="dropdownMenu1">
+                <ul
+                  class="dropdown-menu dropdown-menu-centr"
+                  aria-labelledby="dropdownMenu1"
+                >
                   <li><a href="#">...</a></li>
                   <li><a href="#">...</a></li>
                   <li><a href="#">...</a></li>
@@ -229,19 +235,16 @@
               <div class="selection-dropdown selection-dropdown-img">
                 <img src="../src/images/wheels-selection.png" alt="Wheels" />
               </div>
-            </div>
-            <div class="selection-button-wrapper">
-              <a href="" class="selection-button">Подобрать</a>
-              <a href="" class="selection-button selection-button-reset"
-                >Сбросить</a
-              >
+              <div class="selection-button-wrapper">
+                <a href="" class="selection-button">Подобрать</a>
+                <a href="" class="selection-button selection-button-reset"
+                  >Сбросить</a
+                >
               </div>
             </div>
           </div>
-        </div>
-        <div class="selection-block">
-          <h2 class="selection-title">Подбор шин</h2>
-          <div class="container">
+          <div class="col-lg-6 selection-block">
+            <h2 class="selection-title">Подбор шин</h2>
             <div class="selection-wrapper">
               <div class="dropdown selection-dropdown">
                 <p class="selection-name">Диаметр</p>
@@ -342,12 +345,12 @@
               <div class="selection-dropdown selection-dropdown-img">
                 <img src="../src/images/tires-selection.png" alt="Tires" />
               </div>
-            </div>
-            <div class="selection-button-wrapper">
-              <a href="" class="selection-button">Подобрать</a>
-              <a href="" class="selection-button selection-button-reset"
-                >Сбросить</a
-              >
+              <div class="selection-button-wrapper">
+                <a href="" class="selection-button">Подобрать</a>
+                <a href="" class="selection-button selection-button-reset"
+                  >Сбросить</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -355,7 +358,7 @@
       <section class="card">
         <h2 class="card-title">Новинки</h2>
         <div class="row card-list">
-          <div class="col-sm-6 col-md-3 card-block">
+          <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
             <div class="thumbnail card-item">
               <picture>
                 <source
@@ -374,14 +377,12 @@
                 </h3>
                 <p class="card-price">16 800 руб./лот</p>
                 <p>
-                  <a href="#" class="btn card-btn" role="button"
-                    >Купить</a
-                  >
+                  <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3 card-block">
+          <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
             <div class="thumbnail card-item">
               <picture>
                 <source
@@ -400,14 +401,14 @@
                 </h3>
                 <p class="card-price">16 800 руб./лот</p>
                 <p>
-                  <a href="#" class="btn card-btn" role="button"
-                    >Купить</a
-                  >
+                  <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3 card-block card-block-mobile">
+          <div
+            class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile"
+          >
             <div class="thumbnail card-item">
               <picture>
                 <source
@@ -426,14 +427,14 @@
                 </h3>
                 <p class="card-price">16 800 руб./лот</p>
                 <p>
-                  <a href="#" class="btn card-btn" role="button"
-                    >Купить</a
-                  >
+                  <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3 card-block card-block-mobile">
+          <div
+            class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile"
+          >
             <div class="thumbnail card-item">
               <picture>
                 <source
@@ -452,9 +453,7 @@
                 </h3>
                 <p class="card-price">16 800 руб./лот</p>
                 <p>
-                  <a href="#" class="btn card-btn" role="button"
-                    >Купить</a
-                  >
+                  <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
               </div>
             </div>
@@ -466,8 +465,8 @@
           <h2 class="reviews-title">
             11 лет продаем диски и шины от Федота на Дроме и Авито
           </h2>
-          <div class="reviews-wrapper">
-            <div class="reviews-block">
+          <div class="row reviews-wrapper">
+            <div class="col-sm-6 reviews-block">
               <div class="reviews-items">
                 <div class="reviews-item">
                   <a class="reviews-link" href="#">
@@ -495,7 +494,7 @@
                 </div>
               </div>
             </div>
-            <div class="reviews-block">
+            <div class="col-sm-6 reviews-block">
               <div class="reviews-items">
                 <div class="reviews-item">
                   <a class="reviews-link" href="#">
@@ -527,74 +526,74 @@
         </div>
       </section>
       <section class="stock">
-        <h2 class="stock-title">Наш склад в Барнауле</h2>
-        <div class="stock-wrapper">
-          <div class="row stock-list">
-            <div class="col-xs-6 col-md-3 stock-item">
-              <a href="#" class="">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/stock1-desktop.jpg"
-                  />
-                  <img
-                    class="stock-img"
-                    src="../src/images/stock1-mobile.jpg"
-                    alt=""
-                  />
-                </picture>
-              </a>
-            </div>
-          </div>
-          <div class="row stock-list">
-            <div class="col-xs-6 col-md-3 stock-item">
-              <a href="#" class="">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/stock2-desktop.jpg"
-                  />
-                  <img
-                    class="stock-img"
-                    src="../src/images/stock1-mobile.jpg"
-                    alt=""
-                  />
-                </picture>
-              </a>
-            </div>
-          </div>
-          <div class="row stock-list stock-list-mobile">
-            <div class="col-sm-6 col-md-3 stock-item stock-item-mobile">
-              <a href="#" class="">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/stock3-desktop.jpg"
-                  />
-                  <img
-                    class="stock-img"
-                    src="../src/images/stock1-mobile.jpg"
-                    alt=""
-                  />
-                </picture>
-              </a>
-            </div>
-          </div>
-          <div class="row stock-list stock-list-mobile">
-            <div class="col-sm-6 col-md-3 stock-item stock-item-mobile">
-              <a href="#" class="">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/stock4-desktop.jpg"
-                  />
-                  <img
-                    class="stock-img"
-                    src="../src/images/stock1-mobile.jpg"
-                    alt=""
-                  />
-                </picture>
-              </a>
+        <div class="container">
+          <h2 class="stock-title">Наш склад в Барнауле</h2>
+          <div class="stock-wrapper">
+            <div class="row stock-list">
+              <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
+                <a href="#" class="">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/stock1-desktop.jpg"
+                    />
+                    <img
+                      class="stock-img img-responsive"
+                      src="../src/images/stock1-mobile.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
+                <a href="#" class="">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/stock2-desktop.jpg"
+                    />
+                    <img
+                      class="stock-img img-responsive"
+                      src="../src/images/stock1-mobile.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item stock-item-mobile"
+              >
+                <a href="#" class="">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/stock3-desktop.jpg"
+                    />
+                    <img
+                      class="stock-img img-responsive"
+                      src="../src/images/stock1-mobile.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item stock-item-mobile"
+              >
+                <a href="#" class="">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/stock4-desktop.jpg"
+                    />
+                    <img
+                      class="stock-img img-responsive"
+                      src="../src/images/stock1-mobile.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -666,8 +665,5 @@
         </div>
       </div>
     </footer>
-    <!--  <a href="#" id="scroll" title="Scroll to Top" style="display: block">
-      <i class="fa fa-angle-up"></i>
-    </a> -->
   </body>
 </html>

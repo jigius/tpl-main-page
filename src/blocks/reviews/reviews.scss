@@ -64,12 +64,11 @@
   color: #171717;
 }
 
-@media (min-width: 768px) {
-  .reviews-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
+.reviews-block {
+  padding: 0;
+}
 
+@media (min-width: 768px) {
   .reviews-img {
     margin-right: 20px;
   }
@@ -94,13 +93,7 @@
   }
 
   .reviews-view::before {
-    left: 140px;
-  }
-
-  .reviews-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    left: 125px;
   }
 
   .reviews-items {

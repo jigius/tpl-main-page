@@ -1,16 +1,17 @@
+.card {
+  margin-bottom: 35px;
+}
+
 .card-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   color: #2d245b;
-  padding: 40px 15px 30px 15px;
+  padding: 10px 15px 30px 15px;
 }
 
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .row {
@@ -23,7 +24,7 @@
 }
 
 .card-block {
-  padding: 0;
+  padding: 0 5px !important;
 }
 
 .card-item {
@@ -102,22 +103,16 @@
 }
 
 .btn-primary:active {
-background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
   .card-list {
-    display: flex;
-    grid-gap: 0;
     margin-bottom: 50px;
   }
 
   .card-block-mobile {
     display: block;
-  }
-
-  .card-block:not(:last-child) {
-    margin-right: 40px;
   }
 }
 
@@ -127,10 +122,35 @@ background-color: #ffffff;
     padding-left: calc(50% - 600px);
   }
 
+  .card-block {
+    padding: 0 20px !important;
+  }
+
+  .card-item {
+    padding: 20px;
+  }
+
+  .thumbnail .caption {
+    padding: 0;
+  }
+
+  .card-name {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
   .card-title,
   .card-list {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .card-list {
+    margin: 0 -20px;
+  }
+
+  .card-block {
+    padding: 0 30px;
   }
 }
 

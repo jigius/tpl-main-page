@@ -1,11 +1,7 @@
 .promo {
   position: relative;
   z-index: -10;
-}
-
-.promo-img {
-  width: 100%;
-  height: auto;
+  margin: 0 -15px 30px -15px;
 }
 
 .promo-block {
@@ -31,8 +27,13 @@
 }
 
 @media (min-width: 768px) {
+  .promo {
+    margin: 0 0 30px 0;
+  }
+
   .promo-block {
     top: 25%;
+    padding-left: 30px;
   }
 }
 
@@ -41,9 +42,10 @@
     flex-wrap: nowrap;
     padding-right: calc(50% - 600px);
     padding-left: calc(50% - 600px);
+    margin: 0 0 50px 0;
   }
 
-  .promo-block{
+  .promo-block {
     padding: 0 50px;
   }
 }

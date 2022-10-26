@@ -1,6 +1,11 @@
+.selection {
+  padding: 0 15px;
+}
+
 .selection-block {
+  padding: 30px 15px !important;
   background-color: #e9e9e9;
-  margin: 30px 15px;
+  margin-bottom: 30px;
 }
 
 .selection-wrapper {
@@ -38,7 +43,7 @@
   font-size: 25px;
   line-height: 32px;
   color: #2d245b;
-  padding: 30px 15px 25px 15px;
+  margin-bottom: 25px;
 }
 
 .selection-name {
@@ -50,7 +55,7 @@
 
 .selection-name-centr {
   width: 125px;
-} 
+}
 
 .open > .dropdown-menu {
   display: block;
@@ -93,7 +98,7 @@
 
 .selection-button-wrapper {
   display: flex;
-  margin-bottom: 30px;
+  width: 100%;
 }
 
 .selection-dropdown-img {
@@ -115,11 +120,18 @@
 }
 
 @media (min-width: 768px) {
+  .selection-wrap {
+    margin: 0 15px 30px 15px;
+  }
+
+  .selection-block {
+    padding: 30px !important;
+  }
+
   .selection-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
-    padding: 0 30px;
   }
 
   .selection-title {
@@ -129,7 +141,7 @@
 
   .selection-name-centr {
     width: auto;
-  } 
+  }
 
   .open > .dropdown-menu-centr {
     top: 62px;
@@ -143,12 +155,7 @@
     width: 100%;
   }
 
-  .selection-button-wrapper {
-    padding: 0 30px;
-  }
-
   .selection-button {
-    width: 22%;
     margin-right: 25px;
   }
 
@@ -159,16 +166,19 @@
 
 @media (min-width: 1200px) {
   .selection {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
     padding-right: calc(50% - 600px);
     padding-left: calc(50% - 600px);
+    margin: 0;
   }
 
   .selection-block {
     margin-right: 0;
     margin-left: 0;
+    width: 740px;
+  }
+
+  .selection-block:not(:last-child) {
+    margin-right: 40px;
   }
 }
 
