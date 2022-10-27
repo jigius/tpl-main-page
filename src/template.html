@@ -81,16 +81,16 @@
               <a class="navbar-link" href="#">Шины</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="#">Отзывы</a>
+              <a class="navbar-link" href="reviews.html">Отзывы</a>
             </li>
             <li class="navbar-item">
               <a class="navbar-link" href="#">Как купить</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="#">Оплата и доставка</a>
+              <a class="navbar-link" href="delivery.html">Оплата и доставка</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="#">О нас</a>
+              <a class="navbar-link" href="about.html">О нас</a>
             </li>
           </ul>
           <div class="feedback">
@@ -109,7 +109,7 @@
     </nav>
     <main class="main">
       <section class="promo">
-        <div class="container">
+        <div class="container promo-container">
           <picture>
             <source
               media="(min-width: 768px)"
@@ -235,12 +235,12 @@
               <div class="selection-dropdown selection-dropdown-img">
                 <img src="../src/images/wheels-selection.png" alt="Wheels" />
               </div>
-              <div class="selection-button-wrapper">
-                <a href="" class="selection-button">Подобрать</a>
-                <a href="" class="selection-button selection-button-reset"
-                  >Сбросить</a
-                >
-              </div>
+            </div>
+            <div class="selection-button-wrapper">
+              <a href="" class="selection-button">Подобрать</a>
+              <a href="" class="selection-button selection-button-reset"
+                >Сбросить</a
+              >
             </div>
           </div>
           <div class="col-lg-6 selection-block">
@@ -345,12 +345,12 @@
               <div class="selection-dropdown selection-dropdown-img">
                 <img src="../src/images/tires-selection.png" alt="Tires" />
               </div>
-              <div class="selection-button-wrapper">
-                <a href="" class="selection-button">Подобрать</a>
-                <a href="" class="selection-button selection-button-reset"
-                  >Сбросить</a
-                >
-              </div>
+            </div>
+            <div class="selection-button-wrapper">
+              <a href="" class="selection-button">Подобрать</a>
+              <a href="" class="selection-button selection-button-reset"
+                >Сбросить</a
+              >
             </div>
           </div>
         </div>
@@ -380,6 +380,9 @@
                   <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
               </div>
+              <div class="card-panel">
+                <span class="card-stiker">Новинка</span>
+              </div>
             </div>
           </div>
           <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
@@ -404,31 +407,8 @@
                   <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
               </div>
-            </div>
-          </div>
-          <div
-            class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile"
-          >
-            <div class="thumbnail card-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="images/wheels-desktop.png"
-                />
-                <img
-                  class="card-img"
-                  src="../src/images/wheels-mobile.png"
-                  alt="Wheels"
-                />
-              </picture>
-              <div class="caption card-info">
-                <h3 class="card-name">
-                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
-                </h3>
-                <p class="card-price">16 800 руб./лот</p>
-                <p>
-                  <a href="#" class="btn card-btn" role="button">Купить</a>
-                </p>
+              <div class="card-panel">
+                <span class="card-stiker">Новинка</span>
               </div>
             </div>
           </div>
@@ -455,17 +435,49 @@
                 <p>
                   <a href="#" class="btn card-btn" role="button">Купить</a>
                 </p>
+              </div>
+              <div class="card-panel">
+                <span class="card-stiker">Новинка</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile"
+          >
+            <div class="thumbnail card-item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="images/wheels-desktop.png"
+                />
+                <img
+                  class="card-img"
+                  src="../src/images/wheels-mobile.png"
+                  alt="Wheels"
+                />
+              </picture>
+              <div class="caption card-info">
+                <h3 class="card-name">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </h3>
+                <p class="card-price">16 800 руб./лот</p>
+                <p>
+                  <a href="#" class="btn card-btn" role="button">Купить</a>
+                </p>
+              </div>
+              <div class="card-panel">
+                <span class="card-stiker">Новинка</span>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="reviews">
-        <div class="container reviews-container">
+        <div class="row reviews-container">
           <h2 class="reviews-title">
             11 лет продаем диски и шины от Федота на Дроме и Авито
           </h2>
-          <div class="row reviews-wrapper">
+          <div class="reviews-wrapper">
             <div class="col-sm-6 reviews-block">
               <div class="reviews-items">
                 <div class="reviews-item">
@@ -526,7 +538,7 @@
         </div>
       </section>
       <section class="stock">
-        <div class="container">
+        <div class="row">
           <h2 class="stock-title">Наш склад в Барнауле</h2>
           <div class="stock-wrapper">
             <div class="row stock-list">
@@ -631,7 +643,7 @@
             <div class="col-sm-3 footer-item">
               <h5 class="footer-title">О магазине</h5>
               <a class="footer-link" href="">Новости</a>
-              <a class="footer-link" href="">О нас</a>
+              <a class="footer-link" href="about.html">О нас</a>
             </div>
             <div class="col-sm-3 footer-item">
               <h5 class="footer-title">Наши контакты</h5>

@@ -1,7 +1,11 @@
 .promo {
   position: relative;
   z-index: -10;
-  margin: 0 -15px 30px -15px;
+}
+
+.promo-container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .promo-block {

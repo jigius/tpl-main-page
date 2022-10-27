@@ -1,13 +1,10 @@
-.stock {
-  margin: 0 -15px;
-}
-
 .stock-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   color: #2d245b;
-  padding: 0 15px 10px 15px;
+  padding: 0 15px;
+  margin-bottom: 30px;
 }
 
 .stock-wrapper {
@@ -34,12 +31,12 @@
 
 @media (min-width: 768px) {
   .stock-title {
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-bottom: 35px;
+    padding: 0 15px;
   }
 
   .stock-item {
-    padding: 20px;
+    padding-bottom: 15px;
   }
 
   .stock-item-mobile {
@@ -48,7 +45,6 @@
 
   .stock-list {
     width: auto;
-    margin: 0;
   }
 }
 
@@ -62,6 +58,10 @@
   .stock {
     padding-right: calc(50% - 600px);
     padding-left: calc(50% - 600px);
+  }
+
+  .stock-title {
+    padding: 0;
   }
 
   .stock-list-mobile {

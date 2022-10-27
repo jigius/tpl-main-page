@@ -68,17 +68,6 @@
   padding: 10px 25px 15px 25px;
 }
 
-.card-item::before {
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 24px;
-  top: 10px;
-  left: 9px;
-  background-image: url("../../images/new.svg");
-  z-index: 1;
-}
-
 .thumbnail .caption {
   padding: 15px 9px;
 }
@@ -96,6 +85,26 @@
   line-height: 21px;
   color: #e01f35;
   margin-bottom: 15px;
+}
+
+.card-panel {
+  position: absolute;
+  background-color: #1aaf43;
+  width: 70px;
+  height: 24px;
+  top: 10px;
+  left: 9px;
+}
+
+.card-stiker {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  color: #ffffff;
+  text-transform: lowercase;
+  padding: 2px 5px;
 }
 
 .card-block-mobile {
@@ -128,6 +137,17 @@
 
   .card-item {
     padding: 20px;
+  }
+
+  .card-panel {
+    width: 75px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .card-stiker {
+    line-height: 16px;
+    padding: 4px 11px;
   }
 
   .thumbnail .caption {
