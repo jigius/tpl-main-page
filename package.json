@@ -12,6 +12,8 @@
   "author": "Jigius",
   "license": "MIT",
   "devDependencies": {
+    "@fontsource/lexend": "^4.5.13",
+    "@fontsource/pt-sans": "^4.5.11",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "file-loader": "^6.2.0",
@@ -34,7 +36,6 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@fontsource/roboto": "^4.5.8",
     "bootstrap": "^3.3.5",
     "fontawesome-4.7": "^4.7.0",
     "jquery": "^2.1.1",
