@@ -1,0 +1,20 @@
+.feedback {
+  margin-top: 17px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-link {
+  font-size: 13px;
+  line-height: 150%;
+  text-decoration: underline;
+  color: #171717;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .feedback {
+    display: none;
+  }
+}

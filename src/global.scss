@@ -1,0 +1,37 @@
+body {
+  font-family: "PT Sans";
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a:hover,
+a:focus {
+  color: #ffffff;
+}
+
+.link {
+  color: #171717;
+}
+
+.link:hover {
+  color: #171717;
+  text-decoration: none;
+}
