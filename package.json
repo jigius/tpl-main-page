@@ -36,6 +36,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@fontsource/source-sans-pro": "^4.5.11",
     "bootstrap": "^3.3.5",
     "fontawesome-4.7": "^4.7.0",
     "jquery": "^2.1.1",
