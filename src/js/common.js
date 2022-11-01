@@ -487,4 +487,10 @@ $(document).delegate('.agree', 'click', function(e) {
 
 		});
 	}
+
+	$('.hidden').removeClass('hidden').hide();
+	$('.toggle-text').click(function() {
+		$(this).find('span').each(function() { $(this).toggle(); });
+	});
+
 })(window.jQuery);

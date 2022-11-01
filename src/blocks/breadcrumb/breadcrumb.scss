@@ -1,0 +1,20 @@
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 35px;
+}
+
+.breadcrumb-link {
+  color: #171717;
+}
+
+.breadcrumb-link-index {
+  color: #e01f35;
+}
+
+@media (min-width: 1200px) {
+  .breadcrumb {
+    padding: 0;
+  }
+}
