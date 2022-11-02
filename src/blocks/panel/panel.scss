@@ -1,0 +1,79 @@
+#accordion {
+  margin: auto;
+  max-width: 500px;
+}
+
+.panel-heading a {
+  display: block;
+  position: relative;
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &[aria-expanded="true"]::after {
+    transform: rotate(-135deg);
+    top: 5px;
+  }
+}
+
+.panel {
+  background-color: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+.panel-heading {
+  padding: 15px 0;
+  border-bottom: transparent;
+}
+
+.panel-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2d245b;
+}
+
+.panel-title a:hover,
+.panel-title a:focus,
+.panel-title a:active {
+  color: #2d245b;
+  text-decoration: none;
+}
+
+.panel-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #171717;
+  margin-bottom: 15px;
+  padding-left: 28px;
+}
+
+.panel-default:not(:last-child) {
+  border-bottom: transparent;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.panel-form {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 0 !important;
+}
