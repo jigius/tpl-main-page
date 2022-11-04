@@ -1,746 +1,588 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Шины и диски от Федота</title>
-  </head>
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
-          </button>
-          <a class="navbar-brand navbar-logo" href="index.html">
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="images/logo-desktop.svg"
-              />
-              <img class="" src="../src/images/logo-mobile.svg" alt="Logo" />
-            </picture>
-          </a>
-          <div class="navbar-tel-mobile">
-            <a class="navbar-number-mobile" href="+79833884506">
-              +7‒983‒388‒45‒06
-            </a>
-          </div>
-          <div class="navbar-contact">
-            <p class="navbar-country">Барнаул,​</p>
-            <p class="navbar-adress">Рыбозаводской проезд, 42</p>
-          </div>
-          <div class="button button-desktop">
-            <a href="" class="button-call button-call-desktop">
-              Обратный звонок
-            </a>
-          </div>
-          <div class="navbar-tel navbar-tel-desktop">
-            <a class="navbar-number" href="+79833884506">+7‒983‒388‒45‒06</a>
-            <a class="navbar-wa" href="+79833884506">
-              <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="navbar-item">
-              <a class="navbar-link" href="catalog.html">
-                Диски
-                <span class="sr-only"></span>
-              </a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="catalog.html">Шины</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="reviews.html">Отзывы</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="#">Как купить</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="delivery.html">Оплата и доставка</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="about.html">О нас</a>
-            </li>
-          </ul>
-          <div class="feedback">
-            <a class="feedback-link" href="">Написать в WhatsApp</a>
-            <a class="feedback-wa" href="+79833884506">
-              <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
-            </a>
-          </div>
-          <div class="button button-mobile">
-            <a href="" class="button-call button-call-mobile">
-              Обратный звонок
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <main class="main">
-      <section class="promo">
-        <div class="container promo-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Шины и диски от Федота</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-logo" href="index.html">
           <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="images/promo-desktop.jpg"
-            />
-            <img
-              class="promo-img img-responsive"
-              src="../src/images/promo-mobile.jpg"
-              alt="Promo"
-            />
+            <source media="(min-width: 1200px)" srcset="images/logo-desktop.svg" />
+            <img class="" src="../src/images/logo-mobile.svg" alt="Logo" />
           </picture>
-          <div class="promo-block">
-            <h1 class="promo-title">Шины и диски от Федота</h1>
-            <p class="promo-adress">г. Барнаул, Рыбозаводской, 42</p>
-          </div>
+        </a>
+        <div class="navbar-tel-mobile">
+          <a class="navbar-number-mobile" href="+79833884506">
+            +7‒983‒388‒45‒06
+          </a>
         </div>
-      </section>
-      <section class="selection">
-        <div class="row">
-          <div class="col-lg-6 selection-block">
-            <h2 class="selection-title">Подбор дисков</h2>
-            <div class="selection-wrapper">
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Диаметр</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Сверловка</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Ширина</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Вылет</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name selection-name-centr">
-                  Центральное отверстие
-                </p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul
-                  class="dropdown-menu dropdown-menu-centr"
-                  aria-labelledby="dropdownMenu1"
-                >
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="selection-dropdown selection-dropdown-img">
-                <img src="../src/images/wheels-selection.png" alt="Wheels" />
-              </div>
-            </div>
-            <div class="selection-button-wrapper">
-              <a href="" class="selection-button">Подобрать</a>
-              <a href="" class="selection-button selection-button-reset">
-                Сбросить
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 selection-block">
-            <h2 class="selection-title">Подбор шин</h2>
-            <div class="selection-wrapper">
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Диаметр</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Ширина</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Высота</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Сезонность</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="dropdown selection-dropdown">
-                <p class="selection-name">Шипы</p>
-                <button
-                  class="btn btn-default dropdown-toggle selection-btn"
-                  type="button"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                >
-                  Все
-                  <span class="caret selection-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="selection-dropdown selection-dropdown-img">
-                <img src="../src/images/tires-selection.png" alt="Tires" />
-              </div>
-            </div>
-            <div class="selection-button-wrapper">
-              <a href="" class="selection-button">Подобрать</a>
-              <a href="" class="selection-button selection-button-reset">
-                Сбросить
-              </a>
-            </div>
-          </div>
+        <div class="navbar-contact">
+          <p class="navbar-country">Барнаул,​</p>
+          <p class="navbar-adress">Рыбозаводской проезд, 42</p>
         </div>
-      </section>
-      <section class="card">
-        <h2 class="card-title">Новинки</h2>
-        <div class="row card-list">
-          <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
-            <div class="thumbnail card-item">
-              <a href="card.html" class="link card-link">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/wheels-desktop.png"
-                  />
-                  <img
-                    class="card-img"
-                    src="../src/images/wheels-mobile.png"
-                    alt="Wheels"
-                  />
-                </picture>
-              </a>
-              <div class="caption card-info">
-                <h3 class="card-name">
-                  <a href="card.html" class="link card-link">
-                    18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
-                  </a>
-                </h3>
-                <p class="card-price">16 800 руб./лот</p>
-                <p>
-                  <a href="card.html" class="btn card-btn" role="button">
-                    Купить
-                  </a>
-                </p>
-              </div>
-              <div class="card-panel">
-                <span class="card-stiker">Новинка</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
-            <div class="thumbnail card-item">
-              <a href="card.html" class="link card-link">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/wheels-desktop.png"
-                  />
-                  <img
-                    class="card-img"
-                    src="../src/images/wheels-mobile.png"
-                    alt="Wheels"
-                  />
-                </picture>
-              </a>
-              <div class="caption card-info">
-                <h3 class="card-name">
-                  <a href="card.html" class="link card-link">
-                    18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
-                  </a>
-                </h3>
-                <p class="card-price">16 800 руб./лот</p>
-                <p>
-                  <a href="card.html" class="btn card-btn" role="button">
-                    Купить
-                  </a>
-                </p>
-              </div>
-              <div class="card-panel">
-                <span class="card-stiker">Новинка</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile"
-          >
-            <div class="thumbnail card-item">
-              <a href="card.html" class="link card-link">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/wheels-desktop.png"
-                  />
-                  <img
-                    class="card-img"
-                    src="../src/images/wheels-mobile.png"
-                    alt="Wheels"
-                  />
-                </picture>
-              </a>
-              <div class="caption card-info">
-                <h3 class="card-name">
-                  <a href="#" class="link card-link">
-                    18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
-                  </a>
-                </h3>
-                <p class="card-price">16 800 руб./лот</p>
-                <p>
-                  <a href="#" class="btn card-btn" role="button">Купить</a>
-                </p>
-              </div>
-              <div class="card-panel">
-                <span class="card-stiker">Новинка</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile"
-          >
-            <div class="thumbnail card-item">
-              <a href="card.html" class="link card-link">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/wheels-desktop.png"
-                  />
-                  <img
-                    class="card-img"
-                    src="../src/images/wheels-mobile.png"
-                    alt="Wheels"
-                  />
-                </picture>
-              </a>
-              <div class="caption card-info">
-                <h3 class="card-name">
-                  <a href="#" class="link card-link">
-                    18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
-                  </a>
-                </h3>
-                <p class="card-price">16 800 руб./лот</p>
-                <p>
-                  <a href="#" class="btn card-btn" role="button">Купить</a>
-                </p>
-              </div>
-              <div class="card-panel">
-                <span class="card-stiker">Новинка</span>
-              </div>
-            </div>
-          </div>
+        <div class="button button-desktop">
+          <a href="" class="button-call button-call-desktop">
+            Обратный звонок
+          </a>
         </div>
-      </section>
-      <section class="reviews">
-        <div class="row reviews-container">
-          <h2 class="reviews-title">
-            11 лет продаем диски и шины от Федота на Дроме и Авито
-          </h2>
-          <div class="reviews-wrapper">
-            <div class="col-sm-6 reviews-block">
-              <div class="reviews-items">
-                <div class="reviews-item">
-                  <a class="reviews-link" href="#">
-                    <picture>
-                      <source
-                        media="(min-width: 1200px)"
-                        srcset="images/drom-desktop.svg"
-                      />
-                      <img
-                        class="reviews-img"
-                        src="../src/images/drom-mobile.svg"
-                        alt="Drom"
-                      />
-                    </picture>
-                  </a>
-                </div>
-              </div>
-              <div class="reviews-items">
-                <div class="reviews-item">
-                  <p class="reviews-rating">1 272 (99,5%)</p>
-                  <p class="reviews-name">Рейтинг на Дроме</p>
-                </div>
-                <div class="reviews-item">
-                  <a class="reviews-view" href="">Посмотреть отзывы</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 reviews-block">
-              <div class="reviews-items">
-                <div class="reviews-item">
-                  <a class="reviews-link" href="#">
-                    <picture>
-                      <source
-                        media="(min-width: 1200px)"
-                        srcset="images/avito-desktop.svg"
-                      />
-                      <img
-                        class="reviews-img"
-                        src="../src/images/avito-mobile.svg"
-                        alt="Avito"
-                      />
-                    </picture>
-                  </a>
-                </div>
-              </div>
-              <div class="reviews-items">
-                <div class="reviews-item">
-                  <p class="reviews-rating">4,9 (162 оценок)</p>
-                  <p class="reviews-name">Рейтинг на Авито</p>
-                </div>
-                <div class="reviews-item">
-                  <a class="reviews-view" href="">Посмотреть отзывы</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="navbar-tel navbar-tel-desktop">
+          <a class="navbar-number" href="+79833884506">+7‒983‒388‒45‒06</a>
+          <a class="navbar-wa" href="+79833884506">
+            <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
+          </a>
         </div>
-      </section>
-      <section class="stock">
-        <div class="row">
-          <h2 class="stock-title">Наш склад в Барнауле</h2>
-          <div class="stock-wrapper">
-            <div class="row stock-list">
-              <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
-                <a href="#" class="">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="images/stock1-desktop.jpg"
-                    />
-                    <img
-                      class="stock-img img-responsive"
-                      src="../src/images/stock1-mobile.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </a>
-              </div>
-              <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
-                <a href="#" class="">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="images/stock2-desktop.jpg"
-                    />
-                    <img
-                      class="stock-img img-responsive"
-                      src="../src/images/stock1-mobile.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </a>
-              </div>
-              <div
-                class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item stock-item-mobile"
-              >
-                <a href="#" class="">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="images/stock3-desktop.jpg"
-                    />
-                    <img
-                      class="stock-img img-responsive"
-                      src="../src/images/stock1-mobile.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </a>
-              </div>
-              <div
-                class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item stock-item-mobile"
-              >
-                <a href="#" class="">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="images/stock4-desktop.jpg"
-                    />
-                    <img
-                      class="stock-img img-responsive"
-                      src="../src/images/stock1-mobile.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="button-wrapper">
-          <div class="button-stock">
-            <a href="" class="button-stock">Все фотографии склада</a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="foot-top">
-        <div class="container"></div>
       </div>
-      <div class="container">
-        <div class="row footer-wrapper">
-          <div class="middle-footer">
-            <div class="col-sm-3 footer-item">
-              <p class="footer-info">Диски & Шины от Федота © 2022</p>
-              <p class="footer-info">ИП Иванов</p>
-              <p class="footer-info">ИНН: 2221066669473</p>
-              <p class="footer-info">Не является публичной офертой</p>
-              <a class="footer-link" href="">Политика конфиденциальности</a>
-              <a class="footer-link" href="">
-                Согласие на обработку персональных данных
+    </div>
+    <div class="container">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="navbar-item">
+            <a class="navbar-link" href="catalog.html">
+              Диски
+              <span class="sr-only"></span>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="catalog.html">Шины</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="reviews.html">Отзывы</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">Как купить</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="delivery.html">Оплата и доставка</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="about.html">О нас</a>
+          </li>
+        </ul>
+        <div class="feedback">
+          <a class="feedback-link" href="">Написать в WhatsApp</a>
+          <a class="feedback-wa" href="+79833884506">
+            <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
+          </a>
+        </div>
+        <div class="button button-mobile">
+          <a href="" class="button-call button-call-mobile">
+            Обратный звонок
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="main">
+    <section class="promo">
+      <div class="container promo-container">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/promo-desktop.jpg" />
+          <img class="promo-img img-responsive" src="../src/images/promo-mobile.jpg" alt="Promo" />
+        </picture>
+        <div class="promo-block">
+          <h1 class="promo-title">Шины и диски от Федота</h1>
+          <p class="promo-adress">г. Барнаул, Рыбозаводской, 42</p>
+        </div>
+      </div>
+    </section>
+    <section class="selection">
+      <div class="row">
+        <div class="col-lg-6 selection-block">
+          <h2 class="selection-title">Подбор дисков</h2>
+          <div class="selection-wrapper">
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Диаметр</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Сверловка</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Ширина</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Вылет</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name selection-name-centr">
+                Центральное отверстие
+              </p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-centr" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="selection-dropdown selection-dropdown-img">
+              <img src="../src/images/wheels-selection.png" alt="Wheels" />
+            </div>
+          </div>
+          <div class="selection-button-wrapper">
+            <a href="" class="selection-button">Подобрать</a>
+            <a href="" class="selection-button selection-button-reset">
+              Сбросить
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 selection-block">
+          <h2 class="selection-title">Подбор шин</h2>
+          <div class="selection-wrapper">
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Диаметр</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Ширина</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Высота</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Сезонность</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown selection-dropdown">
+              <p class="selection-name">Шипы</p>
+              <button class="btn btn-default dropdown-toggle selection-btn" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Все
+                <span class="caret selection-arrow"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="selection-dropdown selection-dropdown-img">
+              <img src="../src/images/tires-selection.png" alt="Tires" />
+            </div>
+          </div>
+          <div class="selection-button-wrapper">
+            <a href="" class="selection-button">Подобрать</a>
+            <a href="" class="selection-button selection-button-reset">
+              Сбросить
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card">
+      <h2 class="card-title">Новинки</h2>
+      <div class="row card-list">
+        <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
+          <div class="thumbnail card-item">
+            <a href="card.html" class="link card-link">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/wheels-desktop.png" />
+                <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+              </picture>
+            </a>
+            <div class="caption card-info">
+              <h3 class="card-name">
+                <a href="card.html" class="link card-link">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </a>
+              </h3>
+              <p class="card-price">16 800 руб./лот</p>
+              <p>
+                <a href="card.html" class="btn card-btn" role="button">
+                  Купить
+                </a>
+              </p>
+            </div>
+            <div class="card-panel">
+              <span class="card-stiker">Новинка</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
+          <div class="thumbnail card-item">
+            <a href="card.html" class="link card-link">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/wheels-desktop.png" />
+                <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+              </picture>
+            </a>
+            <div class="caption card-info">
+              <h3 class="card-name">
+                <a href="card.html" class="link card-link">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </a>
+              </h3>
+              <p class="card-price">16 800 руб./лот</p>
+              <p>
+                <a href="card.html" class="btn card-btn" role="button">
+                  Купить
+                </a>
+              </p>
+            </div>
+            <div class="card-panel">
+              <span class="card-stiker">Новинка</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile">
+          <div class="thumbnail card-item">
+            <a href="card.html" class="link card-link">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/wheels-desktop.png" />
+                <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+              </picture>
+            </a>
+            <div class="caption card-info">
+              <h3 class="card-name">
+                <a href="#" class="link card-link">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </a>
+              </h3>
+              <p class="card-price">16 800 руб./лот</p>
+              <p>
+                <a href="#" class="btn card-btn" role="button">Купить</a>
+              </p>
+            </div>
+            <div class="card-panel">
+              <span class="card-stiker">Новинка</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block card-block-mobile">
+          <div class="thumbnail card-item">
+            <a href="card.html" class="link card-link">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/wheels-desktop.png" />
+                <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+              </picture>
+            </a>
+            <div class="caption card-info">
+              <h3 class="card-name">
+                <a href="#" class="link card-link">
+                  18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                </a>
+              </h3>
+              <p class="card-price">16 800 руб./лот</p>
+              <p>
+                <a href="#" class="btn card-btn" role="button">Купить</a>
+              </p>
+            </div>
+            <div class="card-panel">
+              <span class="card-stiker">Новинка</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="row reviews-container">
+        <h2 class="reviews-title">
+          11 лет продаем диски и шины от Федота на Дроме и Авито
+        </h2>
+        <div class="reviews-wrapper">
+          <div class="col-sm-6 reviews-block">
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <a class="reviews-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="images/drom-desktop.svg" />
+                    <img class="reviews-img" src="../src/images/drom-mobile.svg" alt="Drom" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <p class="reviews-rating">1 272 (99,5%)</p>
+                <p class="reviews-name">Рейтинг на Дроме</p>
+              </div>
+              <div class="reviews-item">
+                <a class="reviews-view" href="">Посмотреть отзывы</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 reviews-block">
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <a class="reviews-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="images/avito-desktop.svg" />
+                    <img class="reviews-img" src="../src/images/avito-mobile.svg" alt="Avito" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <p class="reviews-rating">4,9 (162 оценок)</p>
+                <p class="reviews-name">Рейтинг на Авито</p>
+              </div>
+              <div class="reviews-item">
+                <a class="reviews-view" href="">Посмотреть отзывы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stock">
+      <div class="row">
+        <h2 class="stock-title">Наш склад в Барнауле</h2>
+        <div class="stock-wrapper">
+          <div class="row stock-list">
+            <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
+              <a href="#" class="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="images/stock1-desktop.jpg" />
+                  <img class="stock-img img-responsive" src="../src/images/stock1-mobile.jpg" alt="" />
+                </picture>
               </a>
             </div>
-            <div class="col-sm-3 footer-item">
-              <h5 class="footer-title">Покупателю</h5>
-              <a class="footer-link" href="">Оплата и доставка</a>
-              <a class="footer-link" href="">Гарантии</a>
-              <a class="footer-link" href="">Вопрос-ответ</a>
-              <a class="footer-link" href="">Новинки</a>
-            </div>
-            <div class="col-sm-3 footer-item">
-              <h5 class="footer-title">О магазине</h5>
-              <a class="footer-link" href="">Новости</a>
-              <a class="footer-link" href="about.html">О нас</a>
-            </div>
-            <div class="col-sm-3 footer-item">
-              <h5 class="footer-title">Наши контакты</h5>
-              <a class="footer-link" href="">+7‒983‒388‒45‒06</a>
-              <a class="footer-link" href="">zakaz@fedot22.ru</a>
-              <a class="footer-link" href="">
-                Барнаул, ​Рыбозаводской проезд, 42
+            <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
+              <a href="#" class="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="images/stock2-desktop.jpg" />
+                  <img class="stock-img img-responsive" src="../src/images/stock1-mobile.jpg" alt="" />
+                </picture>
               </a>
             </div>
-            <div class="col-sm-3 footer-item">
-              <a class="footer-link footer-link-wa" href="+79833884506">
-                Написать в WhatsApp
-              </a>
-              <a class="footer-link" href="+79833884506">
-                <img
-                  class="footer-img"
-                  src="../src/images/whatsapp.svg"
-                  alt="Whatsapp"
-                />
+            <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item stock-item-mobile">
+              <a href="#" class="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="images/stock3-desktop.jpg" />
+                  <img class="stock-img img-responsive" src="../src/images/stock1-mobile.jpg" alt="" />
+                </picture>
               </a>
             </div>
-            <div class="col-sm-3 footer-item">
-              <a class="footer-link footer-link-email" href="https://catda.ru/">
-                Разработка сайта
-              </a>
-              <a class="footer-img" href="https://catda.ru/">
-                <img src="../src/images/catafot.svg" alt="Catafot" />
+            <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item stock-item-mobile">
+              <a href="#" class="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="images/stock4-desktop.jpg" />
+                  <img class="stock-img img-responsive" src="../src/images/stock1-mobile.jpg" alt="" />
+                </picture>
               </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="button-wrapper">
+        <div class="button-stock">
+          <a href="" class="button-stock">Все фотографии склада</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="foot-top">
+      <div class="container"></div>
+    </div>
+    <div class="container">
+      <div class="row footer-wrapper">
+        <div class="middle-footer">
+          <div class="col-sm-3 footer-item">
+            <p class="footer-info">Диски & Шины от Федота © 2022</p>
+            <p class="footer-info">ИП Иванов</p>
+            <p class="footer-info">ИНН: 2221066669473</p>
+            <p class="footer-info">Не является публичной офертой</p>
+            <a class="footer-link" href="">Политика конфиденциальности</a>
+            <a class="footer-link" href="">
+              Согласие на обработку персональных данных
+            </a>
+          </div>
+          <div class="col-sm-3 footer-item">
+            <h5 class="footer-title">Покупателю</h5>
+            <a class="footer-link" href="">Оплата и доставка</a>
+            <a class="footer-link" href="">Гарантии</a>
+            <a class="footer-link" href="">Вопрос-ответ</a>
+            <a class="footer-link" href="">Новинки</a>
+          </div>
+          <div class="col-sm-3 footer-item">
+            <h5 class="footer-title">О магазине</h5>
+            <a class="footer-link" href="">Новости</a>
+            <a class="footer-link" href="about.html">О нас</a>
+          </div>
+          <div class="col-sm-3 footer-item">
+            <h5 class="footer-title">Наши контакты</h5>
+            <a class="footer-link" href="">+7‒983‒388‒45‒06</a>
+            <a class="footer-link" href="">zakaz@fedot22.ru</a>
+            <a class="footer-link" href="">
+              Барнаул, ​Рыбозаводской проезд, 42
+            </a>
+          </div>
+          <div class="col-sm-3 footer-item">
+            <a class="footer-link footer-link-wa" href="+79833884506">
+              Написать в WhatsApp
+            </a>
+            <a class="footer-link" href="+79833884506">
+              <img class="footer-img" src="../src/images/whatsapp.svg" alt="Whatsapp" />
+            </a>
+          </div>
+          <div class="col-sm-3 footer-item">
+            <a class="footer-link footer-link-email" href="https://catda.ru/">
+              Разработка сайта
+            </a>
+            <a class="footer-img" href="https://catda.ru/">
+              <img src="../src/images/catafot.svg" alt="Catafot" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

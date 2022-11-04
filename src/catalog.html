@@ -80,27 +80,26 @@
   <main class="main">
     <section class="catalog">
       <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-link breadcrumb-link-index" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-link" href="catalog.html">
+              Комплекты Дисков</a>
+          </li>
+        </ul>
         <div class="row catalog-row">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a class="breadcrumb-link breadcrumb-link-index" href="index.html">Главная</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a class="breadcrumb-link" href="catalog.html">
-                Комплекты Дисков</a>
-            </li>
-          </ul>
-
-          <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="col-xs-12 col-sm-3 col-md-3 catalog-sidebar">
             <h2 class="title catalog-title-mobile">Комплекты Дисков</h2>
             <h2 class="title catalog-title-desktop">Подбор по параметрам</h2>
-            <div class="catalog-filter">
+            <div class="catalog-filter-btn">
               <button class="btn catalog-btn" type="button" data-toggle="collapse" data-target="#footwear"
-                aria-expanded="false" aria-controls="footwear">
-                Фильтр
+                aria-expanded="false" aria-controls="footwear" id="show">
+                <span>Фильтр</span>
               </button>
             </div>
-            <div class="collapse" id="footwear">
+            <div class="collapse catalog-collapse" id="footwear">
               <div id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="catalog-clear">
                   <a class="catalog-clear-all" href="">Очистить все</a>
@@ -115,10 +114,17 @@
                     </h4>
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
-                    </label>
+                    <div class="panel-price-slider">
+                      <div class="panel-price-range"></div>
+                      <div class="panel-price-inputs">
+                        <label class="panel-price-label">
+                          <input type="number" min="10" max="999999" placeholder="99" class="panel-price-input">
+                        </label>
+                        <label class="panel-price-label">
+                          <input type="number" min="10" max="999999" placeholder="999999" class="panel-price-input">
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -131,9 +137,10 @@
                     </h4>
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -148,9 +155,10 @@
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
                     aria-labelledby="headingThree">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -164,9 +172,10 @@
                     </h4>
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -180,9 +189,10 @@
                     </h4>
                   </div>
                   <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -196,9 +206,10 @@
                     </h4>
                   </div>
                   <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -213,9 +224,10 @@
                   </div>
                   <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
                     aria-labelledby="headingSeven">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -230,9 +242,10 @@
                   </div>
                   <div id="collapseEight" class="panel-collapse collapse" role="tabpanel"
                     aria-labelledby="headingEight">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -246,9 +259,10 @@
                     </h4>
                   </div>
                   <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -262,9 +276,10 @@
                     </h4>
                   </div>
                   <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
@@ -279,19 +294,233 @@
                   </div>
                   <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel"
                     aria-labelledby="headingEleven">
-                    <input class="form-input panel-form" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-label panel-label" for="defaultCheck1">
-                      Все варианты
+                    <label class="form-label panel-label">
+                      <input class="form-input panel-checkbox" type="checkbox" />
+                      <span class="panel-fake"></span>
+                      <span>Все варианты</span>
                     </label>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="col-xs-12 col-sm-8 pull-right sort">
             <h2 class="catalog-head-desktop">Комплекты Дисков</h2>
+            <div class="sort-wrap">
+              <div class="sort-wrapper">
+                <div class="sort-select">
+                  <button type="button" class="btn sort-btn sort-btn-first">
+                  </button>
+                  <button type="button" class="btn sort-btn sort-btn-second">
+                  </button>
+                </div>
+                <div class="sort-compare">
+                  <p class="sort-compare-text">Сравнение (0)</p>
+                </div>
+              </div>
+              <div class="sort-block">
+                <span class="sort-label">Сортировать по</span>
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle sort-dropdown sort-dropdown-first" type="button" id="sort-dropdown"
+                    data-toggle="dropdown" aria-expanded="false">
+                    <span class="sort-text">По умолчанию</span>
+                  </button>
+                  <ul class="dropdown-menu sort-menu" role="menu" aria-labelledby="sort_dropdown">
+                    <li><a href="">...</a></li>
+                    <li>
+                      <a href="">...</a>
+                    </li>
+                    <li>
+                      <a href="">...</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sort-block">
+                <span class="sort-label">Показывать по</span>
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle sort-dropdown sort-dropdown-second" type="button"
+                    id="sort-dropdown" data-toggle="dropdown" aria-expanded="false">
+                    <span class="sort-text">15</span>
+                  </button>
+                  <ul class="dropdown-menu sort-menu" role="menu" aria-labelledby="sort_dropdown">
+                    <li><a href="">...</a></li>
+                    <li>
+                      <a href="">...</a>
+                    </li>
+                    <li>
+                      <a href="">...</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row catalog-list">
+              <div class="col-xs-6 col-sm-4 card-block catalog-block">
+                <div class="thumbnail card-item">
+                  <a href="card.html" class="link card-link">
+                    <picture>
+                      <source media="(min-width: 1520px)" srcset="images/wheels-desktop.png" />
+                      <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+                    </picture>
+                  </a>
+                  <div class="caption card-info">
+                    <h3 class="card-name">
+                      <a href="card.html" class="link card-link">
+                        18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                      </a>
+                    </h3>
+                    <p class="card-price">16 800 руб./лот</p>
+                    <p>
+                      <a href="card.html" class="btn card-btn" role="button">
+                        Купить
+                      </a>
+                    </p>
+                  </div>
+                  <div class="card-panel catalog-panel">
+                    <span class="card-stiker">Новинка</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 card-block catalog-block">
+                <div class="thumbnail card-item">
+                  <a href="card.html" class="link card-link">
+                    <picture>
+                      <source media="(min-width: 1520px)" srcset="images/wheels-desktop.png" />
+                      <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+                    </picture>
+                  </a>
+                  <div class="caption card-info">
+                    <h3 class="card-name">
+                      <a href="card.html" class="link card-link">
+                        18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                      </a>
+                    </h3>
+                    <p class="card-price">16 800 руб./лот</p>
+                    <p>
+                      <a href="card.html" class="btn card-btn" role="button">
+                        Купить
+                      </a>
+                    </p>
+                  </div>
+                  <div class="card-panel catalog-panel">
+                    <span class="card-stiker">Новинка</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 card-block catalog-block">
+                <div class="thumbnail card-item">
+                  <a href="card.html" class="link card-link">
+                    <picture>
+                      <source media="(min-width: 1520px)" srcset="images/wheels-desktop.png" />
+                      <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+                    </picture>
+                  </a>
+                  <div class="caption card-info">
+                    <h3 class="card-name">
+                      <a href="card.html" class="link card-link">
+                        18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                      </a>
+                    </h3>
+                    <p class="card-price">16 800 руб./лот</p>
+                    <p>
+                      <a href="card.html" class="btn card-btn" role="button">
+                        Купить
+                      </a>
+                    </p>
+                  </div>
+                  <div class="card-panel catalog-panel">
+                    <span class="card-stiker">Новинка</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 card-block catalog-block">
+                <div class="thumbnail card-item">
+                  <a href="card.html" class="link card-link">
+                    <picture>
+                      <source media="(min-width: 1520px)" srcset="images/wheels-desktop.png" />
+                      <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+                    </picture>
+                  </a>
+                  <div class="caption card-info">
+                    <h3 class="card-name">
+                      <a href="card.html" class="link card-link">
+                        18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                      </a>
+                    </h3>
+                    <p class="card-price">16 800 руб./лот</p>
+                    <p>
+                      <a href="card.html" class="btn card-btn" role="button">
+                        Купить
+                      </a>
+                    </p>
+                  </div>
+                  <div class="card-panel catalog-panel">
+                    <span class="card-stiker">Новинка</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 card-block catalog-block">
+                <div class="thumbnail card-item">
+                  <a href="card.html" class="link card-link">
+                    <picture>
+                      <source media="(min-width: 1520px)" srcset="images/wheels-desktop.png" />
+                      <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+                    </picture>
+                  </a>
+                  <div class="caption card-info">
+                    <h3 class="card-name">
+                      <a href="card.html" class="link card-link">
+                        18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                      </a>
+                    </h3>
+                    <p class="card-price">16 800 руб./лот</p>
+                    <p>
+                      <a href="card.html" class="btn card-btn" role="button">
+                        Купить
+                      </a>
+                    </p>
+                  </div>
+                  <div class="card-panel catalog-panel">
+                    <span class="card-stiker">Новинка</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 card-block catalog-block">
+                <div class="thumbnail card-item">
+                  <a href="card.html" class="link card-link">
+                    <picture>
+                      <source media="(min-width: 1520px)" srcset="images/wheels-desktop.png" />
+                      <img class="card-img" src="../src/images/wheels-mobile.png" alt="Wheels" />
+                    </picture>
+                  </a>
+                  <div class="caption card-info">
+                    <h3 class="card-name">
+                      <a href="card.html" class="link card-link">
+                        18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1
+                      </a>
+                    </h3>
+                    <p class="card-price">16 800 руб./лот</p>
+                    <p>
+                      <a href="card.html" class="btn card-btn" role="button">
+                        Купить
+                      </a>
+                    </p>
+                  </div>
+                  <div class="card-panel catalog-panel">
+                    <span class="card-stiker">Новинка</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-show">
+              <p class="catalog-pages">
+                Показано с 1 по 3 из 3 (всего страниц: 1)
+              </p>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <section class="reviews">

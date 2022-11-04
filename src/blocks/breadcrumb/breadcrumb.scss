@@ -9,6 +9,20 @@
   color: #171717;
 }
 
+.breadcrumb-link:hover,
+.breadcrumb-link:focus,
+.breadcrumb-link:active {
+  color: #171717;
+  text-decoration: none;
+}
+
+.breadcrumb-link-index:hover,
+.breadcrumb-link-index:focus,
+.breadcrumb-link-index:active {
+  color: #e01f35;
+  text-decoration: none;
+}
+
 .breadcrumb-link-index {
   color: #e01f35;
 }
