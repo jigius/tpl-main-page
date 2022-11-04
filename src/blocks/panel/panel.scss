@@ -43,37 +43,19 @@
 .panel-title::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 1px;
+  width: 14px;
+  height: 8px;
   right: 0;
   top: 8px;
-  /*  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
-  background-color: red;
+  background-image: url("/src/images/dropdown-arrow.svg");
   transition: all 0.3s ease 0s;
-  /*  background-image: url("/src/images/dropdown-arrow.svg");
   background-repeat: no-repeat;
-  background-size: contain; */
+  background-size: contain;
 }
 
-.panel-title::before {
-  transform: rotate(-40deg);
-  right: 0;
-}
-
-.panel-title::after {
-  transform: rotate(40deg);
-  right: 7px;
-}
-
-.panel-title.active:before {
-  transform: rotate(40deg);
-}
-
+.panel-title.active:before,
 .panel-title.active:after {
-  transform: rotate(-40deg);
+  transform: rotate(180deg);
 }
 
 .panel-heading {
@@ -101,6 +83,7 @@
   line-height: 18px;
   color: #171717;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .panel-default:not(:last-child) {
@@ -183,6 +166,7 @@
   top: 3px;
   margin-right: 14px;
   border: 1px solid #e6e6e6;
+  cursor: pointer;
 }
 
 .panel-fake::before {
