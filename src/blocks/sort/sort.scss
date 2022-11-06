@@ -1,0 +1,171 @@
+.sort {
+  padding: 0;
+}
+
+.sort-wrap {
+  padding: 15px;
+  border: 1px solid #d3d3d3;
+}
+
+.sort-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sort-dropdown {
+  position: relative;
+  width: 100%;
+  padding: 9px 20px 9px 10px;
+  border: 1px solid #d3d3d3;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.sort-dropdown:focus {
+  outline: none !important;
+}
+
+.sort-dropdown::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 6px;
+  right: 10px;
+  top: 17px;
+  background-image: url("/src/images/dropdown-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sort-dropdown-first {
+  min-width: 147px;
+}
+
+.sort-dropdown-second {
+  min-width: 152px;
+}
+
+.sort-menu {
+  top: 39px !important;
+}
+
+.sort-label {
+  font-weight: 700;
+  color: #777777;
+}
+
+.sort-text {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  color: #777777;
+}
+
+.sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-wrap {
+  margin-bottom: 30px;
+}
+
+.sort-select {
+  margin-bottom: 10px;
+}
+
+.sort-btn {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 17px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.sort-btn:hover,
+.sort-btn:active,
+.sort-btn:focus {
+  border-radius: 0;
+  box-shadow: 0 0 0 7px #ffffff, 0 0 0 8px #d3d3d3;
+  outline: none !important;
+}
+
+.sort-btn:active {
+}
+
+.sort-btn-first {
+  background-image: url("/src/images/select-view.svg");
+}
+
+.sort-btn-second {
+  background-image: url("/src/images/select-view2.svg");
+  border-radius: 0;
+}
+
+.sort-compare-text {
+  font-weight: 700;
+  color: #777777;
+}
+
+@media (min-width: 768px) {
+  .sort-compare-text,
+  .sort-label,
+  .sort-text {
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sort-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sort-dropdown-first {
+    min-width: 123px;
+  }
+
+  .sort-dropdown-second {
+    min-width: 63px;
+  }
+
+  .sort-wrapper {
+    justify-content: normal;
+  }
+
+  .sort-block {
+    justify-content: normal;
+  }
+
+  .sort-label:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+@media (min-width: 1520px) {
+  .sort-wrap {
+    padding: 11px 20px;
+  }
+
+  .sort-select {
+    margin-right: 65px;
+  }
+
+  .sort-compare {
+    margin-right: 300px;
+  }
+
+  .sort-block:not(:last-child) {
+    margin-right: 29px;
+  }
+}
