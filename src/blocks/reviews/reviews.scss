@@ -49,12 +49,12 @@
   color: #171717;
 }
 
-.reviews-view::before {
+.reviews-view::after {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  right: -55px;
+  margin-left: 5px;
   bottom: 0;
   background-image: url("../../images/arrow.svg");
   background-repeat: no-repeat;

@@ -593,12 +593,12 @@ $(document).delegate(".agree", "click", function (e) {
     });
   };
 
-  const btn = document.querySelector(".btn > span");
-  btn.addEventListener("click", function () {
-    btn.innerHTML =
-      btn.innerHTML === "Фильтр"
-        ? (btn.innerHTML = "Скрыть фильтр")
-        : (btn.innerHTML = "Фильтр");
+  $(".btn").click(function () {
+    var $btn = $(this);
+    var text = $btn.text();
+    var label = $btn.data("label");
+
+    $btn.text(label).data("label", text);
   });
 
   $(document).ready(function () {
