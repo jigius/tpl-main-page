@@ -47,6 +47,11 @@ module.exports = {
       chunks: ['main', 'catalog']
     }),
     new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/catalog-list.html"), // шаблон
+      filename: "catalog-list.html", // название выходного файла
+    }),
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
     }),
