@@ -40,6 +40,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/card.html"), // шаблон
       filename: "card.html", // название выходного файла
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog.html"), // шаблон
@@ -49,19 +50,23 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog-list.html"), // шаблон
       filename: "catalog-list.html", // название выходного файла
+      chunks: ['main', 'catalog']
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/delivery.html"), // шаблон
       filename: "delivery.html", // название выходного файла
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/about.html"), // шаблон
       filename: "about.html", // название выходного файла
+      chunks: ['main']
     }),
   ],
   module: {
