@@ -3,15 +3,19 @@ const OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
 const path = require("path");
+const glob = require("glob");
 
 module.exports = {
-  entry: "./src/js/app.js",
+  entry: {
+      main: "./src/js/app.js",
+      sample: glob.sync("./src/js/page/sample/**/*.js"),
+      catalog: glob.sync("./src/js/page/catalog/**/*.js")
+  },
   mode: "development",
   output: {
     path: `${__dirname}/dist`,
-    filename: "bundle.js",
+    filename: "[name]-bundle.js",
     clean: true,
   },
 
@@ -23,30 +27,33 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/template.html"), // шаблон
-      filename: "index.html", // название выходного файла
+      template: path.resolve(__dirname, "./src/template.html"), // main page
+      filename: "index.html",
+        chunks: ['main']
     }),
     new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/sample.html"), // sample template
+      filename: "sample.html", // result page into ./dist folder
+      chunks: ['main', 'sample']
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/card.html"), // шаблон
       filename: "card.html", // название выходного файла
     }),
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog.html"), // шаблон
       filename: "catalog.html", // название выходного файла
+      chunks: ['main', 'catalog']
     }),
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
     }),
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/delivery.html"), // шаблон
       filename: "delivery.html", // название выходного файла
     }),
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/about.html"), // шаблон
       filename: "about.html", // название выходного файла
