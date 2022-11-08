@@ -12,7 +12,7 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <button class="navbar-toggler collapsed" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
           data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="toggler-icon top-bar"></span>
@@ -91,12 +91,12 @@
         </ul>
         <div class="row catalog-row">
           <div class="col-xs-12 col-sm-3 col-md-3 catalog-sidebar">
-            <h2 class="title catalog-title-mobile">Комплекты Дисков</h2>
+            <h1 class="title catalog-title">Комплекты Дисков</h1>
             <h2 class="title catalog-title-desktop">Подбор по параметрам</h2>
             <div class="catalog-filter-btn">
-              <button class="btn catalog-btn" type="button" data-toggle="collapse" data-target="#footwear"
-                aria-expanded="false" aria-controls="footwear" id="show">
-                <span>Фильтр</span>
+              <button class="btn catalog-btn" type="button" data-label="Скрыть фильтр" data-toggle="collapse"
+                data-target="#footwear" aria-expanded="false" aria-controls="footwear">
+                Фильтр
               </button>
             </div>
             <div class="collapse catalog-collapse" id="footwear">
@@ -304,8 +304,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-8 pull-right sort">
-            <h2 class="catalog-head-desktop">Комплекты Дисков</h2>
+          <div class="col-xs-12 col-sm-9 col-md-9 sort">
             <div class="sort-wrap">
               <div class="sort-wrapper">
                 <div class="sort-select">
@@ -321,7 +320,7 @@
               <div class="sort-block">
                 <span class="sort-label">Сортировать по</span>
                 <div class="dropdown">
-                  <button class="btn dropdown-toggle sort-dropdown sort-dropdown-first" type="button" id="sort-dropdown"
+                  <button class="btn dropdown-toggle sort-dropdown sort-dropdown-first" type="button"
                     data-toggle="dropdown" aria-expanded="false">
                     <span class="sort-text">По умолчанию</span>
                   </button>
@@ -340,7 +339,7 @@
                 <span class="sort-label">Показывать по</span>
                 <div class="dropdown">
                   <button class="btn dropdown-toggle sort-dropdown sort-dropdown-second" type="button"
-                    id="sort-dropdown" data-toggle="dropdown" aria-expanded="false">
+                    data-toggle="dropdown" aria-expanded="false">
                     <span class="sort-text">15</span>
                   </button>
                   <ul class="dropdown-menu sort-menu" role="menu" aria-labelledby="sort_dropdown">
