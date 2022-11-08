@@ -1,82 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Шины и диски от Федота</title>
-</head>
+${require('./partials/head.html')}
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="toggler-icon top-bar"></span>
-          <span class="toggler-icon middle-bar"></span>
-          <span class="toggler-icon bottom-bar"></span>
-        </button>
-        <a class="navbar-brand navbar-logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="images/logo-desktop.svg" />
-            <img class="" src="../src/images/logo-mobile.svg" alt="Logo" />
-          </picture>
-        </a>
-        <div class="navbar-tel-mobile">
-          <a class="navbar-number-mobile" href="+79833884506">+7‒983‒388‒45‒06</a>
-        </div>
-        <div class="navbar-contact">
-          <p class="navbar-country">Барнаул,​</p>
-          <p class="navbar-adress">Рыбозаводской проезд, 42</p>
-        </div>
-        <div class="button button-desktop">
-          <a href="" class="button-call button-call-desktop">Обратный звонок</a>
-        </div>
-        <div class="navbar-tel navbar-tel-desktop">
-          <a class="navbar-number" href="+79833884506">+7‒983‒388‒45‒06</a>
-          <a class="navbar-wa" href="+79833884506">
-            <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="navbar-item">
-            <a class="navbar-link" href="#">Диски<span class="sr-only"></span></a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#">Шины</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="reviews.html">Отзывы</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#">Как купить</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="delivery.html">Оплата и доставка</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="about.html">О нас</a>
-          </li>
-        </ul>
-        <div class="feedback">
-          <a class="feedback-link" href="">Написать в WhatsApp</a>
-          <a class="feedback-wa" href="+79833884506">
-            <img src="../src/images/whatsapp.svg" alt="Whatsapp" />
-          </a>
-        </div>
-        <div class="button button-mobile">
-          <a href="" class="button-call button-call-mobile">Обратный звонок</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  ${require('./partials/navbar.html')}
+
   <main class="main">
     <section class="catalog">
       <div class="container">
@@ -761,55 +690,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="foot-top">
-      <div class="container"></div>
-    </div>
-    <div class="container">
-      <div class="row footer-wrapper">
-        <div class="middle-footer">
-          <div class="col-sm-3 footer-item">
-            <p class="footer-info">Диски & Шины от Федота © 2022</p>
-            <p class="footer-info">ИП Иванов</p>
-            <p class="footer-info">ИНН: 2221066669473</p>
-            <p class="footer-info">Не является публичной офертой</p>
-            <a class="footer-link" href="">Политика конфиденциальности</a>
-            <a class="footer-link" href="">Согласие на обработку персональных данных</a>
-          </div>
-          <div class="col-sm-3 footer-item">
-            <h5 class="footer-title">Покупателю</h5>
-            <a class="footer-link" href="">Оплата и доставка</a>
-            <a class="footer-link" href="">Гарантии</a>
-            <a class="footer-link" href="">Вопрос-ответ</a>
-            <a class="footer-link" href="">Новинки</a>
-          </div>
-          <div class="col-sm-3 footer-item">
-            <h5 class="footer-title">О магазине</h5>
-            <a class="footer-link" href="">Новости</a>
-            <a class="footer-link" href="">О нас</a>
-          </div>
-          <div class="col-sm-3 footer-item">
-            <h5 class="footer-title">Наши контакты</h5>
-            <a class="footer-link" href="">+7‒983‒388‒45‒06</a>
-            <a class="footer-link" href="">zakaz@fedot22.ru</a>
-            <a class="footer-link" href="">Барнаул, ​Рыбозаводской проезд, 42</a>
-          </div>
-          <div class="col-sm-3 footer-item">
-            <a class="footer-link footer-link-wa" href="+79833884506">Написать в WhatsApp</a>
-            <a class="footer-link" href="+79833884506">
-              <img class="footer-img" src="../src/images/whatsapp.svg" alt="Whatsapp" />
-            </a>
-          </div>
-          <div class="col-sm-3 footer-item">
-            <a class="footer-link footer-link-email" href="https://catda.ru/">Разработка сайта</a>
-            <a class="footer-img" href="https://catda.ru/">
-              <img src="../src/images/catafot.svg" alt="Catafot" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  ${require('./partials/footer.html')}
 </body>
 
 </html>

@@ -4,4 +4,4 @@
  *
  * !!! НЕ БУДЕТ включен в окончательную сборку проекта
  */
-console.log("hello from demo.js");
+alert("hello from demo.js");

@@ -73,7 +73,14 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader",
+          include: path.join(__dirname, 'src'),
+          use: [ {
+              loader: 'html-loader',
+              options: {
+                  interpolate: true,
+                  attrs: ['img:src', "source:srcset"]
+              }
+          }],
       },
       {
         test: /\.(css|scss)$/,
