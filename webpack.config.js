@@ -8,9 +8,9 @@ const glob = require("glob");
 
 module.exports = {
   entry: {
-      main: "./src/js/app.js",
-      sample: glob.sync("./src/js/page/sample/**/*.js"),
-      catalog: glob.sync("./src/js/page/catalog/**/*.js")
+    main: "./src/js/app.js",
+    sample: glob.sync("./src/js/page/sample/**/*.js"),
+    catalog: glob.sync("./src/js/page/catalog/**/*.js"),
   },
   mode: "development",
   output: {
@@ -29,58 +29,60 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/template.html"), // main page
       filename: "index.html",
-        chunks: ['main']
+      chunks: ["main"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/sample.html"), // sample template
       filename: "sample.html", // result page into ./dist folder
-      chunks: ['main', 'sample']
+      chunks: ["main", "sample"],
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/card.html"), // шаблон
-      filename: "card.html", // название выходного файла
-      chunks: ['main']
+      template: path.resolve(__dirname, "./src/card-catalog.html"), // шаблон
+      filename: "card-catalog.html", // название выходного файла
+      chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog.html"), // шаблон
       filename: "catalog.html", // название выходного файла
-      chunks: ['main', 'catalog']
+      chunks: ["main", "catalog"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog-list.html"), // шаблон
       filename: "catalog-list.html", // название выходного файла
-      chunks: ['main', 'catalog']
+      chunks: ["main", "catalog"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
-      chunks: ['main']
+      chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/delivery.html"), // шаблон
       filename: "delivery.html", // название выходного файла
-      chunks: ['main']
+      chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/about.html"), // шаблон
       filename: "about.html", // название выходного файла
-      chunks: ['main']
+      chunks: ["main"],
     }),
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
-          include: path.join(__dirname, 'src'),
-          use: [ {
-              loader: 'html-loader',
-              options: {
-                  interpolate: true,
-                  attrs: ['img:src', "source:srcset"]
-              }
-          }],
+        include: path.join(__dirname, "src"),
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              interpolate: true,
+              attrs: ["img:src", "source:srcset"],
+            },
+          },
+        ],
       },
       {
         test: /\.(css|scss)$/,
