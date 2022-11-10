@@ -10,6 +10,7 @@
   cursor: pointer;
 }
 
+.button:hover,
 .button-call:hover,
 .selection-button:hover,
 .button-stock:hover {
@@ -56,6 +57,23 @@
   display: none;
 }
 
+.button-card {
+  margin: 0;
+  padding: 8px 28px;
+}
+
+.button-feedback {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 15px 50px;
+  color: #2D245B;
+  background-color: #E9E9E9;
+}
+
+.button-feedback:hover {
+  background-color: #cacaca;
+}
+
 @media (min-width: 768px) {
   .button {
     display: none;
@@ -73,6 +91,14 @@
       background-color: #cb192e;
       color: #ffffff;
     }
+  }
+
+  .button-card {
+    display: block;
+  }
+
+  .button-feedback {
+    display: block;
   }
 }
 
