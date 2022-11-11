@@ -3,11 +3,6 @@
   max-width: 500px;
 }
 
-.panel-default > .panel-heading + .panel-collapse > .panel-body {
-  height: 160px;
-  overflow: auto;
-}
-
 .panel-heading a {
   display: block;
   position: relative;
@@ -96,10 +91,6 @@
   color: #b7b7b7;
 }
 
-.panel-default:not(:last-child) {
-  border-bottom: transparent;
-}
-
 .panel-default > .panel-heading {
   background-color: transparent;
   border-color: transparent;
@@ -140,6 +131,7 @@
   width: 100%;
   height: 2px;
   background-color: #e01f35;
+  margin-top: 4px;
   margin-bottom: 18px;
 }
 
@@ -202,13 +194,30 @@
   opacity: 1;
 }
 
-.panel-collapse-scroll {
-  overflow: scroll !important;
-  height: 160px !important;
+.panel-body {
+  padding: 0;
+  height: 160px;
+  overflow: scroll;
 }
 
-.panel-collapse-open {
-  display: block;
+.panel-price-slider {
+  height: auto;
+}
+
+.panel-default {
+  border-bottom: none;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: transparent;
+}
+
+.panel-group .panel + .panel {
+  margin: 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar {

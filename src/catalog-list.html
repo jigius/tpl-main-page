@@ -29,20 +29,19 @@ ${require('./partials/head.html')}
               </button>
             </div>
             <div class="collapse catalog-collapse" id="footwear">
-              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel-group" id="accordion">
                 <div class="catalog-clear">
                   <a class="catalog-clear-all" href="">Очистить все</a>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingOne">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                         Цена, ₽
                       </a>
                     </h4>
                   </div>
-                  <div class="panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-collapse collapse in" id="collapseOne">
                     <div class="panel-body panel-price-slider">
                       <div class="panel-price-range"></div>
                       <div class="panel-price-inputs">
@@ -57,16 +56,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingOne">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                        aria-expanded="false" aria-controls="collapseTwo">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                         Бренд
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTwo" class="panel-collapse-scroll panel-collapse-open collapse" role="tabpanel"
-                    aria-labelledby="headingTwo">
+                  <div class="panel-collapse collapse" id="collapseTwo">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -97,16 +94,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingThree">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
-                        aria-expanded="false" aria-controls="collapseThree">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                         Вес диска, кг
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseThree" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingThree">
+                  <div class="panel-collapse collapse" id="collapseThree">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -137,16 +132,15 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingFour">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
-                        aria-expanded="false" aria-controls="collapseFour">
+                      <a a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseFour">
                         Диаметр, дюйм
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseFour" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingFour">
+                  <div class="panel-collapse collapse" id="collapseFour">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -177,16 +171,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingFive">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
-                        aria-expanded="false" aria-controls="collapseFive">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                         Ширина, дюйм
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseFive" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingFive">
+                  <div class="panel-collapse collapse" id="collapseFive">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -217,16 +209,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingSix">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"
-                        aria-expanded="false" aria-controls="collapseSix">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
                         Бренд
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseSix" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingSix">
+                  <div class="panel-collapse collapse" id="collapseSix">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -257,16 +247,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingSeven">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"
-                        aria-expanded="false" aria-controls="collapseSeven">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
                         Вес диска, кг
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseSeven" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingSeven">
+                  <div class="panel-collapse collapse" id="collapseSeven">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -297,16 +285,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingEight">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight"
-                        aria-expanded="false" aria-controls="collapseEight">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
                         Диаметр, дюйм
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseEight" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingEight">
+                  <div class="panel-collapse collapse" id="collapseEight">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -337,16 +323,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingNine">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine"
-                        aria-expanded="false" aria-controls="collapseNine">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
                         Ширина, дюйм
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseNine" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingNine">
+                  <div class="panel-collapse collapse" id="collapseNine">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -377,16 +361,14 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingTen">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen"
-                        aria-expanded="false" aria-controls="collapseTen">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
                         Диаметр, дюйм
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTen" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingTen">
+                  <div class="panel-collapse collapse" id="collapseTen">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
@@ -417,16 +399,15 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingEleven">
+                  <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven"
-                        aria-expanded="false" aria-controls="collapseEleven">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseEleven">
                         Ширина, дюйм
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseEleven" class="panel-collapse-scroll collapse" role="tabpanel"
-                    aria-labelledby="headingEleven">
+                  <div class="panel-collapse collapse" id="collapseEleven">
                     <div class="panel-body">
                       <label class="form-label panel-label">
                         <input class="form-input panel-checkbox" type="checkbox" />
