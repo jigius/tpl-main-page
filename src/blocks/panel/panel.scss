@@ -202,6 +202,7 @@
 
 .panel-price-slider {
   height: auto;
+  overflow: hidden;
 }
 
 .panel-default {
@@ -237,6 +238,10 @@
 @media (min-width: 768px) {
   .panel-label {
     width: 100%;
-    padding-right: 40px;
+    padding: 3px 15px 15px 0;
+  }
+
+  .panel-price-label {
+    padding: 0;
   }
 }
