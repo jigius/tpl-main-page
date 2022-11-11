@@ -3,6 +3,11 @@
   max-width: 500px;
 }
 
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  height: 160px;
+  overflow: auto;
+}
+
 .panel-heading a {
   display: block;
   position: relative;

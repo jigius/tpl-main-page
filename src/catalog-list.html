@@ -29,21 +29,21 @@ ${require('./partials/head.html')}
               </button>
             </div>
             <div class="collapse catalog-collapse" id="footwear">
-              <div id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="catalog-clear">
                   <a class="catalog-clear-all" href="">Очистить все</a>
                 </div>
                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                        aria-controls="collapseOne">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
                         Цена, ₽
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-price-slider">
+                  <div class="panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body panel-price-slider">
                       <div class="panel-price-range"></div>
                       <div class="panel-price-inputs">
                         <label class="panel-price-label">
@@ -57,7 +57,7 @@ ${require('./partials/head.html')}
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingTwo">
+                  <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
                         aria-expanded="false" aria-controls="collapseTwo">
@@ -67,31 +67,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseTwo" class="panel-collapse-scroll panel-collapse-open collapse" role="tabpanel"
                     aria-labelledby="headingTwo">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -105,31 +107,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseThree" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingThree">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -143,32 +147,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseFour" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingFour">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label> варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -182,31 +187,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseFive" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingFive">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -220,31 +227,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseSix" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingSix">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -258,31 +267,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseSeven" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingSeven">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -296,31 +307,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseEight" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingEight">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -334,31 +347,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseNine" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingNine">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -372,31 +387,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseTen" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingTen">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
@@ -410,31 +427,33 @@ ${require('./partials/head.html')}
                   </div>
                   <div id="collapseEleven" class="panel-collapse-scroll collapse" role="tabpanel"
                     aria-labelledby="headingEleven">
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label">
-                      <input class="form-input panel-checkbox" type="checkbox" />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
-                    <label class="form-label panel-label panel-label-disabled">
-                      <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
-                      <span class="panel-fake"></span>
-                      <span>Все варианты</span>
-                    </label>
+                    <div class="panel-body">
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label">
+                        <input class="form-input panel-checkbox" type="checkbox" />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                      <label class="form-label panel-label panel-label-disabled">
+                        <input class="form-input panel-checkbox panel-checkbox-disabled" type="checkbox" disabled />
+                        <span class="panel-fake"></span>
+                        <span>Все варианты</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
