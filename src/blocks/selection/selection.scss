@@ -28,14 +28,26 @@
   margin-bottom: 25px;
 }
 
-.selection-arrow {
+.selection-btn::before {
+  content: "";
   position: absolute;
-  width: 10px;
-  height: 7px;
-  right: 13px;
-  top: 12px;
-  background-image: url("../../images/arrow-dropdown.svg");
-  background-repeat: no-repeat;
+  width: 5px;
+  height: 2px;
+  right: 10.4px;
+  top: 14px;
+  transform: rotate(45deg);
+  background-color: #9d9d9d;
+}
+
+.selection-btn::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  right: 8.3px;
+  top: 14px;
+  transform: rotate(-45deg);
+  background-color: #9d9d9d;
 }
 
 .caret {

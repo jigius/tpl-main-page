@@ -91,10 +91,6 @@
   color: #b7b7b7;
 }
 
-.panel-default:not(:last-child) {
-  border-bottom: transparent;
-}
-
 .panel-default > .panel-heading {
   background-color: transparent;
   border-color: transparent;
@@ -135,6 +131,7 @@
   width: 100%;
   height: 2px;
   background-color: #e01f35;
+  margin-top: 4px;
   margin-bottom: 18px;
 }
 
@@ -197,9 +194,32 @@
   opacity: 1;
 }
 
-.panel-collapse-scroll {
-  overflow: scroll !important;
-  height: 160px !important;
+.panel-body {
+  padding: 0;
+  margin-right: 3px;
+  height: 160px;
+  overflow: scroll;
+}
+
+.panel-price-slider {
+  height: auto;
+  overflow: hidden;
+}
+
+.panel-default {
+  border-bottom: none;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: transparent;
+}
+
+.panel-group .panel + .panel {
+  margin: 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar {
@@ -219,6 +239,10 @@
 @media (min-width: 768px) {
   .panel-label {
     width: 100%;
-    padding-right: 40px;
+    padding: 3px 15px 15px 0;
+  }
+
+  .panel-price-label {
+    padding: 0;
   }
 }

@@ -1,9 +1,16 @@
 .button {
   margin-top: 100px;
   margin-bottom: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #e01f35;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
+.button:hover,
 .button-call:hover,
 .selection-button:hover,
 .button-stock:hover {
@@ -34,7 +41,7 @@
   line-height: 18px;
   color: #ffffff;
   background-color: #e01f35;
-  padding: 7px 23px;
+  padding: 8px 23px;
 }
 
 .button-wrapper {
@@ -48,6 +55,23 @@
 
 .button-desktop {
   display: none;
+}
+
+.button-card {
+  margin: 0;
+  padding: 8px 28px;
+}
+
+.button-feedback {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 15px 50px;
+  color: #2D245B;
+  background-color: #E9E9E9;
+}
+
+.button-feedback:hover {
+  background-color: #cacaca;
 }
 
 @media (min-width: 768px) {
@@ -68,12 +92,19 @@
       color: #ffffff;
     }
   }
+
+  .button-card {
+    display: block;
+  }
+
+  .button-feedback {
+    display: block;
+  }
 }
 
 @media (min-width: 1200px) {
   .button-stock {
     width: 230px;
-    padding: 7px 0;
     margin: 0 auto;
   }
 }
