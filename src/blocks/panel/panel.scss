@@ -39,23 +39,20 @@
   position: relative;
 }
 
-.panel-title::before,
-.panel-title::after {
-  content: "";
+.panel-arrow {
   position: absolute;
   width: 14px;
   height: 8px;
   right: 0;
   top: 8px;
-  background-image: url("/src/images/dropdown-arrow.svg");
-  transition: all 0.3s ease 0s;
+  transition: all 0.1s ease 0s;
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url("/src/images/arrow-up.svg");
 }
 
-.panel-title.active:before,
-.panel-title.active:after {
-  transform: rotate(180deg);
+.collapsed .panel-arrow {
+  background-image: url("/src/images/arrow-down.svg");
 }
 
 .panel-heading {
