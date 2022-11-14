@@ -68,12 +68,27 @@ module.exports = {
       filename: "about.html", // название выходного файла
       chunks: ["main"],
     }),
-      new HtmlWebpackPlugin({
-          // шаблон страницы заказа
-          template: path.resolve(__dirname, "./src/order.html"),
-          filename: "order.html", // название выходного файла
-          chunks: ["main"],
-      }),
+    new HtmlWebpackPlugin({
+      // шаблон страницы заказа
+      template: path.resolve(__dirname, "./src/order.html"),
+      filename: "order.html", // название выходного файла
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/moods/modal-popup.html"),
+      filename: "moods/modal-popup.html",
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/moods/alert.html"),
+      filename: "moods/alert.html",
+      chunks: ["main"],
+    }),
+    /*new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/mood-formcontrols.html"),
+      filename: "mood-formcontrols.html",
+      chunks: ["main"],
+    }),*/
   ],
   module: {
     rules: [
