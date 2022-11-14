@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+${require('./partials/head.html')}
+
+<body>
+  ${require('./partials/navbar.html')}
+
+  <main class="main">
+    <section class="card-catalog">
+      <div class="container">
+        <div class="row card-catalog-row">
+          <div class="col-xs-12 card-catalog-row">
+            <div class="row">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="/order.html">Оформление заказа</a>
+                </li>
+              </ul>
+              <h1 class="card-catalog-name">
+                Оформление заказа
+              </h1>
+            </div>
+            <div class="row order-row">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <td class="text-center"></td>
+                    <td class="text-left">Наименование</td>
+                    <td class="text-left">Лот</td>
+                    <td class="text-right">Количество</td>
+                    <td class="text-right">Цена за шт</td>
+                    <td class="text-right">Всего</td>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="text-center"> <a href="#"><img src="images/wheels.jpg" alt="Поштучно Тойота Сурф/Прадо на 17&quot; 7.5jj (6*139.7)et+30 (Япония) Toyota" title="Поштучно Тойота Сурф/Прадо на 17&quot; 7.5jj (6*139.7)et+30 (Япония) Toyota"></a> </td>
+                    <td class="text-left"><a href="#">Поштучно Тойота Сурф/Прадо на 17" 7.5jj (6*139.7)et+30 (Япония) Toyota</a></td>
+                    <td class="text-left">167541</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">28 000₽</td>
+                    <td class="text-right">28 000₽</td>
+                  </tr>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <td colspan="5" class="text-right"><strong>Итого:</strong></td>
+                    <td class="text-right">28 000₽</td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-xs-12">
+                <form method="post" class="form-horizontal">
+                  <fieldset>
+                    <legend>Заполните данные</legend>
+                    <div class="form-group required">
+                      <label class="col-sm-2 control-label" for="input-name">Ваше имя</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="name" id="input-name" value="" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="form-group required">
+                      <label class="col-sm-2 control-label" for="input-phone">Контактный телефон</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="phone" value="+7 (901) 001 23 3" id="input-phone" class="form-control" required aria-describedby="helpBlockPhone">
+                      </div>
+                    </div>
+                    <div class="form-group required">
+                      <label class="col-sm-2 control-label" for="input-email">E-mail</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="email" value="foo@example.com" id="input-email" class="form-control" required aria-describedby="helpBlockEmail">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label" for="input-address">Адрес доставки</label>
+                      <div class="col-sm-10">
+                        <textarea name="address" id="input-address" class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label" for="input-comment">Комментарий к заказу</label>
+                      <div class="col-sm-10">
+                        <textarea name="comment" id="input-comment" class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"></label>
+                      <div class="col-sm-10">
+                        <input id="input-agree" type="checkbox" name="agree" value="1">&nbsp;&nbsp;<label for="input-agree">Я прочитал(а) и принял(а) <a href="#" class="agree"><b>Соглашение о конфиденциальности персональной информации</b></a></label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="col-md-12 col-xs-12">
+                    <div class="pull-right">
+                      <input type="submit" value="Подтвердить заказ" id="btn_process" class="btn btn-primary">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    ${require('./partials/review.html')}
+  </main>
+
+  ${require('./partials/footer.html')}
+</body>
+
+</html>

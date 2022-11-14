@@ -68,6 +68,12 @@ module.exports = {
       filename: "about.html", // название выходного файла
       chunks: ["main"],
     }),
+      new HtmlWebpackPlugin({
+          // шаблон страницы заказа
+          template: path.resolve(__dirname, "./src/order.html"),
+          filename: "order.html", // название выходного файла
+          chunks: ["main"],
+      }),
   ],
   module: {
     rules: [
