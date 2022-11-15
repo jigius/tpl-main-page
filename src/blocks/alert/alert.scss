@@ -1,0 +1,107 @@
+.alert {
+  position: relative;
+  padding: 18px 40px 17px 100px;
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0;
+}
+
+.alert::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 25px;
+  top: 20px;
+  border-radius: 50%;
+}
+
+.alert-error::after {
+  background-image: url("/src/images/error.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alert-warn::after {
+  background-image: url("/src/images/warning.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alert-inf::after {
+  background-image: url("/src/images/info.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alert-error::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  background-color: #e01f35;
+}
+
+.alert-warn::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  background-color: #ffb900;
+}
+
+.alert-inf::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  background-color: #2fa346;
+}
+
+.alert-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.alert h4 {
+  color: #2d245b;
+}
+
+.alert-text {
+  font-size: 16px;
+  line-height: 129.7%;
+  color: #171717;
+}
+
+.close {
+  font-weight: inherit;
+  width: 10px;
+  height: 10px;
+  color: #2d245b !important;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.alert-dismissable .close,
+.alert-dismissible .close {
+  right: -24px;
+  top: -10px;
+}
+
+@media (min-width: 768px) {
+  .alert {
+    width: 570px;
+  }
+}

@@ -1,0 +1,149 @@
+.modal-content {
+  position: relative;
+  padding: 38px 30px 35px 105px;
+  border-radius: 0;
+}
+
+.modal-header {
+  position: relative;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #2d245b;
+  margin-bottom: 10px;
+}
+
+.modal-text {
+  font-size: 16px;
+  line-height: 129.7%;
+  color: #171717;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 0;
+  border: none;
+}
+
+.modal-body {
+  margin-bottom: 10px;
+}
+
+.modal-footer .btn + .btn {
+  margin: 0;
+}
+
+.modal-footer .btn + .btn:hover,
+.modal-footer .btn + .btn:focus,
+.modal-footer .btn + .btn:active {
+  background-color: #cb192e;
+  outline: none;
+}
+
+.btn-modal {
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  padding: 8px 60px;
+  background-color: #e01f35;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-modal:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.btn-modal-no {
+  background-color: #ffffff;
+  border: 2px solid #e01f35;
+  color: #171717;
+}
+
+.btn-modal-no:hover,
+.btn-modal-no:focus,
+.btn-modal-no:active {
+  background-color: #cb192e !important;
+  border: 2px solid #cb192e !important;
+  color: #ffffff !important;
+  outline: none !important;
+}
+
+.btn-modal:hover,
+.btn-modal:focus,
+.btn-modal:active {
+  text-decoration: none;
+  outline: none;
+  background-color: #cb192e !important;
+}
+
+.modal-header::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -75px;
+  top: 0;
+}
+
+.modal-header-error::before {
+  background-image: url("/src/images/error.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-header-warn::before {
+  background-image: url("/src/images/warning.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-header-info::before {
+  background-image: url("/src/images/info.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-close {
+  position: absolute;
+  font-size: 30px;
+  top: -31px;
+  right: -14px;
+}
+
+@media (min-width: 768px) {
+  .modal-title {
+    margin-bottom: 25px;
+  }
+
+  .modal-body {
+    margin-bottom: 30px;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn-modal {
+    width: 137px;
+  }
+
+  .btn-modal:not(:last-child) {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-content {
+    width: 694px;
+  }
+}

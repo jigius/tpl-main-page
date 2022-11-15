@@ -3,62 +3,65 @@
 ${require('../partials/head.html')}
 
 <body>
-${require('../partials/navbar.html')}
+  ${require('../partials/navbar.html')}
 
-<main class="main">
-  <section class="card-catalog">
-    <div class="container">
-      <div class="row card-catalog-row">
-        <div class="col-xs-12 card-catalog-row">
-          <div class="row">
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a class="breadcrumb-link" href="/moods/alert.html">Примеры алертов</a>
-              </li>
-            </ul>
-            <h1 class="card-catalog-name">
-              Примеры алертов
-            </h1>
+  <main class="main">
+    <section class="card-catalog">
+      <div class="container">
+        <div class="row card-catalog-row">
+          <div class="col-xs-12 card-catalog-row">
+            <div class="row">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="/moods/alert.html">Примеры алертов</a>
+                </li>
+              </ul>
+              <h1 class="card-catalog-name">
+                Примеры алертов
+              </h1>
+            </div>
+
+            <div class="row">
+              <!-- error alert -->
+              <!-- Селектор для кастомизации: .alert-error -->
+              <div class="alert alert-error alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">×</span></button>
+                <h4 class="alert-title">Error!</h4>
+                <p class="alert-text">В наличии! Новые! Красивые литые диски 18" </p>
+              </div>
+
+              <!-- warning alert -->
+              <!-- Селектор для кастомизации: .alert-warning -->
+              <div class="alert alert-warn alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">×</span></button>
+                <h4 class="alert-title">Warning!</h4>
+                <p class="alert-text">В наличии! Новые! Красивые литые диски 18" </p>
+              </div>
+
+              <!-- warning alert -->
+              <!-- Селектор для кастомизации: .alert-info -->
+              <div class="alert alert-inf alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">×</span></button>
+                <h4 class="alert-title">Info!</h4>
+                <p class="alert-text">В наличии! Новые! Красивые литые диски 18" </p>
+              </div>
+            </div>
+
           </div>
-
-          <div class="row">
-            <!-- error alert -->
-            <!-- Селектор для кастомизации: .alert-error -->
-            <div class="alert alert-danger alert-dismissible fade in" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <h4>Error!</h4>
-              <p>В наличии! Новые! Красивые литые диски 18" </p>
-            </div>
-
-            <!-- warning alert -->
-            <!-- Селектор для кастомизации: .alert-warning -->
-            <div class="alert alert-warning alert-dismissible fade in" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <h4>Warning!</h4>
-              <p>В наличии! Новые! Красивые литые диски 18" </p>
-            </div>
-
-            <!-- warning alert -->
-            <!-- Селектор для кастомизации: .alert-info -->
-            <div class="alert alert-info alert-dismissible fade in" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <h4>Info!</h4>
-              <p>В наличии! Новые! Красивые литые диски 18" </p>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  ${require('../partials/review.html')}
-</main>
+    ${require('../partials/review.html')}
+  </main>
 
-${require('../partials/footer.html')}
+  ${require('../partials/footer.html')}
 </body>
 
 </html>
