@@ -3,119 +3,116 @@
 ${require('../partials/head.html')}
 
 <body>
-${require('../partials/navbar.html')}
+  ${require('../partials/navbar.html')}
 
-<!-- Modal Info -->
-<!-- Селектор для кастомизации: .modal-info -->
-<div class="modal fade modal-info" id="modInfo" tabindex="-1" role="dialog" aria-labelledby="modInfolLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modInfoLabel">Инфо</h4>
-      </div>
-      <div class="modal-body">
-        В наличии! Новые! Красивые литые диски 18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1 (лот №1558)
-        Диски новые! Отличное состояние!
-        В наличии. Цена указана за 4 диска.
-        <br>
-        <br>
-        Кнопка No может отсутствовать!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Warning -->
-<!-- Селектор для кастомизации: .modal-warn -->
-<div class="modal fade modal-warn" id="modWarn" tabindex="-1" role="dialog" aria-labelledby="modWarnLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modWarnLabel">Внимание</h4>
-      </div>
-      <div class="modal-body">
-        В наличии! Новые! Красивые литые диски 18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1 (лот №1558)
-        Диски новые! Отличное состояние!
-        В наличии. Цена указана за 4 диска.
-        <br>
-        <br>
-        Кнопка No может отсутствовать!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Error -->
-<!-- Селектор для кастомизации: .modal-error -->
-<div class="modal fade modal-error" id="modError" tabindex="-1" role="dialog" aria-labelledby="modErrorLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modErrorLabel">Ошибка</h4>
-      </div>
-      <div class="modal-body">
-        В наличии! Новые! Красивые литые диски 18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1 (лот №1558)
-        Диски новые! Отличное состояние!
-        В наличии. Цена указана за 4 диска.
-        <br>
-        <br>
-        Кнопка No может отсутствовать!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<main class="main">
-  <section class="card-catalog">
-    <div class="container">
-      <div class="row card-catalog-row">
-        <div class="col-xs-12 card-catalog-row">
-          <div class="row">
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a class="breadcrumb-link" href="/moods/modal-popup.html">Примеры модальных окон</a>
-              </li>
-            </ul>
-            <h1 class="card-catalog-name">
-              Примеры модальных окон
-            </h1>
-          </div>
-
-          <div class="row">
-            <ul>
-              <li><a data-toggle="modal" href="#modInfo">Info</a></li>
-              <li><a data-toggle="modal" href="#modWarn">Warning</a></li>
-              <li><a data-toggle="modal" href="#modError">Error</a></li>
-            </ul>
-          </div>
-
+  <!-- Modal Info -->
+  <!-- Селектор для кастомизации: .modal-info -->
+  <div class="modal fade modal-info" id="modInfo" tabindex="-1" role="dialog" aria-labelledby="modInfolLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-header-info">
+          <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modInfoLabel">Инфо</h4>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">В наличии! Новые! Красивые литые диски 18" Marcello Ziodano Series-Z (5*114.3) 8.5j
+            ет+40 цо67.1 (лот №1558)</p>
+          <p class="modal-text">Диски новые! Отличное состояние!</p>
+          <p class="modal-text">В наличии. Цена указана за 4 диска.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-modal btn-modal-no" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary btn-modal">Yes</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  ${require('../partials/review.html')}
-</main>
+  <!-- Modal Warning -->
+  <!-- Селектор для кастомизации: .modal-warn -->
+  <div class="modal fade modal-warn" id="modWarn" tabindex="-1" role="dialog" aria-labelledby="modWarnLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-header-warn">
+          <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modWarnLabel">Внимание</h4>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">В наличии! Новые! Красивые литые диски 18" Marcello Ziodano Series-Z (5*114.3) 8.5j
+            ет+40 цо67.1 (лот №1558)</p>
+          <p class="modal-text">Диски новые! Отличное состояние!</p>
+          <p class="modal-text">В наличии. Цена указана за 4 диска.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-modal btn-modal-no" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary btn-modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-${require('../partials/footer.html')}
+  <!-- Modal Error -->
+  <!-- Селектор для кастомизации: .modal-error -->
+  <div class="modal fade modal-error" id="modError" tabindex="-1" role="dialog" aria-labelledby="modErrorLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-header-error">
+          <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modErrorLabel">Ошибка</h4>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">В наличии! Новые! Красивые литые диски 18" Marcello Ziodano Series-Z (5*114.3) 8.5j
+            ет+40 цо67.1 (лот №1558)</p>
+          <p class="modal-text">Диски новые! Отличное состояние!</p>
+          <p class="modal-text">В наличии. Цена указана за 4 диска.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-modal btn-modal-no" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary btn-modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <section class="card-catalog">
+      <div class="container">
+        <div class="row card-catalog-row">
+          <div class="col-xs-12 card-catalog-row">
+            <div class="row">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="/moods/modal-popup.html">Примеры модальных окон</a>
+                </li>
+              </ul>
+              <h1 class="card-catalog-name">
+                Примеры модальных окон
+              </h1>
+            </div>
+
+            <div class="row">
+              <ul>
+                <li><a data-toggle="modal" href="#modInfo">Info</a></li>
+                <li><a data-toggle="modal" href="#modWarn">Warning</a></li>
+                <li><a data-toggle="modal" href="#modError">Error</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    ${require('../partials/review.html')}
+  </main>
+
+  ${require('../partials/footer.html')}
 </body>
 
 </html>
