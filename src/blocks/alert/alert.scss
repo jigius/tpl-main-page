@@ -83,11 +83,13 @@
 
 .close {
   font-weight: inherit;
-  width: 10px;
-  height: 10px;
   color: #2d245b !important;
   opacity: 1;
   text-shadow: none;
+}
+
+button.close {
+  height: 27px;
 }
 
 .close:hover {
