@@ -1,0 +1,81 @@
+.form-group.required .control-label:after {
+  content: "*";
+  color: #e01f35;
+}
+
+.order-name {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  color: #2d245b;
+  margin-bottom: 35px;
+}
+
+.order-data {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 41px;
+  color: #2d245b;
+}
+
+.order-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #171717;
+}
+
+.order-input {
+  border: 1px solid #969696;
+  border-radius: 0;
+}
+
+.order-textarea {
+  border: 1px solid #969696;
+  border-radius: 0;
+  resize: none;
+}
+
+.order-textarea::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.order-textarea::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.order-textarea:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.order-textarea:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.order-textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.order-textarea:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.order-textarea:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.order-textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+@media (min-width: 768px) {
+  .order-name {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    margin-bottom: 40px;
+  }
+}
