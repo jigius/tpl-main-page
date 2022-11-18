@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 ${require('./partials/head.html')}
-
+<style>
+    .form-group.required .control-label:after {
+        content: "*";
+        color: red;
+    }
+</style>
 <body>
   ${require('./partials/navbar.html')}
 
@@ -61,16 +66,23 @@ ${require('./partials/head.html')}
                 <form method="post" class="form-horizontal">
                   <fieldset>
                     <legend>Заполните данные</legend>
+                    <div class="alert alert-error alert-dismissible fade in" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                          aria-hidden="true">×</span></button>
+                      <h4 class="alert-title">Ошибка!</h4>
+                      <p class="alert-text">Форма содержит некорректные данные!</p>
+                    </div>
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-name">Ваше имя</label>
                       <div class="col-sm-10">
-                        <input type="text" name="name" id="input-name" value="" class="form-control" required>
+                        <input type="text" name="name" id="input-name" value="foo" class="form-control" required>
                       </div>
                     </div>
-                    <div class="form-group required">
+                    <div class="form-group required has-error">
                       <label class="col-sm-2 control-label" for="input-phone">Контактный телефон</label>
                       <div class="col-sm-10">
                         <input type="text" name="phone" value="+7 (901) 001 23 3" id="input-phone" class="form-control" required aria-describedby="helpBlockPhone">
+                        <span id="helpBlockPhone" class="help-block">Указан неверный номер</span>
                       </div>
                     </div>
                     <div class="form-group required">
@@ -79,28 +91,69 @@ ${require('./partials/head.html')}
                         <input type="text" name="email" value="foo@example.com" id="input-email" class="form-control" required aria-describedby="helpBlockEmail">
                       </div>
                     </div>
+                    <div class="form-group required has-error">
+                      <label class="col-sm-2 control-label" for="input-address">Вид доставки</label>
+                      <div class="col-sm-10">
+                        <div class="dropdown">
+                          <button class="btn dropdown-toggle sort-dropdown sort-dropdown-first" type="button"
+                            data-toggle="dropdown" aria-expanded="false" aria-describedby="helpBlockDelivery"
+                          >
+                            <span class="sort-text">Выберите</span>
+                          </button>
+                          <ul class="dropdown-menu sort-menu" role="menu" aria-labelledby="sort_dropdown">
+                            <li><a href="#">Самовывоз</a></li>
+                            <li><a href="#">Курьер</a></li>
+                            <li><a href="#">ТК</a></li>
+                          </ul>
+                        </div>
+                        <span id="helpBlockDelivery" class="help-block">Выберите тип доставки</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label" for="input-address">Дополнительные услуги</label>
+                      <div class="col-sm-10">
+                        <label class="form-label panel-label">
+                          <input class="form-input panel-checkbox" type="checkbox" />
+                          <span class="panel-fake"></span>
+                          <span>Нужна обрешетка товара</span>
+                        </label>
+                        <label class="form-label panel-label">
+                          <input class="form-input panel-checkbox" type="checkbox" />
+                          <span class="panel-fake"></span>
+                          <span>Требуется шиномонтаж (диски + шины)</span>
+                        </label>
+                        <label class="form-label panel-label">
+                          <input class="form-input panel-checkbox" type="checkbox" />
+                          <span class="panel-fake"></span>
+                          <span>Требуется временное хранение (30 суток)</span>
+                        </label>
+                        <span id="helpBlockService" class="help-block">Выберите дополнительные услуги</span>
+                      </div>
+                    </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-address">Адрес доставки</label>
                       <div class="col-sm-10">
-                        <textarea name="address" id="input-address" class="form-control" rows="3"></textarea>
+                        <textarea name="address" id="input-address" class="form-control" rows="3">bar</textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-comment">Комментарий к заказу</label>
                       <div class="col-sm-10">
-                        <textarea name="comment" id="input-comment" class="form-control" rows="3"></textarea>
+                        <textarea name="comment" id="input-comment" class="form-control" rows="3" aria-describedby="helpBlockComment">baz</textarea>
+                        <span id="helpBlockComment" class="help-block">Укажите важную информацию о заказе</span>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label"></label>
                       <div class="col-sm-10">
-                        <input id="input-agree" type="checkbox" name="agree" value="1">&nbsp;&nbsp;<label for="input-agree">Я прочитал(а) и принял(а) <a href="#" class="agree"><b>Соглашение о конфиденциальности персональной информации</b></a></label>
+                        <input id="input-agree" type="checkbox" name="agree" value="1">&nbsp;&nbsp;<label for="input-agree">Я принимаю <a href="#" class="agree"><b>Соглашение о конфиденциальности персональной информации</b></a></label>
                       </div>
                     </div>
                   </fieldset>
                   <div class="col-md-12 col-xs-12">
                     <div class="pull-right">
-                      <input type="submit" value="Подтвердить заказ" id="btn_process" class="btn btn-primary">
+                      <input type="button" value="Отмена" class="btn btn-default">
+                      <input type="submit" value="Отправить" id="btn_process" class="btn btn-primary">
                     </div>
                   </div>
                 </form>
