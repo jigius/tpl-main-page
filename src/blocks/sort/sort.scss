@@ -44,8 +44,21 @@
   min-width: 152px;
 }
 
+.sort-dropdown-order {
+  padding: 6px 12px;
+}
+
+.sort-dropdown-order::before {
+  top: 12px;
+}
+
 .sort-menu {
-  top: 39px !important;
+  top: 40px !important;
+  border-top: 0;
+}
+
+.sort-menu-order {
+  top: 40px !important;
 }
 
 .sort-label {
@@ -60,6 +73,13 @@
   font-size: 13px;
   line-height: 17px;
   color: #777777;
+}
+
+.sort-order {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #9c9c9c;
 }
 
 .sort-wrapper {
