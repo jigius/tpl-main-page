@@ -6,173 +6,171 @@ ${require('./partials/head.html')}
   ${require('./partials/navbar.html')}
 
   <main class="main">
-    <section class="order card-catalog">
+    <section class="order">
       <div class="container">
-        <div class="row card-catalog-row">
-          <div class="col-xs-12 card-catalog-row">
-            <div class="row">
-              <ul class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a class="breadcrumb-link" href="/order.html">Оформление заказа</a>
-                </li>
-              </ul>
-              <h1 class="order-name">Оформление заказа</h1>
-            </div>
-            <div class="row order-row">
-              <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <td class="text-center"></td>
-                      <td class="text-left">Наименование</td>
-                      <td class="text-left">Лот</td>
-                      <td class="text-right">Количество</td>
-                      <td class="text-right">Цена за шт</td>
-                      <td class="text-right">Всего</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center">
-                        <a href="#"><img src="images/wheels.jpg"
-                            alt='Поштучно Тойота Сурф/Прадо на 17" 7.5jj (6*139.7)et+30 (Япония) Toyota'
-                            title='Поштучно Тойота Сурф/Прадо на 17" 7.5jj (6*139.7)et+30 (Япония) Toyota' /></a>
-                      </td>
-                      <td class="text-left">
-                        <a href="#">Поштучно Тойота Сурф/Прадо на 17" 7.5jj
-                          (6*139.7)et+30 (Япония) Toyota</a>
-                      </td>
-                      <td class="text-left">167541</td>
-                      <td class="text-right">1</td>
-                      <td class="text-right">28 000₽</td>
-                      <td class="text-right">28 000₽</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="5" class="text-right">
-                        <strong>Итого:</strong>
-                      </td>
-                      <td class="text-right">28 000₽</td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 col-xs-12">
-                <form method="post" class="form-horizontal">
-                  <fieldset>
-                    <legend class="order-data">Заполните данные</legend>
-                    <div class="alert alert-error alert-dismissible fade in" role="alert">
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                      <h4 class="alert-title">Ошибка!</h4>
-                      <p class="alert-text">
-                        Форма содержит некорректные данные!
-                      </p>
-                    </div>
-                    <div class="form-group form-order required">
-                      <label class="col-sm-2 order-label control-label form" for="input-name">Ваше имя</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="name" id="input-name" value="foo" class="form-control order-input"
-                          required />
-                      </div>
-                    </div>
-                    <div class="form-group required has-error">
-                      <label class="col-sm-2 order-label control-label" for="input-phone">Контактный телефон</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="phone" value="+7 (901) 001 23 3" id="input-phone"
-                          class="form-control order-input" required aria-describedby="helpBlockPhone" />
-                        <span id="helpBlockPhone" class="help-block order-help">Указан неверный номер</span>
-                      </div>
-                    </div>
-                    <div class="form-group required">
-                      <label class="col-sm-2 order-label control-label" for="input-email">E-mail</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="email" value="foo@example.com" id="input-email"
-                          class="form-control order-input" required aria-describedby="helpBlockEmail" />
-                      </div>
-                    </div>
-                    <div class="form-group required has-error">
-                      <label class="col-sm-2 order-label control-label" for="input-address">Вид доставки</label>
-                      <div class="col-sm-10">
-                        <div class="dropdown">
-                          <button class="btn dropdown-toggle sort-dropdown sort-dropdown-first" type="button"
-                            data-toggle="dropdown" aria-expanded="false" aria-describedby="helpBlockDelivery">
-                            <span class="sort-text">Выберите</span>
-                          </button>
-                          <ul class="dropdown-menu sort-menu" role="menu" aria-labelledby="sort_dropdown">
-                            <li><a href="#">Самовывоз</a></li>
-                            <li><a href="#">Курьер</a></li>
-                            <li><a href="#">ТК</a></li>
-                          </ul>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-link" href="/order.html">Оформление заказа</a>
+          </li>
+        </ul>
+        <h1 class="order-title">Оформление заказа</h1>
+        <div class="row order-row">
+          <div class="col-md-12 col-xs-12">
+            <div class="table-responsive order-table">
+              <table class="table table-bordered table-hover">
+                <thead class="order-thead">
+                  <tr>
+                    <td class="order-image hidden-xs">Фото</td>
+                    <td class="order-name">Наименование</td>
+                    <td class="order-lot hidden-xs">Лот</td>
+                    <td class="order-amount">Кол-во</td>
+                    <td class="order-price">Цена</td>
+                  </tr>
+                </thead>
+                <tbody class="order-tbody">
+                  <tr>
+                    <td class="order-image text-center hidden-xs">
+                      <a href="#"><img src="images/wheels.jpg" alt="Order picture"></a>
+                    </td>
+                    <td class="order-name">
+                      <a href="#" class="order-head">18" Marcello Ziodano Series-Z (5*114.3) 8.5j ет+40 цо67.1</a>
+                    </td>
+                    <td class="order-lot hidden-xs">167541</td>
+                    <td class="order-amount quantity">
+                      <div class="quantity order-number">
+                        <div class="order-change-count">
+                          <div class="order-btn-plus">
+                            <button type="button">+</button>
+                          </div>
+                          <div class="order-btn-minus">
+                            <button type="button">-</button>
+                          </div>
                         </div>
-                        <span id="helpBlockDelivery" class="help-block order-help">Выберите тип доставки</span>
+                        <input type="text" name="#" value="1" size="1" class="order-plus-minus">
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 order-label control-label" for="input-address">Дополнительные
-                        услуги</label>
-                      <div class="col-sm-10">
-                        <label class="form-label panel-label">
-                          <input class="form-input panel-checkbox" type="checkbox" />
-                          <span class="panel-fake"></span>
-                          <span class="checkbox-text">Нужна обрешетка товара</span>
-                        </label>
-                        <label class="form-label panel-label">
-                          <input class="form-input panel-checkbox" type="checkbox" />
-                          <span class="panel-fake"></span>
-                          <span class="checkbox-text">Требуется шиномонтаж (диски + шины)</span>
-                        </label>
-                        <label class="form-label panel-label">
-                          <input class="form-input panel-checkbox" type="checkbox" />
-                          <span class="panel-fake"></span>
-                          <span class="checkbox-text">Требуется временное хранение (30 суток)</span>
-                        </label>
-                        <span id="helpBlockService" class="help-block order-help">Выберите дополнительные услуги</span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 order-label control-label" for="input-address">Адрес доставки</label>
-                      <div class="col-sm-10">
-                        <textarea name="address" id="input-address" class="form-control order-textarea" rows="3"
-                          placeholder="Ваш адрес"></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 order-label control-label" for="input-comment">Комментарий к заказу</label>
-                      <div class="col-sm-10">
-                        <textarea name="comment" id="input-comment" class="form-control order-textarea" rows="3"
-                          aria-describedby="helpBlockComment" placeholder="Ваш комментарий"></textarea>
-                        <span id="helpBlockComment" class="help-block order-help">Укажите важную информацию о
-                          заказе</span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 order-label control-label"></label>
-                      <div class="col-sm-10">
-                        <input id="input-agree" type="checkbox" name="agree" value="1" />&nbsp;&nbsp;
-                        <label for="input-agree" class="order-label order-label-agree">Нажимая на кнопку «Заказать», вы
-                          даете согласие на
-                          обработку персональных данных и соглашаетесь c
-                          <a href="#" class="order-confident">Политикой конфиденциальности.</a></label>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <div class="col-md-12 col-xs-12">
-                    <div class="pull-right">
-                      <input type="button" value="Отмена" class="btn btn-default" />
-                      <input type="submit" value="Отправить" id="btn_process" class="btn btn-primary" />
-                    </div>
-                  </div>
-                </form>
+                    </td>
+                    <td class="order-price">28 000 руб.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="order-total-wrap">
+                <span class="order-total"> Итого к оплате:</span>
+                <span class="order-total">28 000 руб.</span>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row order-row">
+          <div class="col-md-12 col-xs-12 order-wrapper">
+            <form method="post" class="form-horizontal">
+              <fieldset>
+                <legend class="order-data">Заполните данные</legend>
+                <div class="alert alert-error alert-dismissible fade in" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="alert-title">Ошибка!</h4>
+                  <p class="alert-text">
+                    Форма содержит некорректные данные!
+                  </p>
+                </div>
+                <div class="form-group form-order required">
+                  <label class="col-sm-2 order-label control-label form" for="input-head">Ваше имя</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="name" id="input-name" value="" placeholder="Ваше имя"
+                      class="form-control order-input" required />
+                  </div>
+                </div>
+                <div class="form-group required has-error">
+                  <label class="col-sm-2 order-label control-label" for="input-phone">Телефон</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="phone" value="" id="input-phone" placeholder="+7 999 999 99 99"
+                      class="form-control order-input" required aria-describedby="helpBlockPhone" />
+                    <span id="helpBlockPhone" class="help-block order-help">Указан неверный номер</span>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <label class="col-sm-2 order-label control-label" for="input-email">E-mail</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="email" value="" placeholder="email@email.com" id="input-email"
+                      class="form-control order-input" required aria-describedby="helpBlockEmail" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 order-label control-label" for="input-address">Вид доставки</label>
+                  <div class="col-sm-10 select">
+                    <select name="select-category" id="" class="select">
+                      <option selected disabled hidden>Выберите</option>
+                      <option value="1">Самовывоз</option>
+                      <option value="2">Курьер</option>
+                      <option value="3">ТК</option>
+                    </select>
+                    <span id="helpBlockDelivery" class="help-block order-help">Выберите тип доставки</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 order-label control-label" for="input-address">Дополнительные
+                    услуги</label>
+                  <div class="col-sm-10">
+                    <label class="check check-order">
+                      <input class="check-input panel-checkbox" type="checkbox" />
+                      <span class="check-box"></span>
+                      Нужна обрешетка товара
+                    </label>
+                    <label class="check check-order">
+                      <input class="check-input panel-checkbox" type="checkbox" />
+                      <span class="check-box"></span>
+                      Требуется шиномонтаж (диски + шины)
+                    </label>
+                    <label class="check check-order">
+                      <input class="check-input panel-checkbox" type="checkbox" />
+                      <span class="check-box"></span>
+                      Требуется временное хранение (30 суток)
+                    </label>
+                    <span id="helpBlockService" class="help-block order-help">Выберите дополнительные услуги</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 order-label control-label" for="input-address">Адрес доставки</label>
+                  <div class="col-sm-10">
+                    <textarea name="address" id="input-address" class="form-control order-textarea" rows="3"
+                      placeholder="Ваш адрес"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 order-label control-label" for="input-comment">Комментарий</label>
+                  <div class="col-sm-10">
+                    <textarea name="comment" id="input-comment" class="form-control order-textarea" rows="3"
+                      aria-describedby="helpBlockComment" placeholder="Ваш комментарий"></textarea>
+                    <span id="helpBlockComment" class="help-block order-help">Укажите важную информацию о
+                      заказе</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 order-label control-label"></label>
+                  <div class="col-sm-10">
+                    <label class="check check-order check-confident">
+                      <input class="check-input panel-checkbox" type="checkbox" />
+                      <span class="check-box"></span>
+                      Нажимая на кнопку «Заказать», вы
+                      даете согласие на
+                      обработку персональных данных и соглашаетесь c
+                      <a href="#" class="order-confident">Политикой конфиденциальности.</a>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="row order-row">
+                <div class="col-md-12 col-xs-12">
+                  <div class="order-button">
+                    <button class="button button-card button-order">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

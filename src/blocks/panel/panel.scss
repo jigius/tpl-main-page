@@ -74,20 +74,6 @@
   text-decoration: none;
 }
 
-.panel-label {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #171717;
-  padding: 15px 158px 15px 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.panel-label-disabled {
-  color: #b7b7b7;
-}
-
 .panel-default > .panel-heading {
   background-color: transparent;
   border-color: transparent;
@@ -154,43 +140,6 @@
   right: 0;
 }
 
-.panel-checkbox {
-  display: none;
-}
-
-.panel-checkbox-disabled {
-  border: 1px solid #b7b7b7;
-  color: #b7b7b7;
-}
-
-.panel-fake {
-  position: relative;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  top: 3px;
-  margin-right: 14px;
-  border: 1px solid #e6e6e6;
-  cursor: pointer;
-}
-
-.panel-fake::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 9px;
-  height: 7px;
-  background-image: url("/src/images/checkbox.svg");
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.panel-checkbox:checked + .panel-fake::before {
-  opacity: 1;
-}
-
 .panel-body {
   padding: 0;
   margin-right: 3px;
@@ -231,15 +180,4 @@
 ::-webkit-scrollbar-thumb {
   background-color: #d5d5d5;
   border-radius: 7px;
-}
-
-@media (min-width: 768px) {
-  .panel-label {
-    width: 100%;
-    padding: 3px 15px 15px 0;
-  }
-
-  .panel-price-label {
-    padding: 0;
-  }
 }
