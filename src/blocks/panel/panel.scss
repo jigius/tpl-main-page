@@ -99,6 +99,7 @@
 }
 
 .panel-price-input {
+  width: 55px;
   font-weight: 700;
   color: #757575;
   border: none;
@@ -142,9 +143,12 @@
 
 .panel-body {
   padding: 0;
-  margin-right: 3px;
   height: 160px;
-  overflow: scroll;
+  overflow: auto;
+}
+
+.panel-body::-webkit-scrollbar {
+  overflow: auto;
 }
 
 .panel-price-slider {
@@ -180,4 +184,28 @@
 ::-webkit-scrollbar-thumb {
   background-color: #d5d5d5;
   border-radius: 7px;
+}
+
+@media (min-width: 768px) {
+  .panel-price-label {
+    width: 69px;
+  }
+}
+
+@media (min-width: 820px) {
+  .panel-price-label {
+    width: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .panel-price-label {
+    width: 101px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .panel-price-label {
+    width: 170px;
+  }
 }

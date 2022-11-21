@@ -24,7 +24,8 @@ h5 {
 
 a:hover,
 a:focus {
-  color: #ffffff;
+  color: initial;
+  text-decoration: none;
 }
 
 .link {
@@ -53,3 +54,8 @@ a:focus {
 ::-moz-focus-inner {
   border: 0px !important;
 }
+
+a:focus, button:focus {
+  outline: solid #767676 1px !important;
+  text-decoration: none;
+  }
