@@ -63,6 +63,10 @@
   padding: 8px 28px;
 }
 
+.button-contact {
+  width: 147px;
+}
+
 .button-order {
   width: 132px;
 }
@@ -82,7 +86,7 @@
 .button-order-no {
   color: #171717;
   background-color: #ffffff;
-  border: 2px solid #E01F35;
+  border: 2px solid #e01f35;
 }
 
 .button-order-no:hover {
@@ -105,12 +109,12 @@
 
   .button-call-desktop {
     padding: 7px 20px;
- }
+  }
 
- .button-call-desktop:hover {
-  background-color: #cb192e;
-  color: #ffffff;
-}
+  .button-call-desktop:hover {
+    background-color: #cb192e;
+    color: #ffffff;
+  }
 
   .button-card {
     display: block;

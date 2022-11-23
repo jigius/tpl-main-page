@@ -59,8 +59,8 @@ module.exports = {
       chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/delivery.html"), // шаблон
-      filename: "delivery.html", // название выходного файла
+      template: path.resolve(__dirname, "./src/contact.html"), // шаблон
+      filename: "contact.html", // название выходного файла
       chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
