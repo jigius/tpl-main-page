@@ -51,6 +51,7 @@
 
 .button-call:focus {
   outline: 0px;
+  color: #ffffff;
 }
 
 .button-desktop {
@@ -78,6 +79,20 @@
   background-color: #cacaca;
 }
 
+.button-order-no {
+  color: #171717;
+  background-color: #ffffff;
+  border: 2px solid #E01F35;
+}
+
+.button-order-no:hover {
+  color: #ffffff;
+}
+
+.button-order-no:not(:last-child) {
+  margin-right: 15px;
+}
+
 @media (min-width: 768px) {
   .button {
     display: none;
@@ -90,12 +105,12 @@
 
   .button-call-desktop {
     padding: 7px 20px;
+ }
 
-    &:hover {
-      background-color: #cb192e;
-      color: #ffffff;
-    }
-  }
+ .button-call-desktop:hover {
+  background-color: #cb192e;
+  color: #ffffff;
+}
 
   .button-card {
     display: block;

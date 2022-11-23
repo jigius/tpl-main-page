@@ -39,6 +39,11 @@
   margin-bottom: 12px;
 }
 
+.footer-link:hover,
+.footer-link:focus {
+  color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .middle-footer {
     flex-direction: row;
