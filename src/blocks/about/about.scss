@@ -1,0 +1,57 @@
+.about-text {
+  font-size: 18px;
+  line-height: 23px;
+  color: #171717;
+}
+
+.about-title {
+  margin-bottom: 14px;
+}
+
+.about-subtitle {
+  font-size: 18px;
+}
+
+.about-wrap {
+  margin-bottom: 30px;
+}
+
+.about-list {
+  margin: 0 -15px;
+}
+
+.about-item {
+  margin-bottom: 25px;
+}
+
+.about-block {
+  margin-bottom: 30px;
+}
+
+.about-text:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
+  }
+
+  .about-row {
+    margin: 0 -15px;
+  }
+}
+
+@media (min-width: 1520px) {
+  .about {
+    padding-right: calc(50% - 760px);
+    padding-left: calc(50% - 760px);
+  }
+}

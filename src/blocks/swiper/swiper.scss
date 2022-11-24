@@ -1,0 +1,35 @@
+.swiper {
+  position: relative;
+}
+
+.swiper-img {
+  width: 100%;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 44%;
+  left: -13px;
+  background-image: url("/src/images/swiper-prev.svg");
+}
+
+.swiper-button-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 44%;
+  right: -13px;
+  background-image: url("/src/images/swiper-next.svg");
+}
+
+@media (min-width: 1200px) {
+  .swiper-button-prev {
+    left: -50px;
+  }
+
+  .swiper-button-next {
+    right: -50px;
+  }
+}
