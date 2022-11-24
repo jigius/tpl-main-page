@@ -15,8 +15,13 @@
 .contact-block {
   font-size: 18px;
   line-height: 23px;
-  color: #171717;
+  color: hsl(0, 0%, 9%);
   margin-bottom: 20px;
+}
+
+.contact-block-tel {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-subtitle {
@@ -26,6 +31,11 @@
 .contact-number {
   text-decoration: underline;
   margin-bottom: 10px;
+  color: #171717;
+}
+
+.contact-number:hover {
+  text-decoration: underline;
 }
 
 .contact-wa {
