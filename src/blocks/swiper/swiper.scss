@@ -11,7 +11,7 @@
   width: 40px;
   height: 40px;
   top: 44%;
-  left: -1%;
+  left: -13px;
   background-image: url("/src/images/swiper-prev.svg");
 }
 
@@ -20,16 +20,16 @@
   width: 40px;
   height: 40px;
   top: 44%;
-  right: -1%;
+  right: -13px;
   background-image: url("/src/images/swiper-next.svg");
 }
 
 @media (min-width: 1200px) {
   .swiper-button-prev {
-    left: -8%;
+    left: -50px;
   }
 
   .swiper-button-next {
-    right: -8%;
+    right: -50px;
   }
 }
