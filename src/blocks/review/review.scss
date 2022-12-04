@@ -10,14 +10,6 @@
   border: 1px solid #d3d3d3;
 }
 
-.review-title {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 28px;
-  color: #2d245b;
-  margin-bottom: 25px;
-}
-
 .review-item {
   color: #171717;
 }
@@ -84,8 +76,7 @@
 
 @media (min-width: 1200px) {
   .review {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
+    padding: 0;
   }
 
   .review-view {
@@ -107,12 +98,5 @@
   .review-rating {
     margin: 0;
     margin-right: 30px;
-  }
-}
-
-@media (min-width: 1520px) {
-  .review {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }

@@ -3,10 +3,6 @@
 }
 
 .card-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 39px;
-  color: #2d245b;
   padding: 10px 15px 30px 15px;
 }
 
@@ -204,11 +200,6 @@
 }
 
 @media (min-width: 1200px) {
-  .card {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
-  }
-
   .card-block {
     padding: 0 20px !important;
   }
@@ -253,12 +244,5 @@
 
   .card-block {
     padding: 0 30px;
-  }
-}
-
-@media (min-width: 1520px) {
-  .card {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }

@@ -1,7 +1,3 @@
-.card-catalog-row {
-  padding: 0;
-}
-
 .card-row {
   margin: 0 -15px;
 }
@@ -136,11 +132,6 @@
 }
 
 @media (min-width: 1200px) {
-  .card-catalog {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
-  }
-
   .card-panel-catalog {
     position: absolute;
     width: 95px;
@@ -187,12 +178,5 @@
   .card-border-big {
     padding: 69px 0;
     margin-bottom: 15px;
-  }
-}
-
-@media (min-width: 1520px) {
-  .card-catalog {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }

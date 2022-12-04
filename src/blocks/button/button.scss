@@ -1,8 +1,8 @@
 .button {
-  margin-top: 100px;
-  margin-bottom: 40px;
-  font-weight: 700;
+  display: block;
   text-align: center;
+  padding: 7px 20px;
+  font-weight: 700;
   color: #ffffff;
   background-color: #e01f35;
   border: none;
@@ -10,6 +10,57 @@
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #cb192e;
+  color: #ffffff;
+}
+
+.button:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.button:disabled {
+  background-color: #b7b7b7;
+}
+
+.button-desktop {
+  display: none;
+}
+
+.button-selection {
+  width: 100%;
+}
+
+.button-reset {
+  border: 2px solid #e01f35;
+  background-color: transparent;
+  color: #171717;
+}
+
+.button-reset:focus {
+  border: 2px solid #e01f35 !important;
+}
+
+@media (min-width: 768px) {
+  .button-selection {
+    margin-right: 25px;
+  }
+
+  .button-mobile {
+    display: none;
+  }
+
+  .button-desktop {
+    display: block;
+    margin: 0 30px 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+/* 
 .button:hover,
 .button-call:hover,
 .selection-button:hover,
@@ -30,7 +81,7 @@
 .button-call {
   display: block;
   text-align: center;
-  padding: 7px 89px;
+  padding: 7px 89px; 
   font-weight: 700;
   color: #ffffff;
   background-color: #e01f35;
@@ -112,7 +163,7 @@
     margin: 0 30px 0 0;
   }
 
-  .button-call-desktop {
+ .button-call-desktop {
     padding: 7px 20px;
   }
 
@@ -136,3 +187,4 @@
     margin: 0 auto;
   }
 }
+ */

@@ -1,3 +1,7 @@
+.catalog {
+  padding: 0 15px;
+}
+
 .catalog-sidebar {
   position: relative;
   margin-bottom: 25px;
@@ -67,13 +71,12 @@
   margin-right: -15px;
 }
 
-.catalog-title {
-  font-size: 25px;
-  line-height: 32px;
-  margin-bottom: 35px;
-}
 
 .catalog-title-desktop {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #2d245b;
   display: none;
 }
 
@@ -117,9 +120,6 @@
 
   .catalog-title-desktop {
     display: block;
-    font-size: 18px;
-    line-height: 23px;
-    margin-bottom: 12px;
   }
 
   .catalog-collapse {
@@ -133,8 +133,7 @@
 
 @media (min-width: 1200px) {
   .catalog {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
+    padding: 0;
   }
 
   .catalog-list {
@@ -143,16 +142,5 @@
 
   .catalog-clear-all {
     font-weight: 400;
-  }
-
-  .catalog-title {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 1520px) {
-  .catalog {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }

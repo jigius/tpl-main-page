@@ -7,7 +7,7 @@ ${require('./partials/head.html')}
   ${require('./partials/navbar.html')}
   <main class="main">
     <section class="promo">
-      <div class="container promo-container">
+      <div class="row">
         <picture>
           <source media="(min-width: 768px)" srcset="images/promo-desktop.jpg" />
           <img class="promo-img img-responsive" src="images/promo-mobile.jpg" alt="Promo" />
@@ -125,10 +125,8 @@ ${require('./partials/head.html')}
             </div>
           </div>
           <div class="selection-button-wrapper">
-            <a href="#" class="selection-button">Подобрать</a>
-            <a href="#" class="selection-button selection-button-reset">
-              Сбросить
-            </a>
+            <button href="#" class="button button-selection">Подобрать</button>
+            <button href="#" class="button button-reset button-selection">Сбросить</button>
           </div>
         </div>
         <div class="col-lg-6 selection-block">
@@ -234,16 +232,14 @@ ${require('./partials/head.html')}
             </div>
           </div>
           <div class="selection-button-wrapper">
-            <a href="#" class="selection-button">Подобрать</a>
-            <a href="#" class="selection-button selection-button-reset">
-              Сбросить
-            </a>
+            <button href="#" class="button button-selection">Подобрать</button>
+            <button href="#" class="button button-reset button-selection">Сбросить</button>
           </div>
         </div>
       </div>
     </section>
     <section class="card">
-      <h2 class="card-title">Новинки</h2>
+      <h1>Новинки</h1>
       <div class="row card-list">
         <div class="col-xl-2 col-md-3 col-sm-3 col-xs-6 card-block">
           <div class="thumbnail card-item">
@@ -350,7 +346,7 @@ ${require('./partials/head.html')}
     ${require('./partials/review.html')}
     <section class="stock">
       <div class="row">
-        <h2 class="stock-title">Наш склад в Барнауле</h2>
+        <h1>Наш склад в Барнауле</h1>
         <div class="stock-wrapper">
           <div class="row stock-list">
             <div class="col-xl-2 col-lg-3 col-sm-6 col-xs-6 stock-item">
