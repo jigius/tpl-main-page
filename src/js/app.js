@@ -9,9 +9,17 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../style.scss";
 
 // JS
-window.$ = window.jQuery = require("jquery");
-require("bootstrap/dist/js/bootstrap.js");
+const jQuery = require("jquery");
 
-// require("./common.js");
+window.$ = window.jQuery = jQuery;
+require("bootstrap/dist/js/bootstrap.js");
+require("./global_messages.js");
+require("./inputmask.js");
+require("./form/");
+
+// OC3 cart
+const cart = require("./oc3/cart.js");
+window.cart = cart.cart(jQuery);
+//require("./common.js");
 // require("./inspire/custom.js");
 // require("./swiper.js");
