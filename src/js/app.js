@@ -16,6 +16,7 @@ require("bootstrap/dist/js/bootstrap.js");
 require("./global_messages.js");
 require("./inputmask.js");
 require("./form/");
+require("./tr_filter.js");
 
 // OC3 cart
 const cart = require("./oc3/cart.js");
