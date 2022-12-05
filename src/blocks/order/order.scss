@@ -221,6 +221,10 @@ input.order-plus-minus {
   background-color: transparent;
 }
 
+.has-error {
+  border: 1px solid #e01f35;
+}
+
 @media (min-width: 768px) {
   .order {
     padding: 0 15px;
