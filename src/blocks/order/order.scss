@@ -126,17 +126,20 @@ input.order-plus-minus {
   line-height: 21px;
   color: #171717;
   margin-bottom: 13px;
+  text-align: right !important;
 }
 
 .order-input {
   border: 1px solid #969696;
   border-radius: 0;
+  padding: 6px 12px !important;
 }
 
 .order-textarea {
   border: 1px solid #969696;
   border-radius: 0;
   resize: none;
+  padding: 6px 12px !important;
 }
 
 .order-textarea::-webkit-input-placeholder {
@@ -221,6 +224,11 @@ input.order-plus-minus {
   background-color: transparent;
 }
 
+.form-control {
+  padding: 0;
+  border-radius: 0;
+}
+
 @media (min-width: 768px) {
   .order {
     padding: 0 15px;
@@ -232,6 +240,10 @@ input.order-plus-minus {
     line-height: 41px;
     margin-bottom: 40px;
   }
+
+  .form-horizontal .control-label {
+    text-align: inherit;
+}
 }
 
 @media (min-width: 1200px) {
