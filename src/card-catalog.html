@@ -226,7 +226,58 @@ ${require('./partials/head.html')}
         </div>
       </div>
     </section>
-    ${require('./partials/review.html')}
+
+    <section class="reviews">
+      <div class="row reviews-container">
+        <h2 class="reviews-title">
+          11 лет продаем диски и шины от Федота на Дроме и Авито
+        </h2>
+        <div class="reviews-wrapper">
+          <div class="col-sm-6 reviews-block">
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <a class="reviews-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="images/drom-desktop.svg" />
+                    <img class="reviews-img" src="../src/images/drom-mobile.svg" alt="Drom" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <p class="reviews-rating">1 272 (99,5%)</p>
+                <p class="reviews-name">Рейтинг на Дроме</p>
+              </div>
+              <div class="reviews-item">
+                <a class="reviews-view" href="">Посмотреть отзывы</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 reviews-block">
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <a class="reviews-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="images/avito-desktop.svg" />
+                    <img class="reviews-img" src="../src/images/avito-mobile.svg" alt="Avito" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="reviews-items">
+              <div class="reviews-item">
+                <p class="reviews-rating">4,9 (162 оценок)</p>
+                <p class="reviews-name">Рейтинг на Авито</p>
+              </div>
+              <div class="reviews-item">
+                <a class="reviews-view" href="">Посмотреть отзывы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   ${require('./partials/footer.html')}
