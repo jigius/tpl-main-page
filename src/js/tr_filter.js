@@ -1,26 +1,20 @@
 $(function() {
     const modifyURLQuery = function(url, param) {
-        var value = {};
-
-        var query = String(url).split('?');
-
+        let value = {};
+        const query = String(url).split('?');
         if (query[1]) {
-            var part = query[1].split('&');
-
-            for (i = 0; i < part.length; i++) {
-                var data = part[i].split('=');
-
+            const part = query[1].split('&');
+            for (let i = 0; i < part.length; i++) {
+                const data = part[i].split('=');
                 if (data[0] && data[1]) {
                     value[data[0]] = data[1];
                 }
             }
         }
-
         value = $.extend(value, param);
-
         // Generate query parameter string
-        var query_param = '';
-        for (i in value) {
+        let query_param = '';
+        for (let i in value) {
             if (value[i]) {
                 if (i === 'route') { // Skip route value to encode
                     query_param += '&' + i + '=' + value[i];
@@ -29,7 +23,6 @@ $(function() {
                 }
             }
         }
-
         // Return url with modified parameter
         if (query_param) {
             return query[0] + '?' + query_param.substring(1);
@@ -70,23 +63,48 @@ $(function() {
                 availability: 1
             }
         };
-
         setting = $.extend(default_setting, setting);
-
-        var tf_filter = this;
-
+        const tf_filter = this;
         // Filter inputs
         this.inputs = $(this).find('input:not([type="search"])');
 
         // Start filter
         this.start = function (param) {
-            if (!setting.ajax) {
+            const cur = window.location.href;
+            const req = modifyURLQuery(window.location.href, $.extend(param, {page: null}));
+            if (cur !== req) {
                 // Reload page with filter parameter
                 window.location.href = modifyURLQuery(window.location.href, $.extend(param, {page: null}));
-                return;
+                // Update page URL
+                //history.pushState(null, null, modifyURLQuery(window.location.href, $.extend(param, {page: null})));
             }
         };
-
+        this.collapseStates = function () {
+            let ret;
+            try {
+                ret =
+                    $(this)
+                        .find(".panel-collapse.collapse")
+                        .map(function () {
+                            let ret;
+                            const expanded = $(this).hasClass("in");
+                            if (expanded ^ !!$(this).data('o-expanded')) {
+                                ret =
+                                    (function (el) {
+                                        const found = $(el).attr('id').toString().match(/\d+$/);
+                                        if (!found) {
+                                            throw new Error("environment is broken");
+                                        }
+                                        return (expanded? 1: -1) * (found[0] + 1);
+                                    }) (this);
+                            }
+                            return ret;
+                        })
+            } catch ($e) {
+                ret = [];
+            }
+            return ret;
+        };
         this.getParam = function () {
             var param = {};
 
@@ -168,8 +186,7 @@ $(function() {
                 tf_filter.start(param);
             }, setting.delay * 1000);
 
-            // Update page URL
-            history.pushState(null, null, modifyURLQuery(window.location.href, $.extend(param, {page: null})));
+
 
             // Trigger param change event
             setting.onParamChange(param);
