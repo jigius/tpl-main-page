@@ -1,3 +1,7 @@
+.about {
+  padding: 0 15px;
+}
+
 .about-text {
   font-size: 18px;
   line-height: 23px;
@@ -5,6 +9,9 @@
 }
 
 .about-title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #2D245B;
   margin-bottom: 14px;
 }
 
@@ -36,22 +43,18 @@
   .about {
     padding: 0 15px;
   }
+
+  .about-title {
+    font-size: 35px;
+  }
 }
 
 @media (min-width: 1200px) {
   .about {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
+    padding: 0;
   }
 
   .about-row {
     margin: 0 -15px;
-  }
-}
-
-@media (min-width: 1520px) {
-  .about {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }

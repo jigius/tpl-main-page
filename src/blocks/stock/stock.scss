@@ -1,10 +1,5 @@
 .stock-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 39px;
-  color: #2d245b;
   padding: 0 15px;
-  margin-bottom: 30px;
 }
 
 .stock-wrapper {
@@ -55,11 +50,6 @@
 }
 
 @media (min-width: 1200px) {
-  .stock {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
-  }
-
   .stock-title {
     padding: 0;
   }
@@ -70,12 +60,5 @@
 
   .stock-wrapper {
     padding: 0;
-  }
-}
-
-@media (min-width: 1520px) {
-  .stock {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }

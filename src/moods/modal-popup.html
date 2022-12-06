@@ -4,6 +4,35 @@ ${require('../partials/head.html')}
 
 <body>
   ${require('../partials/navbar.html')}
+  <main class="main">
+    <section>
+      <div class="row">
+        <div class="col-xs-12 card-catalog-row">
+          <div class="row">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a class="breadcrumb-link" href="/moods/modal-popup.html">Примеры модальных окон</a>
+              </li>
+            </ul>
+            <h1>Примеры модальных окон</h1>
+          </div>
+          <div class="row">
+            <ul>
+              <li><a data-toggle="modal" href="#modInfo">Info</a></li>
+              <li><a data-toggle="modal" href="#modWarn">Warning</a></li>
+              <li><a data-toggle="modal" href="#modError">Error</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    ${require('../partials/review.html')}
+  </main>
+
+  ${require('../partials/footer.html')}
 
   <!-- Modal Info -->
   <!-- Селектор для кастомизации: .modal-info -->
@@ -22,13 +51,12 @@ ${require('../partials/head.html')}
           <p class="modal-text">В наличии. Цена указана за 4 диска.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-modal btn-modal-no" data-dismiss="modal">No</button>
-          <button type="button" class="btn btn-primary btn-modal">Yes</button>
+          <button type="button" class="button button-order button-reset" data-dismiss="modal">No</button>
+          <button type="button" class="button button-order">Yes</button>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Modal Warning -->
   <!-- Селектор для кастомизации: .modal-warn -->
   <div class="modal fade modal-warn" id="modWarn" tabindex="-1" role="dialog" aria-labelledby="modWarnLabel">
@@ -46,13 +74,12 @@ ${require('../partials/head.html')}
           <p class="modal-text">В наличии. Цена указана за 4 диска.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-modal btn-modal-no" data-dismiss="modal">No</button>
-          <button type="button" class="btn btn-primary btn-modal">Yes</button>
+          <button type="button" class="button button-order button-reset" data-dismiss="modal">No</button>
+          <button type="button" class="button button-order">Yes</button>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Modal Error -->
   <!-- Селектор для кастомизации: .modal-error -->
   <div class="modal fade modal-error" id="modError" tabindex="-1" role="dialog" aria-labelledby="modErrorLabel">
@@ -70,49 +97,12 @@ ${require('../partials/head.html')}
           <p class="modal-text">В наличии. Цена указана за 4 диска.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-modal btn-modal-no" data-dismiss="modal">No</button>
-          <button type="button" class="btn btn-primary btn-modal">Yes</button>
+          <button type="button" class="button button-order button-reset" data-dismiss="modal">No</button>
+          <button type="button" class="button button-order">Yes</button>
         </div>
       </div>
     </div>
   </div>
-
-  <main class="main">
-    <section class="card-catalog">
-      <div class="container">
-        <div class="row card-catalog-row">
-          <div class="col-xs-12 card-catalog-row">
-            <div class="row">
-              <ul class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a class="breadcrumb-link" href="/moods/modal-popup.html">Примеры модальных окон</a>
-                </li>
-              </ul>
-              <h1 class="card-catalog-name">
-                Примеры модальных окон
-              </h1>
-            </div>
-
-            <div class="row">
-              <ul>
-                <li><a data-toggle="modal" href="#modInfo">Info</a></li>
-                <li><a data-toggle="modal" href="#modWarn">Warning</a></li>
-                <li><a data-toggle="modal" href="#modError">Error</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    ${require('../partials/review.html')}
-  </main>
-
-  ${require('../partials/footer.html')}
 </body>
 
 </html>

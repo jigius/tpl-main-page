@@ -49,47 +49,6 @@
   outline: none;
 }
 
-.btn-modal {
-  font-weight: 700;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  color: #ffffff;
-  padding: 8px 60px;
-  background-color: #e01f35;
-  border-radius: 0;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.btn-modal:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.btn-modal-no {
-  background-color: #ffffff;
-  border: 2px solid #e01f35;
-  color: #171717;
-}
-
-.btn-modal-no:hover,
-.btn-modal-no:focus,
-.btn-modal-no:active {
-  background-color: #cb192e !important;
-  border: 2px solid #cb192e !important;
-  color: #ffffff !important;
-  outline: none !important;
-}
-
-.btn-modal:hover,
-.btn-modal:focus,
-.btn-modal:active {
-  text-decoration: none;
-  outline: none;
-  background-color: #cb192e !important;
-}
-
 .modal-header::before {
   content: "";
   position: absolute;
