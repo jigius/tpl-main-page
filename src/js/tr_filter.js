@@ -1,3 +1,5 @@
+const isEqual = require('lodash.isequal');
+
 $(function() {
     const modifyURLQuery = function(url, param) {
         let value = {};
@@ -30,222 +32,139 @@ $(function() {
             return query[0];
         }
     };
-
-    $.fn.tf_filter = function (setting = null) {
-        // Default setting
-        var default_setting = {
+    $.fn.tf_filter = function (setting = {}) {
+        const that = this;
+        const defaultOpts = {
             delay: 2, // Second
-            requestURL: null,
-            searchEl: null,
-            ajax: false,
-            search_in_description: true,
-            no_result: '', // HTML for empty product result
-            onParamChange: function () {
-            },
-            onInputChange: function () {
-            },
-            onReset: function () {
-            },
-            onResult: function () {
-            }, // Result function for json
-            onBeforeSend: function () {
-            },
-            onComplete: function () {
-            },
+            dispatcher: function () { return true; },
             status: {
                 price: 1,
                 manufacturer: 1,
-                search: 0,
-                rating: 0,
-                discount: 0,
                 filter: 1,
-                custom: 0,
-                availability: 1
+                availability: 1,
+                collapse: 1
             }
         };
-        setting = $.extend(default_setting, setting);
-        const tf_filter = this;
-        // Filter inputs
-        this.inputs = $(this).find('input:not([type="search"])');
-
-        // Start filter
-        this.start = function (param) {
-            const cur = window.location.href;
-            const req = modifyURLQuery(window.location.href, $.extend(param, {page: null}));
-            if (cur !== req) {
-                // Reload page with filter parameter
-                window.location.href = modifyURLQuery(window.location.href, $.extend(param, {page: null}));
-                // Update page URL
-                //history.pushState(null, null, modifyURLQuery(window.location.href, $.extend(param, {page: null})));
+        this.opts = $.extend(defaultOpts, setting);
+        const params = function (prohibited) {
+            prohibited ||= [];
+            if (Object.prototype.toString.call(prohibited) !== '[object Array]') {
+                throw new Error("argument `prohibited` is invalid");
             }
-        };
-        this.collapseStates = function () {
-            let ret;
-            try {
-                ret =
-                    $(this)
-                        .find(".panel-collapse.collapse")
-                        .map(function () {
-                            let ret;
-                            const expanded = $(this).hasClass("in");
-                            if (expanded ^ !!$(this).data('o-expanded')) {
-                                ret =
-                                    (function (el) {
-                                        const found = $(el).attr('id').toString().match(/\d+$/);
-                                        if (!found) {
-                                            throw new Error("environment is broken");
-                                        }
-                                        return (expanded? 1: -1) * (found[0] + 1);
-                                    }) (this);
-                            }
-                            return ret;
-                        })
-            } catch ($e) {
-                ret = [];
-            }
-            return ret;
-        };
-        this.getParam = function () {
-            var param = {};
-
-            // price
-            if (setting.status.price) {
-                var price = '';
-                var min_price_input = tf_filter.inputs.filter('[name="tf_fp[min]"]');
-                var max_price_input = tf_filter.inputs.filter('[name="tf_fp[max]"]');
-
-                if (min_price_input.attr('min') !== min_price_input.val()) { // When minimum price change
-                    price += min_price_input.val();
+            const param = {};
+            if (that.opts.status.price) {
+                let price = '';
+                const minPrice = $(that).find('[name="tf_fp[min]"]');
+                const maxPrice = $(that).find('[name="tf_fp[max]"]');
+                if (minPrice.attr('min') !== minPrice.val()) { // When minimum price change
+                    price += minPrice.val();
                 }
-
-                if (max_price_input.attr('max') !== max_price_input.val()) { // When maximum price change
-                    price += 'p' + max_price_input.val();
+                if (maxPrice.attr('max') !== maxPrice.val()) { // When maximum price change
+                    price += 'p' + maxPrice.val();
                 }
-
                 if (price) {
                     param.tf_fp = price;
                 }
             }
-
-
-            // Availability
-            if (setting.status.availability) {
-                var in_stock = tf_filter.inputs.filter('[name="tf_fs"]:checked').val();
-
-                if (in_stock !== undefined) {
-                    param.tf_fs = in_stock;
+            if (that.opts.status.availability) {
+                const inStock = $(that).find('[name="tf_fs"]:checked').val();
+                if (inStock !== undefined) {
+                    param.tf_fs = inStock;
                 }
             }
-
             // Manufacturer
-            if (setting.status.manufacturer) {
-                var manufacturer_ids = tf_filter.inputs.filter('[name="tf_fm"]:checked').map(function () {
+            if (that.opts.status.manufacturer) {
+                const manufacturerIds = $(that).find('[name="tf_fm"]:checked').map(function () {
                     return $(this).val();
                 }).get().join('.');
-
-                if (manufacturer_ids) {
-                    param.tf_fm = manufacturer_ids;
+                if (manufacturerIds) {
+                    param.tf_fm = manufacturerIds;
                 }
             }
-
             // Filter
-            if (setting.status.filter) {
-                var filter_ids = tf_filter.inputs.filter('[name="tf_ff"]:checked').map(function () {
+            if (that.opts.status.filter) {
+                const filterIds = $(that).find('[name="tf_ff"]:checked').map(function () {
                     return $(this).val();
                 }).get().join('.');
-
-                if (filter_ids) {
-                    param.tf_ff = filter_ids;
+                if (filterIds) {
+                    param.tf_ff = filterIds;
                 }
             }
-
+            // collapse states
+            if (that.opts.status.collapse && $.inArray('collapse', prohibited) === -1) {
+                const collapseIds = (function () {
+                    let ret;
+                    try {
+                        ret =
+                            $(that)
+                                .find(".panel-collapse.collapse")
+                                .map(function () {
+                                    let ret;
+                                    const expanded = $(this).hasClass("in");
+                                    if (expanded ^ !!$(this).data('o-expanded')) {
+                                        ret =
+                                            (function (el) {
+                                                const found = $(el).attr('id').toString().match(/\d+$/);
+                                                if (!found) {
+                                                    throw new Error("environment is broken");
+                                                }
+                                                return (expanded? 1: -1) * (found[0] + 1);
+                                            }) (this);
+                                    }
+                                    return ret;
+                                })
+                                .get();
+                    } catch ($e) {
+                        ret = [];
+                    }
+                    return ret;
+                }) ();
+                if (collapseIds) {
+                    param.tf_cs = collapseIds.join('.');
+                }
+            }
             return $.extend({
                 tf_fp: null,
-                tf_fq: null,
-                tf_fr: null,
-                tf_fd: null,
                 tf_fs: null,
                 tf_fm: null,
                 tf_ff: null,
-                tf_fc: null
+                tf_cs: null,
             }, param);
         };
-
-        // Run task after user change filter
-        tf_filter.on('change', function () {
-            // Clear past timeout
-            if (tf_filter.timeoutId !== undefined) {
-                clearTimeout(tf_filter.timeoutId);
+        // Start filter
+        this.rqUpdate = function () {
+            if (!isEqual(this.initParams, params(['collapse']))) {
+                const update = function (opts) {
+                    // Reload page with filter parameter
+                    window.location.href =
+                        modifyURLQuery(
+                            window.location.href,
+                            $.extend(params(), {page: null})
+                        );
+                }
+                if (typeof this.opts.dispatcher === 'function') {
+                    const promise = this.opts.dispatcher('updating');
+                    if (typeof promise === 'object' && typeof promise.then === 'function') {
+                        promise.then(function () {
+                            update(that.opts);
+                        });
+                        return;
+                    } else if (!promise) {
+                        /* an request is canceled */
+                        return;
+                    }
+                }
+                update(that.opts);
             }
-
-            // Get filter param
-            var param = tf_filter.getParam();
-
-            // Delay before to start filter
-            tf_filter.timeoutId = setTimeout(function () {
-                tf_filter.start(param);
-            }, setting.delay * 1000);
-
-
-
-            // Trigger param change event
-            setting.onParamChange(param);
-
-
-        });
-
-        // Input change event
-        this.inputs.on('change', function (e) {
-            setting.onInputChange(e);
-        });
-
-        // # Reset #
-        // Radio and checkbox
-        $('[data-tf-reset="check"]').on('click', function (e) {
-            e.stopImmediatePropagation();
-            $(this).parents('.tf-filter-group').find('input').prop('checked', false);
-
-            setting.onReset(this);
-            tf_filter.change();
-        });
-
-        // Price
-        $('[data-tf-reset="price"]').on('click', function (e) {
-            e.stopImmediatePropagation();
-
-            $('[name="tf_fp[min]"]').val($('[name="tf_fp[min]"]').attr('min'));
-            $('[name="tf_fp[max]"]').val($('[name="tf_fp[max]"]').attr('max'));
-
-            setting.onReset(this);
-            tf_filter.change();
-        });
-
-        // Text
-        $('[data-tf-reset="text"]').on('click', function (e) {
-            e.stopImmediatePropagation();
-            $(this).parents('.tf-filter-group').find('input').val('');
-
-            setting.onReset(this);
-            tf_filter.change();
-        });
-
-        // Reset all
-        $(this).find('[data-tf-reset="all"]').on('click', function (e) {
-            e.stopImmediatePropagation();
-
-            // Radio and checkbox
-            $('.tf-filter-group :checkbox, .tf-filter-group :radio').prop('checked', false);
-
-            // Text
-            $('.tf-filter-group input[type="text"]').val('');
-
-            // Price
-            $('[name="tf_fp[min]"]').val($('[name="tf_fp[min]"]').attr('min'));
-            $('[name="tf_fp[max]"]').val($('[name="tf_fp[max]"]').attr('max'));
-
-            // Trigger events
-            setting.onReset(this);
-            tf_filter.change();
+        };
+        this.initParams = params(['collapse']);
+        this.on('change', function () {
+            if (!!that.timeoutId) {
+                window.clearTimeout(that.timeoutId);
+            }
+            that.timeoutId = setTimeout(function () {
+                that.rqUpdate();
+            }, that.opts.delay * 1000);
         });
     };
 });
