@@ -1,5 +1,7 @@
 .button {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 7px 20px;
   font-weight: 700;
@@ -29,7 +31,7 @@
 }
 
 .button-selection {
-  width: 110px;
+  width: 100%;
 }
 
 .button-order {
@@ -55,14 +57,8 @@
 }
 
 .button-reset-card {
+  width: 100%;
   padding: 3px 25px;
-}
-
-.button-stock {
-  max-width: 230px;
-  width: 230px;
-  margin: 0 auto;
-  margin-bottom: 50px;
 }
 
 .button-feedback {
@@ -81,8 +77,15 @@
   margin-bottom: 40px;
 }
 
+.button-stock-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 @media (min-width: 768px) {
   .button-selection {
+    width: 110px;
     margin-right: 25px;
   }
 
@@ -91,7 +94,7 @@
   }
 
   .button-desktop {
-    display: block;
+    display: inline-flex;
     margin: 0 30px 0 0;
   }
 
