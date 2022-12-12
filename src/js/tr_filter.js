@@ -1,37 +1,11 @@
+/**
+ * Refactored js-code to tr_filter module
+ * jigius@gmail.com, 2022
+ */
 const isEqual = require('lodash.isequal');
+const modifyURLQuery = require('./modifyURLQuery');
 
 $(function() {
-    const modifyURLQuery = function(url, param) {
-        let value = {};
-        const query = String(url).split('?');
-        if (query[1]) {
-            const part = query[1].split('&');
-            for (let i = 0; i < part.length; i++) {
-                const data = part[i].split('=');
-                if (data[0] && data[1]) {
-                    value[data[0]] = data[1];
-                }
-            }
-        }
-        value = $.extend(value, param);
-        // Generate query parameter string
-        let query_param = '';
-        for (let i in value) {
-            if (value[i]) {
-                if (i === 'route') { // Skip route value to encode
-                    query_param += '&' + i + '=' + value[i];
-                } else {
-                    query_param += '&' + i + '=' + encodeURIComponent(value[i]);
-                }
-            }
-        }
-        // Return url with modified parameter
-        if (query_param) {
-            return query[0] + '?' + query_param.substring(1);
-        } else {
-            return query[0];
-        }
-    };
     $.fn.tf_filter = function (setting = {}) {
         const that = this;
         const defaultOpts = {
@@ -46,6 +20,13 @@ $(function() {
             }
         };
         this.opts = $.extend(defaultOpts, setting);
+        const paramsEmptied = {
+            tf_fp: null,
+            tf_fs: null,
+            tf_fm: null,
+            tf_ff: null,
+            tf_cs: null,
+        };
         const params = function (prohibited) {
             prohibited ||= [];
             if (Object.prototype.toString.call(prohibited) !== '[object Array]') {
@@ -56,11 +37,13 @@ $(function() {
                 let price = '';
                 const minPrice = $(that).find('[name="tf_fp[min]"]');
                 const maxPrice = $(that).find('[name="tf_fp[max]"]');
-                if (minPrice.attr('min') !== minPrice.val()) { // When minimum price change
-                    price += minPrice.val();
+                const vmin = minPrice.val().replace(/\D/g, '');
+                const vmax = maxPrice.val().replace(/\D/g, '');
+                if (minPrice.attr('min') !== vmin) { // When minimum price change
+                    price += vmin;
                 }
-                if (maxPrice.attr('max') !== maxPrice.val()) { // When maximum price change
-                    price += 'p' + maxPrice.val();
+                if (maxPrice.attr('max') !== vmax) { // When maximum price change
+                    price += 'p' + vmax;
                 }
                 if (price) {
                     param.tf_fp = price;
@@ -108,7 +91,11 @@ $(function() {
                                                 if (!found) {
                                                     throw new Error("environment is broken");
                                                 }
-                                                return (expanded? 1: -1) * (found[0] + 1);
+                                                const id = parseInt(found[0]);
+                                                if (isNaN(id)) {
+                                                    throw new Error("invalid value");
+                                                }
+                                                return (expanded? 1: -1) * (id + 1);
                                             }) (this);
                                     }
                                     return ret;
@@ -123,30 +110,23 @@ $(function() {
                     param.tf_cs = collapseIds.join('.');
                 }
             }
-            return $.extend({
-                tf_fp: null,
-                tf_fs: null,
-                tf_fm: null,
-                tf_ff: null,
-                tf_cs: null,
-            }, param);
+            return $.extend(Object.assign({}, paramsEmptied), param);
         };
-        // Start filter
+        const update = function (params) {
+            // Reload page with filter parameter
+            window.location.href =
+                modifyURLQuery(
+                    window.location.href,
+                    $.extend(params, {page: null})
+                );
+        };
         this.rqUpdate = function () {
             if (!isEqual(this.initParams, params(['collapse']))) {
-                const update = function (opts) {
-                    // Reload page with filter parameter
-                    window.location.href =
-                        modifyURLQuery(
-                            window.location.href,
-                            $.extend(params(), {page: null})
-                        );
-                }
                 if (typeof this.opts.dispatcher === 'function') {
                     const promise = this.opts.dispatcher('updating');
                     if (typeof promise === 'object' && typeof promise.then === 'function') {
                         promise.then(function () {
-                            update(that.opts);
+                            update(params());
                         });
                         return;
                     } else if (!promise) {
@@ -154,8 +134,11 @@ $(function() {
                         return;
                     }
                 }
-                update(that.opts);
+                update(params());
             }
+        };
+        this.rqReset = function () {
+            update(paramsEmptied);
         };
         this.initParams = params(['collapse']);
         this.on('change', function () {
@@ -165,6 +148,12 @@ $(function() {
             that.timeoutId = setTimeout(function () {
                 that.rqUpdate();
             }, that.opts.delay * 1000);
+        });
+        this.on('reset', function () {
+            if (!!that.timeoutId) {
+                window.clearTimeout(that.timeoutId);
+            }
+            that.rqReset();
         });
     };
 });
