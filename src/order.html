@@ -7,7 +7,7 @@ ${require('./partials/head.html')}
 
   <main class="main">
     <section class="order">
-      <div class="container">
+      <div class="row">
         <ul class="breadcrumb">
           <li class="breadcrumb-item">
             <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
@@ -16,7 +16,7 @@ ${require('./partials/head.html')}
             <a class="breadcrumb-link" href="/order.html">Оформление заказа</a>
           </li>
         </ul>
-        <h1 class="order-title">Оформление заказа</h1>
+        <h1>Оформление заказа</h1>
         <div class="row order-row">
           <div class="col-md-12 col-xs-12">
             <div class="table-responsive order-table">
@@ -84,7 +84,7 @@ ${require('./partials/head.html')}
                       class="form-control order-input" required />
                   </div>
                 </div>
-                <div class="form-group required has-error">
+                <div class="form-group required">
                   <label class="col-sm-2 order-label control-label" for="input-phone">Телефон</label>
                   <div class="col-sm-10">
                     <input type="text" name="phone" value="" id="input-phone" placeholder="+7 999 999 99 99"
@@ -99,7 +99,7 @@ ${require('./partials/head.html')}
                       class="form-control order-input" required aria-describedby="helpBlockEmail" />
                   </div>
                 </div>
-                <div class="form-group has-error">
+                <div class="form-group">
                   <label class="col-sm-2 order-label control-label" for="input-address">Вид доставки</label>
                   <div class="col-sm-10 select">
                     <select name="select-category" id="" class="select form-control">
@@ -166,8 +166,8 @@ ${require('./partials/head.html')}
               <div class="row order-row">
                 <div class="col-md-12 col-xs-12">
                   <div class="order-button">
-                    <button class="button button-card button-order button-order-no">Отмена</button>
-                    <button class="button button-card button-order">Заказать</button>
+                    <button class="button button-order">Отмена</button>
+                    <button class="button button-reset button-order">Заказать</button>
                   </div>
                 </div>
               </div>

@@ -1,8 +1,10 @@
 .button {
-  margin-top: 100px;
-  margin-bottom: 40px;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 7px 20px;
+  font-weight: 700;
   color: #ffffff;
   background-color: #e01f35;
   border: none;
@@ -10,70 +12,53 @@
   cursor: pointer;
 }
 
-.button:hover,
-.button-call:hover,
-.selection-button:hover,
-.button-stock:hover {
-  text-decoration: none;
-  background-color: #cb192e;
-}
-
-.button-stock:focus {
+.button:hover {
   background-color: #cb192e;
   color: #ffffff;
 }
 
-.button-stock:hover {
-  color: #ffffff;
+.button:focus {
+  border: none !important;
+  outline: none !important;
 }
 
-.button-call {
-  display: block;
-  text-align: center;
-  padding: 7px 89px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #e01f35;
-  border: none;
-}
-
-.button-stock {
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-  background-color: #e01f35;
-  padding: 8px 23px;
-}
-
-.button-wrapper {
-  padding: 0 40px;
-  margin-bottom: 50px;
-}
-
-.button-call:focus {
-  outline: 0px;
-  color: #ffffff;
+.button:disabled {
+  background-color: #b7b7b7;
 }
 
 .button-desktop {
   display: none;
 }
 
-.button-card {
-  margin: 0;
-  padding: 8px 28px;
-}
-
-.button-contact {
-  width: 147px;
+.button-selection {
+  width: 100%;
 }
 
 .button-order {
-  width: 132px;
+  width: 137px;
+}
+
+.button-order:not(:last-child) {
+  margin-right: 25px;
+}
+
+.button-reset {
+  border: 2px solid #e01f35;
+  background-color: transparent;
+  color: #171717;
+}
+
+.button-reset:hover {
+  border: 2px solid #cb192e;
+}
+
+.button-reset:focus {
+  border: 2px solid #cb192e !important;
+}
+
+.button-reset-card {
+  width: 100%;
+  padding: 3px 25px;
 }
 
 .button-feedback {
@@ -88,51 +73,33 @@
   background-color: #cacaca;
 }
 
-.button-order-no {
-  color: #171717;
-  background-color: #ffffff;
-  border: 2px solid #e01f35;
+.button-mobile-wrapper {
+  margin-bottom: 40px;
 }
 
-.button-order-no:hover {
-  color: #ffffff;
-}
-
-.button-order-no:not(:last-child) {
-  margin-right: 15px;
+.button-stock-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
-  .button {
+  .button-selection {
+    width: 110px;
+    margin-right: 25px;
+  }
+
+  .button-mobile-wrapper {
     display: none;
   }
 
   .button-desktop {
-    display: block;
+    display: inline-flex;
     margin: 0 30px 0 0;
   }
 
-  .button-call-desktop {
-    padding: 7px 20px;
-  }
-
-  .button-call-desktop:hover {
-    background-color: #cb192e;
-    color: #ffffff;
-  }
-
-  .button-card {
-    display: block;
-  }
-
-  .button-feedback {
-    display: block;
-  }
-}
-
-@media (min-width: 1200px) {
-  .button-stock {
-    width: 230px;
-    margin: 0 auto;
+  .button-reset-list {
+    max-width: 110px;
+    width: 110px;
   }
 }

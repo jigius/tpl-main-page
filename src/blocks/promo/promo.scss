@@ -4,11 +4,6 @@
   margin-bottom: 30px;
 }
 
-.promo-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .promo-block {
   position: absolute;
   top: 152px;
@@ -23,6 +18,7 @@
   font-size: 30px;
   line-height: 39px;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .promo-adress {
@@ -45,19 +41,20 @@
 @media (min-width: 1200px) {
   .promo {
     flex-wrap: nowrap;
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
     margin: 0 0 50px 0;
   }
 
   .promo-block {
     padding: 0 50px;
   }
-}
 
-@media (min-width: 1520px) {
-  .promo {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
+  .promo-title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .promo-adress {
+    font-size: 22px;
+    line-height: 28px;
   }
 }

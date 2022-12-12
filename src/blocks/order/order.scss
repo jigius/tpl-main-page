@@ -1,3 +1,7 @@
+.order {
+  padding: 0 15px;
+}
+
 .order-row {
   margin: 0 -15px;
 }
@@ -248,18 +252,10 @@ input.order-plus-minus {
 
 @media (min-width: 1200px) {
   .order {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
+    padding: 0;
   }
 
   .order-row {
     margin: 0 -15px;
-  }
-}
-
-@media (min-width: 1520px) {
-  .order {
-    padding-right: calc(50% - 760px);
-    padding-left: calc(50% - 760px);
   }
 }
