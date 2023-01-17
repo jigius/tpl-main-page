@@ -1,53 +1,93 @@
-.info-title {
+.info-wrapper h1 {
   margin-bottom: 10px;
 }
 
-.info-subtitle {
+.info-wrapper h2 {
   margin-bottom: 10px;
   font-size: 30px;
 }
 
-.info-heading {
+.info-wrapper h3 {
   margin-bottom: 10px;
   font-size: 26px;
 }
 
-.info-head {
+.info-wrapper h4 {
   margin-bottom: 10px;
   font-size: 22px;
 }
 
-.info-text {
+.info-wrapper p {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.info-list {
+.info-wrapper ul {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.info-link {
+.info-wrapper a {
   color: #e01f35;
   text-decoration: none;
 }
 
-.info-link:hover {
+.info-wrapper a:hover {
   text-decoration: underline;
   color: #0058dd;
 }
 
-.table-text {
+.table td span {
   color: #000000;
   font-size: 14px;
   text-align: justify;
 }
 
-.table-link {
+.table td a {
   margin: 0px 5px;
   padding: 0px;
   color: #000000;
   font-size: 14px;
   text-align: center;
   background-color: rgb(255, 255, 255);
+}
+
+.review {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .info-wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: 820px) {
+  .info-wrapper {
+    width: 820px;
+  }
+}
+
+@media (min-width: 912px) {
+  .info-wrapper {
+    width: 912px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info-wrapper {
+    width: 1024px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info-wrapper {
+    width: 1230px;
+  }
+}
+
+@media (min-width: 1520px) {
+  .info-wrapper {
+    width: 1550px;
+  }
 }
