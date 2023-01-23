@@ -58,6 +58,12 @@ module.exports = {
       filename: "reviews.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/info.html"), // шаблон
+      filename: "info.html", // название выходного файла
+      chunks: ["main"],
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/contact.html"), // шаблон
       filename: "contact.html", // название выходного файла

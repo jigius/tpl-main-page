@@ -3,7 +3,7 @@
 }
 
 .card-title {
-  padding: 10px 15px 30px 15px;
+  padding: 0 5px
 }
 
 .card-list {
@@ -207,13 +207,13 @@
     margin-bottom: 20px;
   }
 
-  .card-title,
-  .card-list {
-    padding-left: 0;
-    padding-right: 0;
+  .card-title {
+  padding: 0 20px;
   }
 
   .card-list {
+    padding-left: 0;
+    padding-right: 0;
     margin: 0 -20px;
   }
 
