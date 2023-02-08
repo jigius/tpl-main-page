@@ -6,33 +6,44 @@ import "fontawesome-4.7/css/font-awesome.css";
 import "bootstrap/dist/css/bootstrap.css";
 // import "../css/swiper.css";
 // require("../css/inspire/stylesheet.css");
+import "nouislider/dist/nouislider.css";
 
 
+import "./styles.js";
 
-// JS
-const jQuery = require("jquery");
+const Dependency = require("./dependency");
 
-window.$ = window.jQuery = jQuery;
-require("bootstrap/dist/js/bootstrap.js");
+const app = {
+  dependency: new Dependency()
+};
+
+window.jQuery = window.$ = require("jquery");
+$(function() {
+  app.dependency.register('$', $)
+});
+
+require("bootstrap/dist/js/bootstrap");
 
 /* globals */
-require("./global_messages.js");
-require("./inputmask.js");
-require("./form/");
-window.modifyURLQuery = require('./modifyURLQuery.js');
+app.dependency.register('EventQueue', require("./event_queue"));
+app.dependency.register('template', require("./micro-templating.escaped"));
+require("./global_messages");
+app.dependency.register('Inputmask', require("inputmask"));
+//require("./form/");
+//window.modifyURLQuery = require('./modifyURLQuery');
+app.dependency.register('Modal', require('./modal'));
 
 /* Used into catalog.page */
-window.wNumb = require("wnumb");
-import "nouislider/dist/nouislider.css";
-window.noUiSlider = require("nouislider/dist/nouislider.js");
-require("./tr_filter.js");
-require("./catalog_type_view.js");
+app.dependency.register('wNumb', require("wnumb"));
+//window.noUiSlider = require("nouislider/dist/nouislider");
+require("./tr_filter");
 
 /* Used with button "Buy" - add a product into the cart */
-window.cart = require("./oc3/cart.js");
+window.cart = require("./oc3/cart");
 
+window.App = app;
 
-import "../style.scss";
+//import "../style.scss";
 
 
 

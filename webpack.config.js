@@ -15,12 +15,14 @@ module.exports = {
   mode: "development",
   output: {
     path: `${__dirname}/dist`,
+    //path: "/home/jigius/work/vhosts/fedot/repo/tpls",
     filename: "[name]-bundle.js",
     clean: true,
   },
 
   devServer: {
-    static: "./dist",
+    //static: "./dist",
+    static: "/home/jigius/work/vhosts/fedot/repo/tpls",
     hot: true,
     watchFiles: ["./src"],
   },
@@ -115,11 +117,17 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          //'style-loader',
+          //"style-loader",
           "css-loader",
-          //'sass-loader'
+          "sass-loader"
         ],
       },
+        {
+            test: /\.(scssw)$/,
+            use: [
+                "sass-loader"
+            ],
+        },
       {
         test: /\.(jpe?g|svg|png|gif|ico)(\?v=\d+\.\d+\.\d+)?$/i,
         type: "asset/resource",
