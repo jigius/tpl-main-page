@@ -30,12 +30,13 @@ app.dependency.register('template', require("./micro-templating.escaped"));
 require("./global_messages");
 app.dependency.register('Inputmask', require("inputmask"));
 //require("./form/");
-//window.modifyURLQuery = require('./modifyURLQuery');
+window.modifyURLQuery = require('./modifyURLQuery');
 app.dependency.register('Modal', require('./modal'));
 
 /* Used into catalog.page */
 app.dependency.register('wNumb', require("wnumb"));
-//window.noUiSlider = require("nouislider/dist/nouislider");
+window.wNumb = require("wnumb");
+window.noUiSlider = require("nouislider/dist/nouislider");
 require("./tr_filter");
 
 /* Used with button "Buy" - add a product into the cart */

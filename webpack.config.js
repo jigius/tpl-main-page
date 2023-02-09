@@ -14,8 +14,8 @@ module.exports = {
   },
   mode: "development",
   output: {
-    path: `${__dirname}/dist`,
-    //path: "/home/jigius/work/vhosts/fedot/repo/tpls",
+    //path: `${__dirname}/dist`,
+    path: "/home/jigius/work/vhosts/fedot/repo/tpls",
     filename: "[name]-bundle.js",
     clean: true,
   },
