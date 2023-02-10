@@ -56,8 +56,7 @@ App
       });
       lightbox.init();
       (function () {
-        $(galleryId + " div.card-img-link").on("mouseenter", function (ev) {
-          ev.stopPropagation();
+        $(galleryId + " .card-img-link").on("mouseenter", function (ev) {
           const container = $(".card-img-big");
           if (container.length === 0 || $(container).data("index") === $(this).data("index")) {
             return;
