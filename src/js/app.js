@@ -25,6 +25,11 @@ $(function() {
 require("bootstrap/dist/js/bootstrap");
 
 /* globals */
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import PhotoSwipe from 'photoswipe';
+import 'photoswipe/style.css';
+app.dependency.register('PhotoSwipeLightbox', PhotoSwipeLightbox);
+app.dependency.register('PhotoSwipe', PhotoSwipe);
 app.dependency.register('EventQueue', require("./event_queue"));
 app.dependency.register('template', require("./micro-templating.escaped"));
 require("./global_messages");
