@@ -8,7 +8,7 @@ App
   .dependency
   .resolved('PhotoSwipeLightbox', 'PhotoSwipe', '$')
   .then(function (PhotoSwipeLightbox, PhotoSwipe, $) {
-    const galleryId = "#img-gallery";
+    const galleryId = ".img-gallery";
     $(function () {
       const lightbox = new PhotoSwipeLightbox({
         gallery: galleryId,
