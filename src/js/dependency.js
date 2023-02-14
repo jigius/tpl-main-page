@@ -35,7 +35,7 @@ const Dependency = function ()
 
   /**
    * Resolves requested dependencies
-   * @param {array} keys
+   * @param keys
    * @returns {Promise}
    */
   this.resolved = function (...keys) {

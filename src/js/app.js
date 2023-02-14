@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 // require("../css/inspire/stylesheet.css");
 import "nouislider/dist/nouislider.css";
 
+import 'photoswipe/style.css';
 
 import "./styles.js";
 
@@ -27,7 +28,7 @@ require("bootstrap/dist/js/bootstrap");
 /* globals */
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
-import 'photoswipe/style.css';
+
 app.dependency.register('PhotoSwipeLightbox', PhotoSwipeLightbox);
 app.dependency.register('PhotoSwipe', PhotoSwipe);
 app.dependency.register('EventQueue', require("./event_queue"));
@@ -40,9 +41,10 @@ app.dependency.register('Modal', require('./modal'));
 
 /* Used into catalog.page */
 app.dependency.register('wNumb', require("wnumb"));
-window.wNumb = require("wnumb");
-window.noUiSlider = require("nouislider/dist/nouislider");
-require("./tr_filter");
+app.dependency.register('noUiSlider', require("nouislider/dist/nouislider"));
+//window.wNumb = require("wnumb");
+//window.noUiSlider = require("nouislider/dist/nouislider");
+$.fn.tf_filter = require("./tf_filter");
 
 /* Used with button "Buy" - add a product into the cart */
 window.cart = require("./oc3/cart");

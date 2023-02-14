@@ -1,4 +1,5 @@
 import "../global.scss";
+import "../photoswipe.scss";
 import "../blocks/navbar/navbar.scss";
 import "../blocks/feedback/feedback.scss";
 import "../blocks/button/button.scss";
