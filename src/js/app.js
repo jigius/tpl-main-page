@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "nouislider/dist/nouislider.css";
 
 import 'photoswipe/style.css';
+import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css';
 
 import "./styles.js";
 
@@ -28,9 +29,11 @@ require("bootstrap/dist/js/bootstrap");
 /* globals */
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
+import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
 
 app.dependency.register('PhotoSwipeLightbox', PhotoSwipeLightbox);
 app.dependency.register('PhotoSwipe', PhotoSwipe);
+app.dependency.register('PhotoSwipeDynamicCaption', PhotoSwipeDynamicCaption);
 app.dependency.register('EventQueue', require("./event_queue"));
 app.dependency.register('template', require("./micro-templating.escaped"));
 require("./global_messages");
