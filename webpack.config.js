@@ -11,11 +11,12 @@ module.exports = {
     main: "./src/js/app.js",
     sample: glob.sync("./src/js/page/sample/**/*.js"),
     'card-catalog': glob.sync("./src/js/page/card-catalog/**/*.js"),
+    'reviews': glob.sync("./src/js/page/reviews/**/*.js"),
   },
   mode: "development",
   output: {
-    path: `${__dirname}/dist`,
-    //path: "/home/jigius/work/vhosts/fedot/repo/tpls",
+    //path: `${__dirname}/dist`,
+    path: "/home/jigius/work/vhosts/fedot/repo/tpls",
     filename: "[name]-bundle.js",
     clean: true,
   },
@@ -58,7 +59,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
-      chunks: ["main"],
+      chunks: ["main", "reviews"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
