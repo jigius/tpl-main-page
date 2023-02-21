@@ -1,0 +1,10 @@
+/*
+ * Display arrow buttons on touch devices
+ * https://wordpress.org/support/topic/display-arrow-buttons-on-touch-devices/
+ */
+.pswp--touch {
+  .pswp__button--arrow--prev,
+  .pswp__button--arrow--next {
+    visibility: visible !important;
+  }
+}

@@ -1,69 +1,67 @@
-.info-wrapper h1 {
-  margin-bottom: 10px;
+.info {
+  padding: 0 15px;
 }
-
-.info-wrapper h2 {
-  margin-bottom: 10px;
-  font-size: 30px;
-}
-
-.info-wrapper h3 {
-  margin-bottom: 10px;
-  font-size: 26px;
-}
-
-.info-wrapper h4 {
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
-.info-wrapper p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.info-wrapper ul {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.info-wrapper ol {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.info-wrapper a {
-  color: #e01f35;
-  text-decoration: none;
-}
-
-.info-wrapper a:hover {
-  text-decoration: underline;
-  color: #0058dd;
-}
-
-.table td span {
-  color: #000000;
-  font-size: 14px;
-  text-align: justify;
-}
-
-.table td a {
-  margin: 0px 5px;
-  padding: 0px;
-  color: #000000;
-  font-size: 14px;
-  text-align: center;
-  background-color: rgb(255, 255, 255);
-}
-
-.review {
-  padding: 0;
+.info-wrapper {
+  h1 {
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  h3 {
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  h4 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  ul {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  ol {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  a {
+    color: #e01f35;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #0058dd;
+  }
+  .table {
+    td {
+      span {
+        color: black;
+        font-size: 14px;
+        text-align: justify;
+      }
+      a {
+        margin: 0 5px;
+        padding: 0;
+        color: black;
+        font-size: 14px;
+        text-align: center;
+        background-color: white;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
   .info-wrapper {
     width: 768px;
+  }
+  .info {
+    padding: 0 15px;
   }
 }
 
@@ -87,12 +85,18 @@
 
 @media (min-width: 1200px) {
   .info-wrapper {
-    width: 1230px;
+    width: 1200px;
+  }
+  .info {
+    padding: 0;
   }
 }
 
 @media (min-width: 1520px) {
   .info-wrapper {
-    width: 1550px;
+    width: 1520px;
+  }
+  .info {
+    padding: 0;
   }
 }

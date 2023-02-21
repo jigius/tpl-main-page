@@ -10,17 +10,20 @@ module.exports = {
   entry: {
     main: "./src/js/app.js",
     sample: glob.sync("./src/js/page/sample/**/*.js"),
-    catalog: glob.sync("./src/js/page/catalog/**/*.js"),
+    'card-catalog': glob.sync("./src/js/page/card-catalog/**/*.js"),
+    'reviews': glob.sync("./src/js/page/reviews/**/*.js"),
   },
   mode: "development",
   output: {
-    path: `${__dirname}/dist`,
+    //path: `${__dirname}/dist`,
+    path: "/home/jigius/work/vhosts/fedot/repo/tpls",
     filename: "[name]-bundle.js",
     clean: true,
   },
 
   devServer: {
-    static: "./dist",
+    //static: "./dist",
+    static: "/home/jigius/work/vhosts/fedot/repo/tpls",
     hot: true,
     watchFiles: ["./src"],
   },
@@ -40,23 +43,23 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/card-catalog.html"), // шаблон
       filename: "card-catalog.html", // название выходного файла
-      chunks: ["main"],
+      chunks: ["main", "card-catalog"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog.html"), // шаблон
       filename: "catalog.html", // название выходного файла
-      chunks: ["main", "catalog"],
+      chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog-list.html"), // шаблон
       filename: "catalog-list.html", // название выходного файла
-      chunks: ["main", "catalog"],
+      chunks: ["main"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
-      chunks: ["main"],
+      chunks: ["main", "reviews"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
@@ -115,11 +118,17 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          //'style-loader',
+          //"style-loader",
           "css-loader",
-          //'sass-loader'
+          "sass-loader"
         ],
       },
+        {
+            test: /\.(scssw)$/,
+            use: [
+                "sass-loader"
+            ],
+        },
       {
         test: /\.(jpe?g|svg|png|gif|ico)(\?v=\d+\.\d+\.\d+)?$/i,
         type: "asset/resource",
