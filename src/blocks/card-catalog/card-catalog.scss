@@ -28,8 +28,6 @@
 }
 
 .card-img-small {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -114,10 +112,6 @@
 }
 
 @media (min-width: 768px) {
-  .card-catalog-row {
-    padding: 0 15px;
-  }
-
   .card-catalog-prices {
     justify-content: normal;
   }
@@ -136,6 +130,7 @@
     position: absolute;
     width: 95px;
     top: 0;
+    left: 15px;
   }
 
   .card-catalog-row {
@@ -172,7 +167,7 @@
   }
 
   .card-img-row {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .card-border-big {

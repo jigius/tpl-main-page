@@ -68,12 +68,6 @@ a:focus {
   border: 0px !important;
 }
 
-a:focus,
-button:focus {
-  outline: solid #767676 1px !important;
-  text-decoration: none;
-}
-
 @media (min-width: 1200px) {
   .main {
     padding-right: calc(50% - 600px);
