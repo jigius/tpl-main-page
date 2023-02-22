@@ -120,10 +120,11 @@
   background-color: #ffffff;
 }
 
-.card-list__latest {
+.card-homepage {
   .card-block {
     display: none;
   }
+
   .card-block-1,
   .card-block-2 {
     display: block;
@@ -170,8 +171,7 @@
     font-size: 22px;
     line-height: 28px;
   }
-
-  .card-list__latest {
+  .card-homepage {
     .card-block-3,
     .card-block-4 {
       display: block;
