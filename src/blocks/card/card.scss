@@ -1,3 +1,5 @@
+@use '../../global';
+
 .card {
   margin-bottom: 35px;
 }
@@ -57,8 +59,9 @@
 }
 
 .card-img {
+  @extend .img-responsive;
   position: relative;
-  margin: 10px 25px 15px 25px;
+  /* margin: 10px 25px 15px 25px; */
 }
 
 .card-img-list {
@@ -76,8 +79,9 @@
   line-height: 18px;
   color: #171717;
   margin-bottom: 11px;
-  border-top: 2px solid #e1e1e1;
   padding-top: 15px;
+  height: 70px;
+  overflow: hidden;
 }
 
 .card-name-list {
@@ -116,6 +120,10 @@
   padding: 2px 5px;
 }
 
+.card-block-mobile {
+  display: none;
+}
+
 .btn-primary:active {
   background-color: #ffffff;
 }
@@ -136,6 +144,10 @@
     margin-bottom: 50px;
   }
 
+  .card-block-mobile {
+    display: block;
+  }
+
   .card-item-list {
     flex-direction: row;
     align-items: flex-start;
@@ -148,6 +160,10 @@
   .card-name-list-desktop {
     font-size: 20px !important;
     line-height: 26px !important;
+  }
+
+  .card-name-list-mobile {
+    display: none;
   }
 
   .card-name-list-desktop {
@@ -206,6 +222,8 @@
   .card-name {
     font-size: 15px;
     line-height: 19px;
+    height: 54px;
+    overflow: hidden;
   }
 
   .card-price-list {
