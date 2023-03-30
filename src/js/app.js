@@ -32,6 +32,12 @@ import PhotoSwipe from 'photoswipe';
 import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
 import Swiper from 'swiper/bundle';
 
+/**
+ * Lightweight ES6 Promise polyfill for the browser and node. Adheres closely to the spec.
+ * It is a perfect polyfill IE or any other browser that does not support native promises.
+ */
+import 'promise-polyfill/src/polyfill';
+
 (function () {
   app.dependency.register('PhotoSwipeLightbox', PhotoSwipeLightbox);
   app.dependency.register('PhotoSwipe', PhotoSwipe);
