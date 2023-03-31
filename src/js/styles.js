@@ -26,3 +26,4 @@ import "../blocks/info/info.scss";
 import "../blocks/modal/modal.scss";
 import "../blocks/alert/alert.scss";
 import "../blocks/footer/footer.scss";
+import "../blocks/form/error.scss";
