@@ -2,7 +2,7 @@
 import "./fonts.js";
 
 // CSS
-import "fontawesome-4.7/css/font-awesome.css";
+//import "fontawesome-4.7/css/font-awesome.css";
 import "bootstrap/dist/css/bootstrap.css";
 //import "../css/swiper.css";
 // require("../css/inspire/stylesheet.css");

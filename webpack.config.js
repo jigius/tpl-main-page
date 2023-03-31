@@ -13,6 +13,7 @@ module.exports = {
     'card-catalog': glob.sync("./src/js/page/card-catalog/**/*.js"),
     'reviews': glob.sync("./src/js/page/reviews/**/*.js"),
   },
+  //mode: "production",
   mode: "development",
   output: {
     //path: `${__dirname}/dist`,
