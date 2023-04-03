@@ -12,6 +12,7 @@ import "../blocks/review/review.scss";
 import "../blocks/stock/stock.scss";
 import "../blocks/breadcrumb/breadcrumb.scss";
 import "../blocks/catalog/catalog.scss";
+import "../blocks/catalog/pagination.scss";
 import "../blocks/panel/panel.scss";
 import "../blocks/sort/sort.scss";
 import "../blocks/input/input.scss";

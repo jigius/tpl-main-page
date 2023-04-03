@@ -61,11 +61,3 @@ $.fn.tf_filter = require("./tf_filter");
 window.cart = require("./oc3/cart");
 
 window.App = app;
-
-//import "../style.scss";
-
-
-
-//require("./common.js");
-// require("./inspire/custom.js");
-// require("./swiper.js");
