@@ -12,8 +12,12 @@
   "author": "Jigius",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-arrow-functions": "^7.20.7",
+    "@babel/preset-env": "^7.21.4",
     "@fontsource/lexend": "^4.5.13",
     "@fontsource/pt-sans": "^4.5.11",
+    "babel-loader": "^9.1.2",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "file-loader": "^6.2.0",
@@ -35,6 +39,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@babel/cli": "^7.21.0",
     "bootstrap": "^3.3.5",
     "fontawesome-4.7": "^4.7.0",
     "glob": "^8.0.3",

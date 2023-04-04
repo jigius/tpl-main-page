@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
+const
+  OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
@@ -16,8 +17,8 @@ module.exports = {
   //mode: "production",
   mode: "development",
   output: {
-    //path: `${__dirname}/dist`,
-    path: "/home/jigius/work/vhosts/fedot/repo/tpls",
+    path: `${__dirname}/dist`,
+    //path: "/home/jigius/work/vhosts/fedot/repo/tpls",
     filename: "[name]-bundle.js",
     clean: true,
   },
@@ -94,7 +95,7 @@ module.exports = {
       filename: "moods/alert.html",
       chunks: ["main"],
     }),
-    /*new HtmlWebpackPlugin({
+    /* new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/mood-formcontrols.html"),
       filename: "mood-formcontrols.html",
       chunks: ["main"],
@@ -102,6 +103,34 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+
+              ['@babel/preset-env', {
+                /*"corejs": {
+                  "version": 3
+                },
+                debug: true,
+                "useBuiltIns": "usage",*/
+                targets: {
+                  "edge": "17",
+                  "firefox": "60",
+                  "chrome": "67",
+                  "safari": "11.1"
+                }}],
+            ],
+            "plugins": [
+              "@babel/plugin-proposal-class-properties",
+              "@babel/plugin-transform-arrow-functions"
+            ]
+          }
+        }
+      },
       {
         test: /\.html$/i,
         include: path.join(__dirname, "src"),
@@ -118,7 +147,7 @@ module.exports = {
       {
         test: /\.(css|scss)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          //MiniCssExtractPlugin.loader,
           //"style-loader",
           "css-loader",
           "sass-loader"
