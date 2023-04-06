@@ -1,5 +1,5 @@
 // FONTs
-import "./fonts.js";
+import "./fonts.js";``
 
 // CSS
 //import "fontawesome-4.7/css/font-awesome.css";
@@ -11,7 +11,6 @@ import 'swiper/swiper-bundle.css';
 import 'photoswipe/style.css';
 import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css';
 
-import "./styles.js";
 
 const Dependency = require("./dependency");
 
@@ -36,7 +35,7 @@ import Swiper from 'swiper/bundle';
  * Lightweight ES6 Promise polyfill for the browser and node. Adheres closely to the spec.
  * It is a perfect polyfill IE or any other browser that does not support native promises.
  */
-import 'promise-polyfill/src/polyfill';
+//import 'promise-polyfill/src/polyfill';
 
 (function () {
   app.dependency.register('PhotoSwipeLightbox', PhotoSwipeLightbox);
@@ -59,5 +58,7 @@ $.fn.tf_filter = require("./tf_filter");
 
 /* Used with button "Buy" - add a product into the cart */
 window.cart = require("./oc3/cart");
+
+import "./styles.js";
 
 window.App = app;

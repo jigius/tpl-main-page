@@ -1,28 +1,29 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const
-  OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
+const  OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const path = require("path");
 const glob = require("glob");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/js/app.js",
+    main: ["core-js/stable", "./src/js/app.js"],
     sample: glob.sync("./src/js/page/sample/**/*.js"),
     'card-catalog': glob.sync("./src/js/page/card-catalog/**/*.js"),
     'reviews': glob.sync("./src/js/page/reviews/**/*.js"),
   },
-  //mode: "production",
-  mode: "development",
+  mode: "production",
+  //mode: "development",
   output: {
     path: `${__dirname}/dist`,
-    //path: "/home/jigius/work/vhosts/fedot/repo/tpls",
+    //path: "/home/jigius/work/vhosts/fedot/repo/public/build",
     filename: "[name]-bundle.js",
     clean: true,
+    //chunkFormat: "array-push"
   },
-
+  target: ["es5", "web"],
   devServer: {
     //static: "./dist",
     static: "/home/jigius/work/vhosts/fedot/repo/tpls",
@@ -30,7 +31,6 @@ module.exports = {
     watchFiles: ["./src"],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/template.html"), // main page
       filename: "index.html",
@@ -42,16 +42,19 @@ module.exports = {
       filename: "sample.html", // result page into ./dist folder
       chunks: ["main", "sample"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/card-catalog.html"), // шаблон
       filename: "card-catalog.html", // название выходного файла
       chunks: ["main", "card-catalog"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog.html"), // шаблон
       filename: "catalog.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog-list.html"), // шаблон
       filename: "catalog-list.html", // название выходного файла
@@ -69,37 +72,45 @@ module.exports = {
       filename: "info.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/contact.html"), // шаблон
       filename: "contact.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/about.html"), // шаблон
       filename: "about.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       // шаблон страницы заказа
       template: path.resolve(__dirname, "./src/order.html"),
       filename: "order.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/moods/modal-popup.html"),
-      filename: "moods/modal-popup.html",
+      filename: "moods/modal-popup-[hash].html",
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/moods/alert.html"),
-      filename: "moods/alert.html",
+      filename: "moods/alert-[hash].html",
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     /* new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/mood-formcontrols.html"),
       filename: "mood-formcontrols.html",
       chunks: ["main"],
-    }),*/
+    }),
+    new MiniCssExtractPlugin()
+    */
   ],
   module: {
     rules: [
@@ -110,23 +121,9 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-
-              ['@babel/preset-env', {
-                /*"corejs": {
-                  "version": 3
-                },
-                debug: true,
-                "useBuiltIns": "usage",*/
-                targets: {
-                  "edge": "17",
-                  "firefox": "60",
-                  "chrome": "67",
-                  "safari": "11.1"
-                }}],
-            ],
-            "plugins": [
-              "@babel/plugin-proposal-class-properties",
-              "@babel/plugin-transform-arrow-functions"
+              [
+                '@babel/preset-env',
+              ]
             ]
           }
         }
@@ -147,7 +144,7 @@ module.exports = {
       {
         test: /\.(css|scss)$/,
         use: [
-          //MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           //"style-loader",
           "css-loader",
           "sass-loader"
@@ -163,7 +160,7 @@ module.exports = {
         test: /\.(jpe?g|svg|png|gif|ico)(\?v=\d+\.\d+\.\d+)?$/i,
         type: "asset/resource",
         generator: {
-          filename: "images/[name]-[hash][ext]",
+          filename: "images/[name][ext]",
         },
       },
       {
