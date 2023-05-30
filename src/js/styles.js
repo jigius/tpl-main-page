@@ -1,5 +1,4 @@
 import "../global.scss";
-import "../photoswipe.scss";
 import "../blocks/navbar/navbar.scss";
 import "../blocks/feedback/feedback.scss";
 import "../blocks/button/button.scss";
@@ -28,3 +27,4 @@ import "../blocks/modal/modal.scss";
 import "../blocks/alert/alert.scss";
 import "../blocks/footer/footer.scss";
 import "../blocks/form/error.scss";
+import "../photoswipe.scss";

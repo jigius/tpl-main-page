@@ -8,9 +8,6 @@ import "bootstrap/dist/css/bootstrap.css";
 // require("../css/inspire/stylesheet.css");
 import "nouislider/dist/nouislider.css";
 import 'swiper/swiper-bundle.css';
-import 'photoswipe/style.css';
-import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css';
-
 
 const Dependency = require("./dependency");
 
@@ -26,9 +23,7 @@ $(function() {
 require("bootstrap/dist/js/bootstrap");
 
 /* globals */
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import PhotoSwipe from 'photoswipe';
-import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
+
 import Swiper from 'swiper/bundle';
 
 /**
@@ -37,11 +32,6 @@ import Swiper from 'swiper/bundle';
  */
 //import 'promise-polyfill/src/polyfill';
 
-(function () {
-  app.dependency.register('PhotoSwipeLightbox', PhotoSwipeLightbox);
-  app.dependency.register('PhotoSwipe', PhotoSwipe);
-  app.dependency.register('PhotoSwipeDynamicCaption', PhotoSwipeDynamicCaption);
-}) ();
 app.dependency.register('Swiper', Swiper);
 app.dependency.register('EventQueue', require("./event_queue"));
 app.dependency.register('template', require("./micro-templating.escaped"));
@@ -54,6 +44,9 @@ app.dependency.register('Modal', require('./modal'));
 /* Used into catalog.page */
 app.dependency.register('wNumb', require("wnumb"));
 app.dependency.register('noUiSlider', require("nouislider/dist/nouislider"));
+
+app.dependency.register('photoswipe',  require("./photoswipe").default);
+
 $.fn.tf_filter = require("./tf_filter");
 
 /* Used with button "Buy" - add a product into the cart */

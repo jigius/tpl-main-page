@@ -8,8 +8,9 @@ const glob = require("glob");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  //devtool: 'source-map',
   entry: {
-    main: ["core-js/stable", "./src/js/app.js"],
+    main: ["./src/js/app.js"],
     sample: glob.sync("./src/js/page/sample/**/*.js"),
     'card-catalog': glob.sync("./src/js/page/card-catalog/**/*.js"),
     'reviews': glob.sync("./src/js/page/reviews/**/*.js"),
@@ -21,9 +22,7 @@ module.exports = {
     //path: "/home/jigius/work/vhosts/fedot/repo/public/build",
     filename: "[name]-bundle.js",
     clean: true,
-    //chunkFormat: "array-push"
   },
-  target: ["es5", "web"],
   devServer: {
     //static: "./dist",
     static: "/home/jigius/work/vhosts/fedot/repo/tpls",
@@ -150,12 +149,6 @@ module.exports = {
           "sass-loader"
         ],
       },
-        {
-            test: /\.(scssw)$/,
-            use: [
-                "sass-loader"
-            ],
-        },
       {
         test: /\.(jpe?g|svg|png|gif|ico)(\?v=\d+\.\d+\.\d+)?$/i,
         type: "asset/resource",
