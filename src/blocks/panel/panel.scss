@@ -7,7 +7,8 @@
   display: block;
   position: relative;
   font-weight: bold;
-
+/*
+  PF-28300 - BUG: стили для аккардиона перебивают стили фильтра
   &::after {
     content: "";
     border: solid black;
@@ -18,7 +19,7 @@
     right: 0;
     top: 0;
     transform: rotate(45deg);
-  }
+  }*/
 
   &[aria-expanded="true"]::after {
     transform: rotate(-135deg);

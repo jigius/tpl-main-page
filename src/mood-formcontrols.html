@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+${require('../partials/head.html')}
+
+<body>
+  ${require('../partials/navbar.html')}
+
+  <main class="main">
+    <section class="card-catalog">
+      <div class="container">
+        <div class="row card-catalog-row">
+          <div class="col-xs-12 card-catalog-row">
+            <div class="row">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="/mood-formcontrols.html">Примеры контролов для форм</a>
+                </li>
+              </ul>
+              <h1 class="card-catalog-name">
+                Примеры контролов для форм
+              </h1>
+            </div>
+
+            <style>
+              .form-group.required .control-label:after {
+                  content: "*";
+                  color: red;
+              }
+            </style>
+            <div class="row">
+              <div class="col-md-12 col-xs-12">
+                <fieldset>
+                  <legend>Form's legend</legend>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-name">Label for control</label>
+                    <div class="col-sm-10">
+                      <input type="text" >
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-name">mandatory input</label>
+                    <div class="col-sm-10">
+                      <span id="helpBlockName" class="help-block">error description - foobar is incorrect</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group required">
+                    <label class="col-sm-2 control-label" for="input-name">mandatory input</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="name" id="input-name" value="foobar" class="form-control" required aria-describedby="helpBlockName">
+                      <span id="helpBlockName" class="help-block">error description - foobar is incorrect</span>
+                    </div>
+                  </div>
+
+
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label" for="input-email">optional control</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="email" value="foo@example.com" id="input-email" class="form-control" required aria-describedby="helpBlockEmail">
+                        <span id="helpBlockEmail" class="help-block">Подсказка пользователю</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label" for="input-address">textarea</label>
+                      <div class="col-sm-10">
+                        <textarea name="address" id="input-address" class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">checkboxes</label>
+                      <div class="col-sm-10">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                        </div>
+                        <div class="checkbox disabled">
+                          <label>
+                            <input type="checkbox" value="1" disabled>
+                            Option two is disabled
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">checkboxes</label>
+                      <div class="col-sm-10">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Option two can be something else and selecting it will deselect option one
+                          </label>
+                        </div>
+                        <div class="radio disabled">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                            Option three is disabled
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                    </div>
+                  </fieldset>
+                  <div class="col-md-12 col-xs-12">
+
+                    <div class="pull-right">
+                      <input type="button" value="Отменить" id="btn_cancel" class="btn btn-default">
+                      <input type="submit" value="Подтвердить заказ" id="btn_process" class="btn btn-primary">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    ${require('../partials/review.html')}
+  </main>
+
+  ${require('../partials/footer.html')}
+</body>
+
+</html>

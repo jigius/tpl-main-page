@@ -6,21 +6,25 @@ ${require('./partials/head.html')}
 <body>
     ${require('./partials/navbar.html')}
 
-    <div class="container info-wrapper">
+    <main class="main">
+      <section class="info">
         <div class="row">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a class="breadcrumb-link breadcrumb-link-index"
-                        href="http://fedor.misc.creachoo.ru/index.php?route=common/home">Главная</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a class="breadcrumb-link" href="http://fedor.misc.creachoo.ru/content-styles">Для верстки
-                        стилей контента (Заголовок 1)</a>
-                </li>
-            </ul>
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link breadcrumb-link-index" href="/">Главная</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link" href="/info.html">
+                Информационная страница</a>
+            </li>
+          </ul>
         </div>
+      </section>
+      <section class="info">
         <div class="row">
-            <h1>Для верстки стилей контента (Заголовок 1)</h1>
+          <h1>Информационная страница</h1>
+          <div class="info-wrapper">
+            <h1>Заголовок1</h1>
             <h2>Заголовок2</h2>
             <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но
                 это
@@ -90,30 +94,34 @@ ${require('./partials/head.html')}
                         <td>
                             <span>
                                 fugiat
-                                nulla pariatur</span><br>
+                                nulla pariatur
+                            </span>
+                          <br>
                         </td>
-                        <td><a href="http://groovyconsole.appspot.com/script/64002">Groovy</a><br>
+                        <td><a href="https://example.com/foo/qaz">Groovy</a><br>
                         </td>
                         <td><span>est laborum</span><br></td>
                     </tr>
                     <tr>
                         <td> <span>est laborum</span><br></td>
-                        <td> <span>nulla pariatur</spanclass=><br></td>
-                        <td><a href="http://groovyconsole.appspot.com/script/64002">Groovy</a><br>
+                        <td> <span>nulla pariatur</span><br></td>
+                        <td><a href="https://example.com/foo/bar">Groovy</a><br>
                         </td>
                     </tr>
                     <tr>
-                        <td><a href="http://groovyconsole.appspot.com/script/64002">Groovy</a><br>
+                        <td><a href="https://example.com/foo/baz">Groovy</a><br>
                         </td>
                         <td> <span>est laborum</span><br></td>
-                        <td> <span>nulla pariatur</spanlass=><br></td>
+                        <td> <span>nulla pariatur</span><br></td>
                     </tr>
                 </tbody>
             </table>
             <p><br></p>
+          </div>
         </div>
+      </section>
         ${require('./partials/review.html')}
-    </div>
+    </main>
     ${require('./partials/footer.html')}
 </body>
 

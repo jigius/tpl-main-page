@@ -1,4 +1,4 @@
-import Swiper from 'swiper/swiper-bundle.esm.js';
+import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 // init Swiper:

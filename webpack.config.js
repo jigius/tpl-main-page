@@ -1,31 +1,35 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
+const  OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const path = require("path");
 const glob = require("glob");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  //devtool: 'source-map',
   entry: {
-    main: "./src/js/app.js",
+    main: ["./src/js/app.js"],
     sample: glob.sync("./src/js/page/sample/**/*.js"),
-    catalog: glob.sync("./src/js/page/catalog/**/*.js"),
+    'card-catalog': glob.sync("./src/js/page/card-catalog/**/*.js"),
+    'reviews': glob.sync("./src/js/page/reviews/**/*.js"),
   },
-  mode: "development",
+  mode: "production",
+  //mode: "development",
   output: {
     path: `${__dirname}/dist`,
+    //path: "/home/jigius/work/vhosts/fedot/repo/public/build",
     filename: "[name]-bundle.js",
     clean: true,
   },
-
   devServer: {
-    static: "./dist",
+    //static: "./dist",
+    static: "/home/jigius/work/vhosts/fedot/repo/tpls",
     hot: true,
     watchFiles: ["./src"],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/template.html"), // main page
       filename: "index.html",
@@ -37,26 +41,29 @@ module.exports = {
       filename: "sample.html", // result page into ./dist folder
       chunks: ["main", "sample"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/card-catalog.html"), // шаблон
       filename: "card-catalog.html", // название выходного файла
-      chunks: ["main"],
+      chunks: ["main", "card-catalog"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog.html"), // шаблон
       filename: "catalog.html", // название выходного файла
-      chunks: ["main", "catalog"],
+      chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/catalog-list.html"), // шаблон
       filename: "catalog-list.html", // название выходного файла
-      chunks: ["main", "catalog"],
+      chunks: ["main"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/reviews.html"), // шаблон
       filename: "reviews.html", // название выходного файла
-      chunks: ["main"],
+      chunks: ["main", "reviews"],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
@@ -64,40 +71,62 @@ module.exports = {
       filename: "info.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/contact.html"), // шаблон
       filename: "contact.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/about.html"), // шаблон
       filename: "about.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       // шаблон страницы заказа
       template: path.resolve(__dirname, "./src/order.html"),
       filename: "order.html", // название выходного файла
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/moods/modal-popup.html"),
-      filename: "moods/modal-popup.html",
+      filename: "moods/modal-popup-[hash].html",
       chunks: ["main"],
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/moods/alert.html"),
-      filename: "moods/alert.html",
+      filename: "moods/alert-[hash].html",
       chunks: ["main"],
     }),
-    /*new HtmlWebpackPlugin({
+    new MiniCssExtractPlugin(),
+    /* new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/mood-formcontrols.html"),
       filename: "mood-formcontrols.html",
       chunks: ["main"],
-    }),*/
+    }),
+    new MiniCssExtractPlugin()
+    */
   ],
   module: {
     rules: [
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+              ]
+            ]
+          }
+        }
+      },
       {
         test: /\.html$/i,
         include: path.join(__dirname, "src"),
@@ -115,16 +144,16 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          //'style-loader',
+          //"style-loader",
           "css-loader",
-          //'sass-loader'
+          "sass-loader"
         ],
       },
       {
         test: /\.(jpe?g|svg|png|gif|ico)(\?v=\d+\.\d+\.\d+)?$/i,
         type: "asset/resource",
         generator: {
-          filename: "images/[name]-[hash][ext]",
+          filename: "images/[name][ext]",
         },
       },
       {

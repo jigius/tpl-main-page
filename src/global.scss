@@ -1,5 +1,5 @@
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 18px;
   padding: 0;
@@ -61,11 +61,15 @@ a:focus {
   color: #171717;
 }
 
+.img-responsive {
+  width: 100% !important;
+}
+
 :focus {
   outline: none !important;
 }
 ::-moz-focus-inner {
-  border: 0px !important;
+  border: 0 !important;
 }
 
 @media (min-width: 1200px) {

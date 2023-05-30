@@ -1,3 +1,5 @@
+@use '../../global';
+
 .card {
   margin-bottom: 35px;
 }
@@ -28,10 +30,15 @@
   padding: 0;
   margin: 0;
   border: 1px solid #d3d3d3;
-  border-radius: none;
+  border-radius: unset;
   display: flex;
   flex-direction: column;
   align-items: center;
+  .card-items-desktop {
+    .card-img {
+      padding-right: 10px;
+    }
+  }
 }
 
 .card-item-list {
@@ -57,8 +64,9 @@
 }
 
 .card-img {
+  @extend .img-responsive;
   position: relative;
-  margin: 10px 25px 15px 25px;
+  /* margin: 10px 25px 15px 25px; */
 }
 
 .card-img-list {
@@ -76,8 +84,12 @@
   line-height: 18px;
   color: #171717;
   margin-bottom: 11px;
-  border-top: 2px solid #e1e1e1;
   padding-top: 15px;
+  height: 70px;
+  overflow: hidden;
+  &.card-name-list {
+    padding-top: 0;
+  }
 }
 
 .card-name-list {
@@ -124,6 +136,17 @@
   background-color: #ffffff;
 }
 
+.card-homepage {
+  .card-block {
+    display: none;
+  }
+
+  .card-block-1,
+  .card-block-2 {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   .card-list {
     margin-bottom: 50px;
@@ -147,12 +170,12 @@
     line-height: 26px !important;
   }
 
-  .card-name-list-desktop {
-    display: block;
-  }
-
   .card-name-list-mobile {
     display: none;
+  }
+
+  .card-name-list-desktop {
+    display: block;
   }
 
   .card-name-list-desktop {
@@ -171,6 +194,12 @@
   .card-price-list {
     font-size: 22px;
     line-height: 28px;
+  }
+  .card-homepage {
+    .card-block-3,
+    .card-block-4 {
+      display: block;
+    }
   }
 }
 
@@ -201,6 +230,8 @@
   .card-name {
     font-size: 15px;
     line-height: 19px;
+    height: 54px;
+    overflow: hidden;
   }
 
   .card-price-list {

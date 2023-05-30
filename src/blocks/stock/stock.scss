@@ -7,21 +7,14 @@
   margin-bottom: 30px;
 }
 
-.stock-item-mobile {
+.stock-item {
   display: none;
 }
 
-.stock-list {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.stock-list-mobile {
-  display: none;
-}
-
-.img-responsive {
-  width: 100% !important;
+.stock-item-1,
+.stock-item-2
+{
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -34,17 +27,9 @@
     padding-bottom: 15px;
   }
 
-  .stock-item-mobile {
-    display: block;
-  }
-
-  .stock-list {
-    width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .stock-list-mobile {
+  .stock-item-3,
+  .stock-item-4,
+  {
     display: block;
   }
 }
@@ -52,10 +37,6 @@
 @media (min-width: 1200px) {
   .stock-title {
     padding: 0;
-  }
-
-  .stock-list-mobile {
-    display: block;
   }
 
   .stock-wrapper {

@@ -1,0 +1,12 @@
+.help-block.help-block-info {
+  display: inline-block;
+}
+.has-error .help-block.help-block-info {
+  display: none;
+}
+.help-block.help-block-error {
+  display: none;
+}
+.has-error .help-block.help-block-error {
+  display: inline-block;
+}

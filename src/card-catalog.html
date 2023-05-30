@@ -29,137 +29,125 @@ ${require('./partials/head.html')}
                   <div class="card-panel card-panel-catalog">
                     <span class="card-stiker">Новинка</span>
                   </div>
-                  <div class="card-img-big">
-                    <a class="card-img-link" href="">
-                      <picture>
-                        <source media="(min-width: 768px)" srcset="images/card-desktop-big.jpg" />
-                        <img class="card-catalog-img" src="../src/images/card-desktop-big.jpg" alt="Discs" />
+                  <div class="card-img-big" data-index="0">
+                    <a class="card-img-link" href="javascript:void(0)">
+                      <picture data-index="0">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/1.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/1.jpeg')}"
+                          width="640" alt="pic #1"
+                        />
+                      </picture>
+                      <picture data-index="1" style="display: none">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/2.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/2.jpeg')}"
+                          width="640" alt="pic #2"
+                        />
+                      </picture>
+                      <picture data-index="2" style="display: none">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/3.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/3.jpeg')}"
+                          width="640" alt="pic #3"
+                        />
+                      </picture>
+                      <picture data-index="3" style="display: none">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/4.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/4.jpeg')}"
+                             width="640" alt="pic #4"
+                        />
+                      </picture>
+                      <picture data-index="4" style="display: none">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/5.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/5.jpeg')}"
+                             width="640" alt="pic #5"
+                        />
+                      </picture>
+                      <picture data-index="5" style="display: none">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/6.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/6.jpeg')}"
+                             width="640" alt="pic #6"
+                        />
+                      </picture>
+                      <picture data-index="6" style="display: none">
+                        <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/7.jpeg')}" />
+                        <img class="card-catalog-img" src="${require('./images/card-catalog/big/7.jpeg')}"
+                             width="640" alt="pic #7"
+                        />
                       </picture>
                     </a>
                   </div>
                 </div>
                 <div class="row card-row">
-                  <div class="card-img-small col-xs-12">
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-border-small col-xs-3">
-                      <div class="card-img-link">
-                        <a class="card-img-link" href="">
-                          <picture>
-                            <source media="(min-width: 1024px)" srcset="images/card-desktop-small.jpg" />
-                            <img class="card-catalog-img" src="../src/images/card-mobile-small.jpg" alt="Discs" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
+                  <div class="card-img-small col-xs-12 img-gallery">
+                    <figure class="foo card-border-small col-xs-3">
+                      <a class="card-img-link" data-index="0" href="${require('./images/card-catalog/big/1.jpeg')}"
+                         data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/1.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/1.jpeg')}" alt="pic #1" />
+                        </picture>
+                      </a>
+                    </figure>
+                    <figure class="foo card-border-small col-xs-3">
+                      <a class="card-img-link" data-index="1" href="${require('./images/card-catalog/big/2.jpeg')}"
+                         data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/2.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/2.jpeg')}" alt="pic #2" />
+                        </picture>
+                      </a>
+                    </figure>
+                    <figure class="foo card-border-small col-xs-3">
+                      <a class="card-img-link" data-index="2" href="${require('./images/card-catalog/big/3.jpeg')}"
+                         data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/3.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/3.jpeg')}" alt="pic #3" />
+                        </picture>
+                      </a>
+                    </figure>
+                    <figure class="foo card-border-small col-xs-3">
+                      <a class="card-img-link" data-index="3" href="${require('./images/card-catalog/big/4.jpeg')}"
+                         data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/4.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/4.jpeg')}" alt="pic #4" />
+                        </picture>
+                      </a>
+                    </figure>
+                    <figure class="foo card-border-small col-xs-3">
+                      <a  class="card-img-link" data-index="4" href="${require('./images/card-catalog/big/5.jpeg')}"
+                          data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/5.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/5.jpeg')}" alt="pic #5" />
+                        </picture>
+                      </a>
+                    </figure>
+                    <figure class="foo card-border-small col-xs-3">
+                      <a class="card-img-link" data-index="5" href="${require('./images/card-catalog/big/6.jpeg')}"
+                         data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/6.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/6.jpeg')}" alt="pic #6" />
+                        </picture>
+                      </a>
+                    </figure>
+                    <figure class="foo card-border-small col-xs-3">
+                      <a class="card-img-link" data-index="6" href="${require('./images/card-catalog/big/7.jpeg')}"
+                         data-size="1280x960" target="_blank"
+                      >
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="${require('./images/card-catalog/big/7.jpeg')}" />
+                          <img class="card-catalog-img" src="${require('./images/card-catalog/big/7.jpeg')}" alt="pic #7" />
+                        </picture>
+                      </a>
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -304,14 +292,126 @@ ${require('./partials/head.html')}
                 </div>
               </div>
             </div>
+              <div class="row card-row img-list img-gallery">
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/1.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/1.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/1.jpeg')}"
+                           width="640" alt="pic #1"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/2.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/2.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/2.jpeg')}"
+                           width="640" alt="pic #2"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/3.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/3.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/3.jpeg')}"
+                           width="640" alt="pic #3"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/4.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/4.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/4.jpeg')}"
+                           width="640" alt="pic #4"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/5.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/5.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/5.jpeg')}"
+                           width="640" alt="pic #5"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/6.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/6.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/6.jpeg')}"
+                           width="640" alt="pic #6"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="img-list__img col-lg-6 col-sm-12">
+                  <a class="card-img-link2" data-index="5" href="${require('./images/card-catalog/big/7.jpeg')}"
+                     data-pswp-width="1280" data-pswp-height="960" target="_blank"
+                  >
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/7.jpeg')}" />
+                      <img class="img-responsive" src="${require('./images/card-catalog/big/7.jpeg')}"
+                           width="640" alt="pic #7"
+                      />
+                    </picture>
+                  </a>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+      <figure class="card-img-small col-xs-12" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="${require('./images/card-catalog/big/6.jpeg')}" itemprop="contentUrl" data-size="1280x960">
+          <picture>
+            <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/6.jpeg')}" />
+          <img width="100"  src="${require('./images/card-catalog/big/6.jpeg')}" itemprop="thumbnail" alt="Image description" />
+          </picture>
+        </a>
+        <figcaption itemprop="caption description">Image caption 6</figcaption>
+      </figure>
+
+      <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="${require('./images/card-catalog/big/7.jpeg')}" itemprop="contentUrl" data-size="1280x960">
+          <picture>
+            <source media="(min-width: 768px)" srcset="${require('./images/card-catalog/big/6.jpeg')}" />
+          <img width="100" src="${require('./images/card-catalog/big/7.jpeg')}" itemprop="thumbnail" alt="Image description" />
+          </picture>
+        </a>
+        <figcaption itemprop="caption description">Image caption 7</figcaption>
+      </figure>
+    </div>
+
+
     ${require('./partials/review.html')}
   </main>
 
   ${require('./partials/footer.html')}
+  ${require('./partials/photoswipe.html')}
 </body>
 
 </html>
