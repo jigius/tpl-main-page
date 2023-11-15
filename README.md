@@ -3,7 +3,7 @@
 ## Установка 
 1. [Скачать](https://git-scm.com/download/win) и установить Git
 2. [Скачать](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe) и установить Node Virtual Environment (NVM)
-3. Скачать Node версии 16.4.2. Для этого в командном окне(cmd.exe) выполнить - `nvm install v16.14.2`
+3. Скачать Node версии 16.14.2. Для этого в командном окне(cmd.exe) выполнить - `nvm install v16.14.2`
 4. Указать скаченную версию Node как текущую. Для этого в командном окне(__с правами Администратора__) выполнить - `nvm use 16.14.2`
 5. Склонировать проект задания(Проект). Для этого в командном окне с правами пользователя выполнить - `git clone https://github.com/jigius/tpl-main-page.git` в текущую папку
 6. Перейти в папку Проекта. Выполнить - `cd tpl-main-page`
